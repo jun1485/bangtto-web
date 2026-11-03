@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "nyang.escaperoom",
+      "sha256_cert_fingerprints": [
+        "FA:C0:C3:3C:2E:86:81:B0:E5:C2:F3:CD:01:9C:73:FB:62:74:D0:F1:C9:68:30:2B:43:62:3E:14:96:28:7E:EA",
+        "E5:5A:4B:39:72:C4:14:DC:DF:52:96:F3:C7:A8:F6:CB:19:32:92:22:BD:27:EA:E1:C5:65:97:BD:7B:09:17:70"
+      ]
+    }
+  }
+]
