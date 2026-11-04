@@ -7,19 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
     <!-- 외부 사이트 이동 시 출처 정보 미전송 -->
     <meta name="referrer" content="no-referrer" />
-    <title>방또 - 전국 방탈출 검색·후기·예약 오픈 알림</title>
+    <title>페이지를 찾을 수 없어요 | 방또</title>
     <!-- 검색 결과·공유 미리보기 기본 정보 -->
     <meta data-rh="true" name="description" content="전국 방탈출 테마의 난이도·공포도·인원·가격과 예약 오픈 시간, 후기를 한곳에서 보고 오픈 알림을 받아요." />
+    <meta data-rh="true" name="robots" content="noindex,follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="방또" />
     <meta data-rh="true" property="og:title" content="방또 - 전국 방탈출 검색·후기·예약 오픈 알림" />
     <meta data-rh="true" property="og:description" content="전국 방탈출 테마의 난이도·공포도·인원·가격과 예약 오픈 시간, 후기를 한곳에서 보고 오픈 알림을 받아요." />
     <meta data-rh="true" property="og:image" content="https://bangtto.com/og-image.png?v=20261018" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="방또 - 전국 방탈출 검색 · 후기 · 예약 오픈 알림" />
+    <meta data-rh="true" property="og:image:width" content="1200" />
+    <meta data-rh="true" property="og:image:height" content="630" />
+    <meta data-rh="true" property="og:image:alt" content="방또 - 전국 방탈출 검색·후기·예약 오픈 알림" />
     <meta property="og:locale" content="ko_KR" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta data-rh="true" name="twitter:title" content="방또 - 전국 방탈출 검색·후기·예약 오픈 알림" />
+    <meta data-rh="true" name="twitter:description" content="전국 방탈출 테마의 난이도·공포도·인원·가격과 예약 오픈 시간, 후기를 한곳에서 보고 오픈 알림을 받아요." />
+    <meta data-rh="true" name="twitter:image" content="https://bangtto.com/og-image.png?v=20261018" />
     <!-- 홈 화면에 추가한 웹 앱 설정, 아이폰 웹 알림은 홈 화면 앱에서만 동작 -->
     <link rel="manifest" href="/manifest.json" />
     <!-- 첫 로딩 화면 시작 그림을 앱 JS 보다 먼저 받음 -->
@@ -92,6 +96,10 @@
         flex: 1;
         /* 연속 탭으로 인한 화면 확대 방지 */
         touch-action: manipulation;
+      }
+      .seo-poster {
+        max-width: 100%;
+        height: auto;
       }
       /* PC 처럼 넓은 화면은 휴대폰 폭으로 가운데에 담음 */
       @media (min-width: 600px) {
@@ -188,19 +196,25 @@
     <!-- 웹 광고 AdSense -->
     <meta name="google-adsense-account" content="ca-pub-1289246991166233" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
-  <link rel="icon" href="/favicon.ico"/></head>
+  <link rel="icon" href="/favicon.ico"/>
+    <meta data-rh="true" property="og:url" content="https://bangtto.com/" />
+  </head>
 
   <body>
     <!-- Use static rendering with Expo Router to support running without JavaScript. -->
     <noscript>
-      방또는 전국 방탈출 테마의 난이도·공포도·인원·가격과 예약 오픈 시간, 후기를 모아 보여 주는 서비스예요. 화면을 보려면 자바스크립트를 켜 주세요.
+      <style>
+        #boot-loading, #boot-splash { display: none !important; }
+        body { overflow: auto; }
+        #root { height: auto; min-height: 100%; }
+      </style>
     </noscript>
     <!-- The root element for your Expo app. -->
-    <div id="root"></div>
+    <div id="root"><main><h1>찾는 페이지가 없어요</h1><p>주소가 바뀌었거나 사라진 페이지예요.</p><a href="/">방또 처음 화면으로</a></main></div>
     <div id="boot-loading" role="progressbar" aria-label="방또 불러오는 중">
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-980ae6b830df3b418dde19cbc0a83b68.js" defer></script>
+  <script src="/_expo/static/js/web/entry-66753c84b62e063cebc782ce6cba4ac5.js" defer></script>
 </body>
 </html>

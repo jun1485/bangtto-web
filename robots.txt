@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /lab
-Disallow: /admin
 
 Sitemap: https://bangtto.com/sitemap.xml
