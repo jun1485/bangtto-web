@@ -25,7 +25,7 @@
     <!-- 홈 화면에 추가한 웹 앱 설정, 아이폰 웹 알림은 홈 화면 앱에서만 동작 -->
     <link rel="manifest" href="/manifest.json" />
     <!-- 첫 로딩 화면 시작 그림을 앱 JS 보다 먼저 받음 -->
-    <link rel="preload" as="image" href="/startup/splash.jpg?v=20261104" fetchpriority="high" />
+    <link rel="preload" as="image" href="/startup/splash.jpg?v=20261104" fetchpriority="high" media="(display-mode: standalone)" />
     <!-- 안드로이드는 앱 설치 대신 홈 화면 바로가기로 추가 -->
     <script>
       if (/Android/i.test(navigator.userAgent)) document.querySelector('link[rel="manifest"]').href = '/manifest-android.json';
@@ -118,8 +118,7 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading,
-      #root:has(> main) ~ #boot-loading {
+      #root:empty ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -178,7 +177,8 @@
     </style>
     <!-- 앱 글꼴 Pretendard, 화면에 쓰인 글자 묶음만 받음 -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" /></noscript>
     <!-- 웹 방문 통계 Google 애널리틱스 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-150RKF7VH9"></script>
     <script>
@@ -209,11 +209,11 @@
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
-    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 전국 방탈출 검색·후기·예약 오픈 알림</p><h1>신입사원 - 업무일지의 비밀</h1><img class="seo-poster" src="https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dmissionescape-pnu-newbie%26v%3Dhttp%253A%252F%252Fwww.missionescape.co.kr%252Fimages%252Fsub%252Fslidew5.jpg&amp;w=1080&amp;we&amp;output=jpg&amp;q=82" alt="신입사원 - 업무일지의 비밀 포스터" width="300" height="420" loading="lazy" /><p>부산대 · <a href="/store/missionescape-pnu">미션이스케이프 부산대 1호점</a> · 회사테마</p><ul><li>인원 2~6명</li><li>60분</li><li>난이도 5/5</li><li>공포도 0/5</li><li>가격 2인 36,000원 · 3인 48,000원 · 4인 64,000원 · 5인 80,000원 · 6인 96,000원</li></ul><p>주소 부산 금정구 금정로68번길 5</p><p>회사의 분위기가 심상치않다... 회사 내부에 무슨 문제가 있는지 찾아보자!</p><p><a href="/region/busandae">부산대 방탈출 더 보기</a> · <a href="/">다른 방탈출 테마 보기</a></p></main></div>
+    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 전국 방탈출 검색·후기·예약 오픈 알림</p><h1>신입사원 - 업무일지의 비밀</h1><img class="seo-poster" src="https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dmissionescape-pnu-newbie%26v%3Dhttp%253A%252F%252Fwww.missionescape.co.kr%252Fimages%252Fsub%252Fslidew5.jpg&amp;w=1080&amp;we&amp;output=jpg&amp;q=82" alt="신입사원 - 업무일지의 비밀 포스터" width="300" height="420" fetchpriority="high" /><p>부산대 · <a href="/store/missionescape-pnu">미션이스케이프 부산대 1호점</a> · 회사테마</p><ul><li>예약 가능 인원 2~6명</li><li>60분</li><li>난이도 5/5</li><li>공포도 0/5</li><li>가격 2인 36,000원 · 3인 48,000원 · 4인 64,000원 · 5인 80,000원 · 6인 96,000원</li></ul><p>주소 부산 금정구 금정로68번길 5</p><h2>매장 공식 테마 소개</h2><p>회사의 분위기가 심상치않다... 회사 내부에 무슨 문제가 있는지 찾아보자!</p><h2>예약 안내</h2><p>예약 상시 오픈 · 오픈 시각 없음</p><p><a href="http://www.missionescape.co.kr/reserv/reserv.asp" rel="noopener">매장 공식 예약 페이지</a> · <a href="http://www.missionescape.co.kr/sub/room.asp" rel="noopener">테마 정보 출처</a></p><p>별점과 후기는 방또 이용자가 작성한 내용이며 매장 공식 정보와 구분됩니다. 실제 가격·운영 여부는 매장 공식 페이지를 확인해 주세요.</p><p><a href="/region/busandae">부산대 방탈출 더 보기</a> · <a href="/">다른 방탈출 테마 보기</a></p></main></div>
     <div id="boot-loading" role="progressbar" aria-label="방또 불러오는 중">
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-482f1ab40a3ff88d58d2d18672902de9.js" defer></script>
+  <script src="/_expo/static/js/web/entry-fb23314b90739e5ec675e541f43672ef.js" defer></script>
 </body>
 </html>

@@ -25,7 +25,7 @@
     <!-- 홈 화면에 추가한 웹 앱 설정, 아이폰 웹 알림은 홈 화면 앱에서만 동작 -->
     <link rel="manifest" href="/manifest.json" />
     <!-- 첫 로딩 화면 시작 그림을 앱 JS 보다 먼저 받음 -->
-    <link rel="preload" as="image" href="/startup/splash.jpg?v=20261104" fetchpriority="high" />
+    <link rel="preload" as="image" href="/startup/splash.jpg?v=20261104" fetchpriority="high" media="(display-mode: standalone)" />
     <!-- 안드로이드는 앱 설치 대신 홈 화면 바로가기로 추가 -->
     <script>
       if (/Android/i.test(navigator.userAgent)) document.querySelector('link[rel="manifest"]').href = '/manifest-android.json';
@@ -118,8 +118,7 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading,
-      #root:has(> main) ~ #boot-loading {
+      #root:empty ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -178,7 +177,8 @@
     </style>
     <!-- 앱 글꼴 Pretendard, 화면에 쓰인 글자 묶음만 받음 -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" /></noscript>
     <!-- 웹 방문 통계 Google 애널리틱스 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-150RKF7VH9"></script>
     <script>
@@ -196,7 +196,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/seoulescape-seomyeon-26" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/seoulescape-seomyeon-26" />
-    <script data-seo-url="https://bangtto.com/theme/seoulescape-seomyeon-26" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"죽음을 부르는 재즈바 (서울이스케이프룸 부산 서면점)","description":"떨리는 당신 손에, 편지가 쥐어져 있다. 거의 1년전, 평생 잊지못할 그날 살인자 의 방 404호에서 보았던 그놈의 필체와 똑같은 글씨다. 당신에게 끔찍한 살인 누명을 뒤집어씌우고 홀연히 사라진 ‘살인마 X’가 당신에게 편지를 보내온 것이다.\n\n“안녕 친구, 오랜만이군요. 이거 놀랍습니다. 여태까지 단 한명의 인간 도 제가 고안한 함정에서 탈출은 커녕 살아나간 사람이 없었는데, 용케 이렇게 까지 저를 쫓아오고 괴롭히게까지 되었군요. 훌륭합니다. 저는 당신을 진심으 로 존경하고 좋아하게 되었습니다. 이렇게 신나고 들뜨는 건 오랜만입니다. 우 린 어차피 언젠간 만나야할 운명입니다. 괜찮다면 저와 직접 만나서 술 한잔 하 는게 어떻습니까? 미국 남부 도시 뉴올리언스에 제가 아주 좋아하는 Bar가 하 나 있습니다. 20XX년 XX월 XX일, XX시. 거기서 기다리겠습니다.” 살인마 X”\n\n...\n\n며칠 후, 약속된 당일날 당신은 뉴올리언스의 한 Bar에 찾아왔다. 찌든 양주와 담배 냄새가 풍기는 오래된 작은 재즈 바이다. 아직 이른 저녁이라 손님은 당신 밖에 없다. 약속 시간보다 한시간 일찍 도착한 당신은 독한 위스키를 먼저 한잔 주문한다. 주머니 안에 권총을 움켜","url":"https://bangtto.com/theme/seoulescape-seomyeon-26","image":"https://wsrv.nl/?url=https%3A%2F%2Fwww.seoul-escape.com%2Fstorage%2Ftheme%2F2022_11%2F10%2FtB9eCwrB8v0lAfiXOF6QUjS99eLRe9qsbXxzyBB3.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"부산 부산진구 서전로10번길 61 (쥬디스태화신관) 3층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":35.15522695,"longitude":129.06065567}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"부산 서면 방탈출","item":"https://bangtto.com/region/busan-seomyeon"},{"@type":"ListItem","position":3,"name":"서울이스케이프룸 부산 서면점","item":"https://bangtto.com/store/seoulescape-seomyeon"},{"@type":"ListItem","position":4,"name":"죽음을 부르는 재즈바","item":"https://bangtto.com/theme/seoulescape-seomyeon-26"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/seoulescape-seomyeon-26" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"죽음을 부르는 재즈바 (서울이스케이프룸 부산 서면점)","description":"떨리는 당신 손에, 편지가 쥐어져 있다. 거의 1년전, 평생 잊지못할 그날 살인자 의 방 404호에서 보았던 그놈의 필체와 똑같은 글씨다. 당신에게 끔찍한 살인 누명을 뒤집어씌우고 홀연히 사라진 ‘살인마 X’가 당신에게 편지를 보내온 것이다.\n\n“안녕 친구, 오랜만이군요. 이거 놀랍습니다. 여태까지 단 한명의 인간 도 제가 고안한 함정에서 탈출은 커녕 살아나간 사람이 없었는데, 용케 이렇게 까지 저를 쫓아오고 괴롭히게까지 되었군요. 훌륭합니다. 저는 당신을 진심으 로 존경하고 좋아하게 되었습니다. 이렇게 신나고 들뜨는 건 오랜만입니다. 우 린 어차피 언젠간 만나야할 운명입니다. 괜찮다면 저와 직접 만나서 술 한잔 하 는게 어떻습니까? 미국 남부 도시 뉴올리언스에 제가 아주 좋아하는 Bar가 하 나 있습니다. 20XX년 XX월 XX일, XX시. 거기서 기다리겠습니다.” 살인마 X”\n\n...\n\n며칠 후, 약속된 당일날 당신은 뉴올리언스의 한 Bar에 찾아왔다. 찌든 양주와 담배 냄새가 풍기는 오래된 작은 재즈 바이다. 아직 이른 저녁이라 손님은 당신 밖에 없다. 약속 시간보다 한시간 일찍 도착한 당신은 독한 위스키를 먼저 한잔 주문한다. 주머니 안에 권총을 움켜쥔 손에 땀이 차기 시작한다. 과연.. 그놈은 정말로 나타날 것인가..","url":"https://bangtto.com/theme/seoulescape-seomyeon-26","image":"https://wsrv.nl/?url=https%3A%2F%2Fwww.seoul-escape.com%2Fstorage%2Ftheme%2F2022_11%2F10%2FtB9eCwrB8v0lAfiXOF6QUjS99eLRe9qsbXxzyBB3.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"부산 부산진구 서전로10번길 61 (쥬디스태화신관) 3층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":35.15522695,"longitude":129.06065567}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"부산 서면 방탈출","item":"https://bangtto.com/region/busan-seomyeon"},{"@type":"ListItem","position":3,"name":"서울이스케이프룸 부산 서면점","item":"https://bangtto.com/store/seoulescape-seomyeon"},{"@type":"ListItem","position":4,"name":"죽음을 부르는 재즈바","item":"https://bangtto.com/theme/seoulescape-seomyeon-26"}]}]</script>
   </head>
 
   <body>
@@ -209,11 +209,11 @@
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
-    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 전국 방탈출 검색·후기·예약 오픈 알림</p><h1>죽음을 부르는 재즈바</h1><img class="seo-poster" src="https://wsrv.nl/?url=https%3A%2F%2Fwww.seoul-escape.com%2Fstorage%2Ftheme%2F2022_11%2F10%2FtB9eCwrB8v0lAfiXOF6QUjS99eLRe9qsbXxzyBB3.jpg&amp;w=1080&amp;we&amp;output=jpg&amp;q=82" alt="죽음을 부르는 재즈바 포스터" width="300" height="420" loading="lazy" /><p>부산 서면 · <a href="/store/seoulescape-seomyeon">서울이스케이프룸 부산 서면점</a> · 스릴러</p><ul><li>인원 2~6명</li><li>60분</li><li>난이도 5/5</li><li>가격 2인 44,000원 · 3인 60,000원 · 4인 72,000원 · 5인 90,000원 · 6인 108,000원</li></ul><p>주소 부산 부산진구 서전로10번길 61 (쥬디스태화신관) 3층</p><p>떨리는 당신 손에, 편지가 쥐어져 있다. 거의 1년전, 평생 잊지못할 그날 살인자 의 방 404호에서 보았던 그놈의 필체와 똑같은 글씨다. 당신에게 끔찍한 살인 누명을 뒤집어씌우고 홀연히 사라진 ‘살인마 X’가 당신에게 편지를 보내온 것이다.<br /><br />“안녕 친구, 오랜만이군요. 이거 놀랍습니다. 여태까지 단 한명의 인간 도 제가 고안한 함정에서 탈출은 커녕 살아나간 사람이 없었는데, 용케 이렇게 까지 저를 쫓아오고 괴롭히게까지 되었군요. 훌륭합니다. 저는 당신을 진심으 로 존경하고 좋아하게 되었습니다. 이렇게 신나고 들뜨는 건 오랜만입니다. 우 린 어차피 언젠간 만나야할 운명입니다. 괜찮다면 저와 직접 만나서 술 한잔 하 는게 어떻습니까? 미국 남부 도시 뉴올리언스에 제가 아주 좋아하는 Bar가 하 나 있습니다. 20XX년 XX월 XX일, XX시. 거기서 기다리겠습니다.” 살인마 X”<br /><br />...<br /><br />며칠 후, 약속된 당일날 당신은 뉴올리언스의 한 Bar에 찾아왔다. 찌든 양주와 담배 냄새가 풍기는 오래된 작은 재즈 바이다. 아직 이른 저녁이라 손님은 당신 밖에 없다. 약속 시간보다 한시간 일찍 도착한 당신은 독한 위스키를 먼저 한잔 주문한다. 주머니 안에 권총을 움켜</p><p><a href="/region/busan-seomyeon">부산 서면 방탈출 더 보기</a> · <a href="/genre/thriller">스릴러 방탈출</a> · <a href="/">다른 방탈출 테마 보기</a></p></main></div>
+    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 전국 방탈출 검색·후기·예약 오픈 알림</p><h1>죽음을 부르는 재즈바</h1><img class="seo-poster" src="https://wsrv.nl/?url=https%3A%2F%2Fwww.seoul-escape.com%2Fstorage%2Ftheme%2F2022_11%2F10%2FtB9eCwrB8v0lAfiXOF6QUjS99eLRe9qsbXxzyBB3.jpg&amp;w=1080&amp;we&amp;output=jpg&amp;q=82" alt="죽음을 부르는 재즈바 포스터" width="300" height="420" fetchpriority="high" /><p>부산 서면 · <a href="/store/seoulescape-seomyeon">서울이스케이프룸 부산 서면점</a> · 스릴러</p><ul><li>예약 가능 인원 2~6명</li><li>60분</li><li>난이도 5/5</li><li>가격 2인 44,000원 · 3인 60,000원 · 4인 72,000원 · 5인 90,000원 · 6인 108,000원</li></ul><p>주소 부산 부산진구 서전로10번길 61 (쥬디스태화신관) 3층</p><h2>매장 공식 테마 소개</h2><p>떨리는 당신 손에, 편지가 쥐어져 있다. 거의 1년전, 평생 잊지못할 그날 살인자 의 방 404호에서 보았던 그놈의 필체와 똑같은 글씨다. 당신에게 끔찍한 살인 누명을 뒤집어씌우고 홀연히 사라진 ‘살인마 X’가 당신에게 편지를 보내온 것이다.<br /><br />“안녕 친구, 오랜만이군요. 이거 놀랍습니다. 여태까지 단 한명의 인간 도 제가 고안한 함정에서 탈출은 커녕 살아나간 사람이 없었는데, 용케 이렇게 까지 저를 쫓아오고 괴롭히게까지 되었군요. 훌륭합니다. 저는 당신을 진심으 로 존경하고 좋아하게 되었습니다. 이렇게 신나고 들뜨는 건 오랜만입니다. 우 린 어차피 언젠간 만나야할 운명입니다. 괜찮다면 저와 직접 만나서 술 한잔 하 는게 어떻습니까? 미국 남부 도시 뉴올리언스에 제가 아주 좋아하는 Bar가 하 나 있습니다. 20XX년 XX월 XX일, XX시. 거기서 기다리겠습니다.” 살인마 X”<br /><br />...<br /><br />며칠 후, 약속된 당일날 당신은 뉴올리언스의 한 Bar에 찾아왔다. 찌든 양주와 담배 냄새가 풍기는 오래된 작은 재즈 바이다. 아직 이른 저녁이라 손님은 당신 밖에 없다. 약속 시간보다 한시간 일찍 도착한 당신은 독한 위스키를 먼저 한잔 주문한다. 주머니 안에 권총을 움켜쥔 손에 땀이 차기 시작한다. 과연.. 그놈은 정말로 나타날 것인가..</p><h2>예약 안내</h2><p>매일 00:00에 14일 뒤 날짜 오픈</p><p><a href="https://www.seoul-escape.com/reservation?branch=6#list" rel="noopener">매장 공식 예약 페이지</a> · <a href="https://www.seoul-escape.com/reservation?branch=6" rel="noopener">테마 정보 출처</a></p><p>별점과 후기는 방또 이용자가 작성한 내용이며 매장 공식 정보와 구분됩니다. 실제 가격·운영 여부는 매장 공식 페이지를 확인해 주세요.</p><p><a href="/region/busan-seomyeon">부산 서면 방탈출 더 보기</a> · <a href="/genre/thriller">스릴러 방탈출</a> · <a href="/">다른 방탈출 테마 보기</a></p></main></div>
     <div id="boot-loading" role="progressbar" aria-label="방또 불러오는 중">
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-482f1ab40a3ff88d58d2d18672902de9.js" defer></script>
+  <script src="/_expo/static/js/web/entry-fb23314b90739e5ec675e541f43672ef.js" defer></script>
 </body>
 </html>

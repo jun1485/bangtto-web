@@ -25,7 +25,7 @@
     <!-- 홈 화면에 추가한 웹 앱 설정, 아이폰 웹 알림은 홈 화면 앱에서만 동작 -->
     <link rel="manifest" href="/manifest.json" />
     <!-- 첫 로딩 화면 시작 그림을 앱 JS 보다 먼저 받음 -->
-    <link rel="preload" as="image" href="/startup/splash.jpg?v=20261104" fetchpriority="high" />
+    <link rel="preload" as="image" href="/startup/splash.jpg?v=20261104" fetchpriority="high" media="(display-mode: standalone)" />
     <!-- 안드로이드는 앱 설치 대신 홈 화면 바로가기로 추가 -->
     <script>
       if (/Android/i.test(navigator.userAgent)) document.querySelector('link[rel="manifest"]').href = '/manifest-android.json';
@@ -118,8 +118,7 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading,
-      #root:has(> main) ~ #boot-loading {
+      #root:empty ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -178,7 +177,8 @@
     </style>
     <!-- 앱 글꼴 Pretendard, 화면에 쓰인 글자 묶음만 받음 -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" /></noscript>
     <!-- 웹 방문 통계 Google 애널리틱스 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-150RKF7VH9"></script>
     <script>
@@ -209,11 +209,11 @@
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
-    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 전국 방탈출 검색·후기·예약 오픈 알림</p><h1>FILM BY BOB</h1><img class="seo-poster" src="https://wsrv.nl/?url=https%3A%2F%2Fd1kqa23lh2nxjx.cloudfront.net%2Ffile%2Ftheme_info%2FBOB__sizedown.png&amp;w=1080&amp;we&amp;output=jpg&amp;q=82" alt="FILM BY BOB 포스터" width="300" height="420" loading="lazy" /><p>강남 · <a href="/store/keyescape-memorycompany">키이스케이프 메모리컴퍼니</a> · 일상 드라마</p><ul><li>75분</li><li>난이도 3.5/5</li><li>가격 2인 72,000원 · 3인 102,000원</li></ul><p>주소 서울 강남구 봉은사로2길 7 지하1층</p><p>ºName_Bob Coulson<br />ºAge_31 years old<br />ºGender_Male<br />ºDepartment_Cleaner<br /><br />º직원정보<br />청소부.<br />아직 변경된 근로계약서에 서명 안 했음.<br />금일 출근하면 근로 계약서 작성해야 함.<br /><br />º밥의 한 마디<br />안 짤리고 출근한 기분이 어떻냐고요...?<br />음.. 프란시스 회장님 취임되시고 나서 동료들이 많이 해고당했어요.<br />사실, 저도 언제 해고당해도 이상하지 않은 상황이라 많이 무섭긴 해요..<br /><br />어, 잠시만요. 전화가 왔네요.<br />'네, 여보세요? 어..제 이름이요? 밥이요.'</p><h2>후기 2개 · 평균 ★5</h2><ul><li>★5 · 2024-02-27 · 필름바이 시리즈 3개는 모두 인생 테마! 근데 갈수록 더 재밌어짐. 에디랑 스티브도 정말 재밌었지만 밥이 최고봉이었다! 파워 E랑 가면 더 재밌을거임 개인적으로 밥&gt;스티브&gt;에디 순으로 재밌었음</li><li>★5 · 2024-02-26 · 정말 훌륭한 3부작,,,,, 과몰입 너무 가능 진심 또 하고 싶은데 예약이 너무 어려워요</li></ul><p><a href="/region/gangnam">강남 방탈출 더 보기</a> · <a href="/genre/drama">드라마·감성 방탈출</a> · <a href="/">다른 방탈출 테마 보기</a></p></main></div>
+    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 전국 방탈출 검색·후기·예약 오픈 알림</p><h1>FILM BY BOB</h1><img class="seo-poster" src="https://wsrv.nl/?url=https%3A%2F%2Fd1kqa23lh2nxjx.cloudfront.net%2Ffile%2Ftheme_info%2FBOB__sizedown.png&amp;w=1080&amp;we&amp;output=jpg&amp;q=82" alt="FILM BY BOB 포스터" width="300" height="420" fetchpriority="high" /><p>강남 · <a href="/store/keyescape-memorycompany">키이스케이프 메모리컴퍼니</a> · 일상 드라마</p><ul><li>75분</li><li>난이도 3.5/5</li><li>가격 2인 72,000원 · 3인 102,000원</li></ul><p>주소 서울 강남구 봉은사로2길 7 지하1층</p><h2>매장 공식 테마 소개</h2><p>ºName_Bob Coulson<br />ºAge_31 years old<br />ºGender_Male<br />ºDepartment_Cleaner<br /><br />º직원정보<br />청소부.<br />아직 변경된 근로계약서에 서명 안 했음.<br />금일 출근하면 근로 계약서 작성해야 함.<br /><br />º밥의 한 마디<br />안 짤리고 출근한 기분이 어떻냐고요...?<br />음.. 프란시스 회장님 취임되시고 나서 동료들이 많이 해고당했어요.<br />사실, 저도 언제 해고당해도 이상하지 않은 상황이라 많이 무섭긴 해요..<br /><br />어, 잠시만요. 전화가 왔네요.<br />'네, 여보세요? 어..제 이름이요? 밥이요.'</p><h2>예약 안내</h2><p>매일 10:30에 6일 뒤 날짜 오픈</p><p><a href="https://www.keyescape.com/reservation1.php?zizum_num=18&amp;theme_num=59&amp;theme_info_num=36" rel="noopener">매장 공식 예약 페이지</a> · <a href="https://www.keyescape.com/works.php" rel="noopener">테마 정보 출처</a></p><h2>후기 2개 · 평균 ★5</h2><ul><li>★5 · 2024-02-27 · 필름바이 시리즈 3개는 모두 인생 테마! 근데 갈수록 더 재밌어짐. 에디랑 스티브도 정말 재밌었지만 밥이 최고봉이었다! 파워 E랑 가면 더 재밌을거임 개인적으로 밥&gt;스티브&gt;에디 순으로 재밌었음</li><li>★5 · 2024-02-26 · 정말 훌륭한 3부작,,,,, 과몰입 너무 가능 진심 또 하고 싶은데 예약이 너무 어려워요</li></ul><p>별점과 후기는 방또 이용자가 작성한 내용이며 매장 공식 정보와 구분됩니다. 실제 가격·운영 여부는 매장 공식 페이지를 확인해 주세요.</p><p><a href="/region/gangnam">강남 방탈출 더 보기</a> · <a href="/genre/drama">드라마·감성 방탈출</a> · <a href="/">다른 방탈출 테마 보기</a></p></main></div>
     <div id="boot-loading" role="progressbar" aria-label="방또 불러오는 중">
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-482f1ab40a3ff88d58d2d18672902de9.js" defer></script>
+  <script src="/_expo/static/js/web/entry-fb23314b90739e5ec675e541f43672ef.js" defer></script>
 </body>
 </html>

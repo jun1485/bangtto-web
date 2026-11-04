@@ -25,7 +25,7 @@
     <!-- 홈 화면에 추가한 웹 앱 설정, 아이폰 웹 알림은 홈 화면 앱에서만 동작 -->
     <link rel="manifest" href="/manifest.json" />
     <!-- 첫 로딩 화면 시작 그림을 앱 JS 보다 먼저 받음 -->
-    <link rel="preload" as="image" href="/startup/splash.jpg?v=20261104" fetchpriority="high" />
+    <link rel="preload" as="image" href="/startup/splash.jpg?v=20261104" fetchpriority="high" media="(display-mode: standalone)" />
     <!-- 안드로이드는 앱 설치 대신 홈 화면 바로가기로 추가 -->
     <script>
       if (/Android/i.test(navigator.userAgent)) document.querySelector('link[rel="manifest"]').href = '/manifest-android.json';
@@ -118,8 +118,7 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading,
-      #root:has(> main) ~ #boot-loading {
+      #root:empty ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -178,7 +177,8 @@
     </style>
     <!-- 앱 글꼴 Pretendard, 화면에 쓰인 글자 묶음만 받음 -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" /></noscript>
     <!-- 웹 방문 통계 Google 애널리틱스 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-150RKF7VH9"></script>
     <script>
@@ -196,7 +196,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/routeescape-suwon-989c2390" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/routeescape-suwon-989c2390" />
-    <script data-seo-url="https://bangtto.com/theme/routeescape-suwon-989c2390" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"나를 찾아줘 (루트이스케이프 수원점)","description":"대학 천문학 동아리에서 알게 된 제니\n\n친구로 지낸 지 벌써 7년째. 쾌활하고 똑똑하고 예쁘기까지 한 제니는 모두에게 인기가 많았다. 나 역시 제니를 쭉 좋아해 왔고...\n오늘은 기필코 제니에게 고백을 할 거다 며칠 전 이름을 새긴 커플링도 준비해 두었다\n\n그런데... 제니는 또 별을 보러 간 것 같다. 설마 이런 나의 낌새를 알아채고 피하는 건 아닐까?\n\n사실 제니에게 나는 부족하기 그지없다.\n\"까톡\"\n\n\"존 지금 빨리와줘!!!\"\n\nJenny, who I got to know from the astronomy club at University.\nWe've been friends for seven years already. Jenny, who was cheerful, smart, and pretty, was popular with everyone.\nI've liked her all along, too.\nToday, I will definitely confess to Jenny. I also prepared a couple ring with a name engraved a few day ago.\nBut...Jenny seems to have gone to se","url":"https://bangtto.com/theme/routeescape-suwon-989c2390","image":"https://wsrv.nl/?url=https%3A%2F%2Fbucheonroute.s3.amazonaws.com%2Ftheme%2F1658124139705.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"경기 수원시 팔달구 향교로12-1 5층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.2677962674418,"longitude":127.002655962682}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"수원 방탈출","item":"https://bangtto.com/region/suwon"},{"@type":"ListItem","position":3,"name":"루트이스케이프 수원점","item":"https://bangtto.com/store/routeescape-suwon"},{"@type":"ListItem","position":4,"name":"나를 찾아줘","item":"https://bangtto.com/theme/routeescape-suwon-989c2390"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/routeescape-suwon-989c2390" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"나를 찾아줘 (루트이스케이프 수원점)","description":"대학 천문학 동아리에서 알게 된 제니\n\n친구로 지낸 지 벌써 7년째. 쾌활하고 똑똑하고 예쁘기까지 한 제니는 모두에게 인기가 많았다. 나 역시 제니를 쭉 좋아해 왔고...\n오늘은 기필코 제니에게 고백을 할 거다 며칠 전 이름을 새긴 커플링도 준비해 두었다\n\n그런데... 제니는 또 별을 보러 간 것 같다. 설마 이런 나의 낌새를 알아채고 피하는 건 아닐까?\n\n사실 제니에게 나는 부족하기 그지없다.\n\"까톡\"\n\n\"존 지금 빨리와줘!!!\"\n\nJenny, who I got to know from the astronomy club at University.\nWe've been friends for seven years already. Jenny, who was cheerful, smart, and pretty, was popular with everyone.\nI've liked her all along, too.\nToday, I will definitely confess to Jenny. I also prepared a couple ring with a name engraved a few day ago.\nBut...Jenny seems to have gone to see the stars again.\nDon't tell me she's avoiding me. To be honest... I'm not good enough for Jenny.\n\"Ka Talk\"\n\"John! Please come here now!\"","url":"https://bangtto.com/theme/routeescape-suwon-989c2390","image":"https://wsrv.nl/?url=https%3A%2F%2Fbucheonroute.s3.amazonaws.com%2Ftheme%2F1658124139705.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"경기 수원시 팔달구 향교로12-1 5층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.2677962674418,"longitude":127.002655962682}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"수원 방탈출","item":"https://bangtto.com/region/suwon"},{"@type":"ListItem","position":3,"name":"루트이스케이프 수원점","item":"https://bangtto.com/store/routeescape-suwon"},{"@type":"ListItem","position":4,"name":"나를 찾아줘","item":"https://bangtto.com/theme/routeescape-suwon-989c2390"}]}]</script>
   </head>
 
   <body>
@@ -209,11 +209,11 @@
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
-    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 전국 방탈출 검색·후기·예약 오픈 알림</p><h1>나를 찾아줘</h1><img class="seo-poster" src="https://wsrv.nl/?url=https%3A%2F%2Fbucheonroute.s3.amazonaws.com%2Ftheme%2F1658124139705.jpg&amp;w=1080&amp;we&amp;output=jpg&amp;q=82" alt="나를 찾아줘 포스터" width="300" height="420" loading="lazy" /><p>수원 · <a href="/store/routeescape-suwon">루트이스케이프 수원점</a> · Drama</p><ul><li>인원 1~6명</li><li>60분</li><li>난이도 4/5</li><li>공포도 2/5</li><li>가격 1인 42,000원 · 2인 44,000원 · 3인 60,000원 · 4인 76,000원 · 5인 95,000원 · 6인 114,000원</li></ul><p>주소 경기 수원시 팔달구 향교로12-1 5층</p><p>대학 천문학 동아리에서 알게 된 제니<br /><br />친구로 지낸 지 벌써 7년째. 쾌활하고 똑똑하고 예쁘기까지 한 제니는 모두에게 인기가 많았다. 나 역시 제니를 쭉 좋아해 왔고...<br />오늘은 기필코 제니에게 고백을 할 거다 며칠 전 이름을 새긴 커플링도 준비해 두었다<br /><br />그런데... 제니는 또 별을 보러 간 것 같다. 설마 이런 나의 낌새를 알아채고 피하는 건 아닐까?<br /><br />사실 제니에게 나는 부족하기 그지없다.<br />&quot;까톡&quot;<br /><br />&quot;존 지금 빨리와줘!!!&quot;<br /><br />Jenny, who I got to know from the astronomy club at University.<br />We've been friends for seven years already. Jenny, who was cheerful, smart, and pretty, was popular with everyone.<br />I've liked her all along, too.<br />Today, I will definitely confess to Jenny. I also prepared a couple ring with a name engraved a few day ago.<br />But...Jenny seems to have gone to se</p><p><a href="/region/suwon">수원 방탈출 더 보기</a> · <a href="/genre/drama">드라마·감성 방탈출</a> · <a href="/">다른 방탈출 테마 보기</a></p></main></div>
+    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 전국 방탈출 검색·후기·예약 오픈 알림</p><h1>나를 찾아줘</h1><img class="seo-poster" src="https://wsrv.nl/?url=https%3A%2F%2Fbucheonroute.s3.amazonaws.com%2Ftheme%2F1658124139705.jpg&amp;w=1080&amp;we&amp;output=jpg&amp;q=82" alt="나를 찾아줘 포스터" width="300" height="420" fetchpriority="high" /><p>수원 · <a href="/store/routeescape-suwon">루트이스케이프 수원점</a> · Drama</p><ul><li>예약 가능 인원 1~6명</li><li>60분</li><li>난이도 4/5</li><li>공포도 2/5</li><li>가격 1인 42,000원 · 2인 44,000원 · 3인 60,000원 · 4인 76,000원 · 5인 95,000원 · 6인 114,000원</li></ul><p>주소 경기 수원시 팔달구 향교로12-1 5층</p><h2>매장 공식 테마 소개</h2><p>대학 천문학 동아리에서 알게 된 제니<br /><br />친구로 지낸 지 벌써 7년째. 쾌활하고 똑똑하고 예쁘기까지 한 제니는 모두에게 인기가 많았다. 나 역시 제니를 쭉 좋아해 왔고...<br />오늘은 기필코 제니에게 고백을 할 거다 며칠 전 이름을 새긴 커플링도 준비해 두었다<br /><br />그런데... 제니는 또 별을 보러 간 것 같다. 설마 이런 나의 낌새를 알아채고 피하는 건 아닐까?<br /><br />사실 제니에게 나는 부족하기 그지없다.<br />&quot;까톡&quot;<br /><br />&quot;존 지금 빨리와줘!!!&quot;<br /><br />Jenny, who I got to know from the astronomy club at University.<br />We've been friends for seven years already. Jenny, who was cheerful, smart, and pretty, was popular with everyone.<br />I've liked her all along, too.<br />Today, I will definitely confess to Jenny. I also prepared a couple ring with a name engraved a few day ago.<br />But...Jenny seems to have gone to see the stars again.<br />Don't tell me she's avoiding me. To be honest... I'm not good enough for Jenny.<br />&quot;Ka Talk&quot;<br />&quot;John! Please come here now!&quot;</p><h2>예약 안내</h2><p>예약 상시 오픈 · 오픈 시각 없음</p><p><a href="https://route-sw.com/" rel="noopener">매장 공식 예약 페이지</a> · <a href="https://route-sw.com/theme/info/" rel="noopener">테마 정보 출처</a></p><p>별점과 후기는 방또 이용자가 작성한 내용이며 매장 공식 정보와 구분됩니다. 실제 가격·운영 여부는 매장 공식 페이지를 확인해 주세요.</p><p><a href="/region/suwon">수원 방탈출 더 보기</a> · <a href="/genre/drama">드라마·감성 방탈출</a> · <a href="/">다른 방탈출 테마 보기</a></p></main></div>
     <div id="boot-loading" role="progressbar" aria-label="방또 불러오는 중">
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-482f1ab40a3ff88d58d2d18672902de9.js" defer></script>
+  <script src="/_expo/static/js/web/entry-fb23314b90739e5ec675e541f43672ef.js" defer></script>
 </body>
 </html>

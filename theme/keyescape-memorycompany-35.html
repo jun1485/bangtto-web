@@ -25,7 +25,7 @@
     <!-- 홈 화면에 추가한 웹 앱 설정, 아이폰 웹 알림은 홈 화면 앱에서만 동작 -->
     <link rel="manifest" href="/manifest.json" />
     <!-- 첫 로딩 화면 시작 그림을 앱 JS 보다 먼저 받음 -->
-    <link rel="preload" as="image" href="/startup/splash.jpg?v=20261104" fetchpriority="high" />
+    <link rel="preload" as="image" href="/startup/splash.jpg?v=20261104" fetchpriority="high" media="(display-mode: standalone)" />
     <!-- 안드로이드는 앱 설치 대신 홈 화면 바로가기로 추가 -->
     <script>
       if (/Android/i.test(navigator.userAgent)) document.querySelector('link[rel="manifest"]').href = '/manifest-android.json';
@@ -118,8 +118,7 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading,
-      #root:has(> main) ~ #boot-loading {
+      #root:empty ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -178,7 +177,8 @@
     </style>
     <!-- 앱 글꼴 Pretendard, 화면에 쓰인 글자 묶음만 받음 -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" /></noscript>
     <!-- 웹 방문 통계 Google 애널리틱스 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-150RKF7VH9"></script>
     <script>
@@ -209,11 +209,11 @@
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
-    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 전국 방탈출 검색·후기·예약 오픈 알림</p><h1>FILM BY STEVE</h1><img class="seo-poster" src="https://wsrv.nl/?url=https%3A%2F%2Fd1kqa23lh2nxjx.cloudfront.net%2Ffile%2Ftheme_info%2FSTEVE__sizedown.png&amp;w=1080&amp;we&amp;output=jpg&amp;q=82" alt="FILM BY STEVE 포스터" width="300" height="420" loading="lazy" /><p>강남 · <a href="/store/keyescape-memorycompany">키이스케이프 메모리컴퍼니</a> · 잠입</p><ul><li>80분</li><li>난이도 3.5/5</li><li>가격 2인 70,000원 · 3인 99,000원</li></ul><p>주소 서울 강남구 봉은사로2길 7 지하1층</p><p>ºName_Steve Cooper<br />ºAge_29 years old<br />ºGender_Male<br />ºCustomer classification_Tour Program Applicants<br /><br />º투어 프로그램 예약 정보<br />1) 방문 예정 인원 : 신청자 스티브 본인 외 일행들<br />2) 필수 방문 희망 장소 : VIP 기억 금고<br /><br />º스티브의 한 마디<br />메모리 컴퍼니 투어 프로그램을 꼭 체험해 보고 싶습니다.<br />프로그램을 신청한 이유요? 프랄로스키가 하라고 해서...<br />아, 아니! 그게 아니고!<br />어..메모리 컴퍼니가 되게 보안이 훌륭하다고 들었거든요.<br />그래서 얼마나 훌륭한지 직접 보고 싶어서요.<br /><br />아, 근데 투어 신청하면 VIP 기억 금고도 보여주시는 거..맞죠?</p><h2>후기 2개 · 평균 ★5</h2><ul><li>★5 · 2023-03-14 · 필름바이 시리즈는 내 인생테마 시리즈 에디도 졸잼이었는데 스티브는 더 꿀잼! 테마 처음 나왔을쯤 했었는데 그 때 진짜 재밌는 연출 하나 있었는데 지금은 사라졌다고 해서 아쉽 ㅜ</li><li>★5 · 2023-03-14 · 운좋게 필름 바이 에디랑 연방으로 했는데 너무 재밌었다 메모리컴퍼니 최고</li></ul><p><a href="/region/gangnam">강남 방탈출 더 보기</a> · <a href="/genre/infiltration">잠입·탈옥 방탈출</a> · <a href="/">다른 방탈출 테마 보기</a></p></main></div>
+    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 전국 방탈출 검색·후기·예약 오픈 알림</p><h1>FILM BY STEVE</h1><img class="seo-poster" src="https://wsrv.nl/?url=https%3A%2F%2Fd1kqa23lh2nxjx.cloudfront.net%2Ffile%2Ftheme_info%2FSTEVE__sizedown.png&amp;w=1080&amp;we&amp;output=jpg&amp;q=82" alt="FILM BY STEVE 포스터" width="300" height="420" fetchpriority="high" /><p>강남 · <a href="/store/keyescape-memorycompany">키이스케이프 메모리컴퍼니</a> · 잠입</p><ul><li>80분</li><li>난이도 3.5/5</li><li>가격 2인 70,000원 · 3인 99,000원</li></ul><p>주소 서울 강남구 봉은사로2길 7 지하1층</p><h2>매장 공식 테마 소개</h2><p>ºName_Steve Cooper<br />ºAge_29 years old<br />ºGender_Male<br />ºCustomer classification_Tour Program Applicants<br /><br />º투어 프로그램 예약 정보<br />1) 방문 예정 인원 : 신청자 스티브 본인 외 일행들<br />2) 필수 방문 희망 장소 : VIP 기억 금고<br /><br />º스티브의 한 마디<br />메모리 컴퍼니 투어 프로그램을 꼭 체험해 보고 싶습니다.<br />프로그램을 신청한 이유요? 프랄로스키가 하라고 해서...<br />아, 아니! 그게 아니고!<br />어..메모리 컴퍼니가 되게 보안이 훌륭하다고 들었거든요.<br />그래서 얼마나 훌륭한지 직접 보고 싶어서요.<br /><br />아, 근데 투어 신청하면 VIP 기억 금고도 보여주시는 거..맞죠?</p><h2>예약 안내</h2><p>매일 10:30에 6일 뒤 날짜 오픈</p><p><a href="https://www.keyescape.com/reservation1.php?zizum_num=18&amp;theme_num=58&amp;theme_info_num=35" rel="noopener">매장 공식 예약 페이지</a> · <a href="https://www.keyescape.com/works.php" rel="noopener">테마 정보 출처</a></p><h2>후기 2개 · 평균 ★5</h2><ul><li>★5 · 2023-03-14 · 필름바이 시리즈는 내 인생테마 시리즈 에디도 졸잼이었는데 스티브는 더 꿀잼! 테마 처음 나왔을쯤 했었는데 그 때 진짜 재밌는 연출 하나 있었는데 지금은 사라졌다고 해서 아쉽 ㅜ</li><li>★5 · 2023-03-14 · 운좋게 필름 바이 에디랑 연방으로 했는데 너무 재밌었다 메모리컴퍼니 최고</li></ul><p>별점과 후기는 방또 이용자가 작성한 내용이며 매장 공식 정보와 구분됩니다. 실제 가격·운영 여부는 매장 공식 페이지를 확인해 주세요.</p><p><a href="/region/gangnam">강남 방탈출 더 보기</a> · <a href="/genre/infiltration">잠입·탈옥 방탈출</a> · <a href="/">다른 방탈출 테마 보기</a></p></main></div>
     <div id="boot-loading" role="progressbar" aria-label="방또 불러오는 중">
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-482f1ab40a3ff88d58d2d18672902de9.js" defer></script>
+  <script src="/_expo/static/js/web/entry-fb23314b90739e5ec675e541f43672ef.js" defer></script>
 </body>
 </html>

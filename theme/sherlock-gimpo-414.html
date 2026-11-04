@@ -25,7 +25,7 @@
     <!-- 홈 화면에 추가한 웹 앱 설정, 아이폰 웹 알림은 홈 화면 앱에서만 동작 -->
     <link rel="manifest" href="/manifest.json" />
     <!-- 첫 로딩 화면 시작 그림을 앱 JS 보다 먼저 받음 -->
-    <link rel="preload" as="image" href="/startup/splash.jpg?v=20261104" fetchpriority="high" />
+    <link rel="preload" as="image" href="/startup/splash.jpg?v=20261104" fetchpriority="high" media="(display-mode: standalone)" />
     <!-- 안드로이드는 앱 설치 대신 홈 화면 바로가기로 추가 -->
     <script>
       if (/Android/i.test(navigator.userAgent)) document.querySelector('link[rel="manifest"]').href = '/manifest-android.json';
@@ -118,8 +118,7 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading,
-      #root:has(> main) ~ #boot-loading {
+      #root:empty ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -178,7 +177,8 @@
     </style>
     <!-- 앱 글꼴 Pretendard, 화면에 쓰인 글자 묶음만 받음 -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" /></noscript>
     <!-- 웹 방문 통계 Google 애널리틱스 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-150RKF7VH9"></script>
     <script>
@@ -209,11 +209,11 @@
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
-    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 전국 방탈출 검색·후기·예약 오픈 알림</p><h1>락인블랙_13번째 시간을 털어라</h1><img class="seo-poster" src="https://wsrv.nl/?url=https%3A%2F%2Fsherlock-holmes.co.kr%2Fattach%2Ftheme%2F17239530381.jpg&amp;w=1080&amp;we&amp;output=jpg&amp;q=82" alt="락인블랙_13번째 시간을 털어라 포스터" width="300" height="420" loading="lazy" /><p>김포 · <a href="/store/sherlock-gimpo">셜록홈즈 김포구래점</a> · 미션,문제방</p><ul><li>인원 2~6명</li><li>60분</li><li>난이도 3/5</li><li>공포도 0/5</li><li>가격 2인 42,000원 · 3인 63,000원 · 4인 84,000원 · 5인 105,000원 · 6인 126,000원</li></ul><p>주소 경기 김포시 김포한강9로 77 연세프라자 3층 303호</p><p>&quot;진짜 귀한 보물이 뭐냐고?<br />블루하트? 컬리넌? 이니그마?<br />진짜 귀한보물은 사람들이 그 존재자체도 모른다는 거야.<br />대부분 이전 문명의 유물, 그들이 신의 섭리에 거슬러<br />문명자체를 멸망하게 만든 초자연적인 보물이 있다는거지.<br />우린 마침내 사하라 한가운데에서 Bastian Black의 위치를 찾았네.<br />거긴 하루 한번의 시간을 돌릴수 있는 보물<br />13번째 시간을 모셔놓은 곳이지.&quot;<br />&quot;얘기가 좀 길었군<br />그곳의 보안장치를 해제해 줄 암호 해독 전문가가 필요하네.<br />자네 말고는 적임자를 찾을수 없어.<br />이렇게 부탁하겠네. 내 사례는 섭섭치 않게 챙겨주지.&quot;</p><p><a href="/region/gimpo">김포 방탈출 더 보기</a> · <a href="/genre/mission">게임·미션 방탈출</a> · <a href="/">다른 방탈출 테마 보기</a></p></main></div>
+    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 전국 방탈출 검색·후기·예약 오픈 알림</p><h1>락인블랙_13번째 시간을 털어라</h1><img class="seo-poster" src="https://wsrv.nl/?url=https%3A%2F%2Fsherlock-holmes.co.kr%2Fattach%2Ftheme%2F17239530381.jpg&amp;w=1080&amp;we&amp;output=jpg&amp;q=82" alt="락인블랙_13번째 시간을 털어라 포스터" width="300" height="420" fetchpriority="high" /><p>김포 · <a href="/store/sherlock-gimpo">셜록홈즈 김포구래점</a> · 미션,문제방</p><ul><li>예약 가능 인원 2~6명</li><li>60분</li><li>난이도 3/5</li><li>공포도 0/5</li><li>가격 2인 42,000원 · 3인 63,000원 · 4인 84,000원 · 5인 105,000원 · 6인 126,000원</li></ul><p>주소 경기 김포시 김포한강9로 77 연세프라자 3층 303호</p><h2>매장 공식 테마 소개</h2><p>&quot;진짜 귀한 보물이 뭐냐고?<br />블루하트? 컬리넌? 이니그마?<br />진짜 귀한보물은 사람들이 그 존재자체도 모른다는 거야.<br />대부분 이전 문명의 유물, 그들이 신의 섭리에 거슬러<br />문명자체를 멸망하게 만든 초자연적인 보물이 있다는거지.<br />우린 마침내 사하라 한가운데에서 Bastian Black의 위치를 찾았네.<br />거긴 하루 한번의 시간을 돌릴수 있는 보물<br />13번째 시간을 모셔놓은 곳이지.&quot;<br />&quot;얘기가 좀 길었군<br />그곳의 보안장치를 해제해 줄 암호 해독 전문가가 필요하네.<br />자네 말고는 적임자를 찾을수 없어.<br />이렇게 부탁하겠네. 내 사례는 섭섭치 않게 챙겨주지.&quot;</p><h2>예약 안내</h2><p>1년 뒤까지 예약 가능 · 오픈 시각 없음</p><p><a href="https://sherlock-holmes.co.kr/reservation/index.php?sido=9&amp;bno=102#reservation" rel="noopener">매장 공식 예약 페이지</a> · <a href="https://sherlock-holmes.co.kr/reservation/index.php" rel="noopener">테마 정보 출처</a></p><p>별점과 후기는 방또 이용자가 작성한 내용이며 매장 공식 정보와 구분됩니다. 실제 가격·운영 여부는 매장 공식 페이지를 확인해 주세요.</p><p><a href="/region/gimpo">김포 방탈출 더 보기</a> · <a href="/genre/mission">게임·미션 방탈출</a> · <a href="/">다른 방탈출 테마 보기</a></p></main></div>
     <div id="boot-loading" role="progressbar" aria-label="방또 불러오는 중">
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-482f1ab40a3ff88d58d2d18672902de9.js" defer></script>
+  <script src="/_expo/static/js/web/entry-fb23314b90739e5ec675e541f43672ef.js" defer></script>
 </body>
 </html>
