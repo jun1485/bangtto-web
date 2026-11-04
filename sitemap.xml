@@ -19,8 +19,8 @@
   <url><loc>https://bangtto.com/region/ansan</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/incheon-guwol</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/pyeongtaek</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/region/yongin</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/bundang</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/region/yongin</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/nowon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/jeju</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/anyang</loc><changefreq>weekly</changefreq></url>
@@ -1828,4 +1828,10 @@
   <url><loc>https://bangtto.com/theme/zescape-ulsan-19</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://bangtto.com/theme/zescape-ulsan-20</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://bangtto.com/theme/zescape-ulsan-21</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://bangtto.com/theme/roomlescape-sillim-naver-3191714</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://bangtto.com/theme/roomlescape-sillim-naver-3216438</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://bangtto.com/theme/nextedition-kondae2-naver-5585572</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://bangtto.com/theme/nextedition-kondae2-naver-5585585</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://bangtto.com/theme/nextedition-kondae1-naver-5585784</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://bangtto.com/theme/nextedition-bundang-naver-5756103</loc><lastmod>2026-11-04</lastmod></url>
 </urlset>
