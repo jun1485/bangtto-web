@@ -27,7 +27,7 @@
     <!-- 홈 화면에 추가한 웹 앱 설정, 아이폰 웹 알림은 홈 화면 앱에서만 동작 -->
     <link rel="manifest" href="/manifest.json" />
     <!-- 첫 로딩 화면 시작 그림을 앱 JS 보다 먼저 받음 -->
-    <link rel="preload" as="image" href="/startup/splash.jpg" fetchpriority="high" />
+    <link rel="preload" as="image" href="/startup/splash.jpg?v=20261104" fetchpriority="high" />
     <!-- 안드로이드는 앱 설치 대신 홈 화면 바로가기로 추가 -->
     <script>
       if (/Android/i.test(navigator.userAgent)) document.querySelector('link[rel="manifest"]').href = '/manifest-android.json';
@@ -131,7 +131,7 @@
         align-items: center;
         justify-content: flex-end;
         padding-bottom: 16vh;
-        background: url(/startup/splash.jpg) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
+        background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
       }
       #boot-loading .ring {
@@ -165,7 +165,7 @@
         position: fixed;
         inset: 0;
         z-index: 2147483647;
-        background: #c1e3fc url(/startup/splash.jpg) center / cover no-repeat;
+        background: #c1e3fc url(/startup/splash.jpg?v=20261104) center / cover no-repeat;
         pointer-events: none;
         transition: opacity 0.35s;
       }
