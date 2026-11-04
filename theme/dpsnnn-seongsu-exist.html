@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/dpsnnn-seongsu-exist" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/dpsnnn-seongsu-exist" />
-    <script data-seo-url="https://bangtto.com/theme/dpsnnn-seongsu-exist" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"존재할 자격 (단편선 성수)","description":"누구에게 물어도 그는 별 볼 일 없는 사람이었지만, 그 자신은 제법 만족스럽게 살았다.\n아주 중요한 어떤 회사의 청소부. 그는 작은 사람이었지만 큰 것의 일부로서의 의미는 작지 않았으므로. 하지만 종종 그는 자신의 마음속에서 어떠한 감정의 흔적을 발견하곤 했다. 말하자면 그것은 발자국과 닮아있었다. 감히 직시할 수 없는, 인지의 테두리에 거주하는 무언가의 증거. 그는 발자국의 주인을 마주하는 것을 꺼렸으나, 운명은 미룰 수 있는 성질의 것이 아니었다. 창대한 그 날의 시작은 태연할 만큼 미미하였다.","url":"https://bangtto.com/theme/dpsnnn-seongsu-exist","image":"https://wsrv.nl/?url=https%3A%2F%2Fcdn.imweb.me%2Fthumbnail%2F20240425%2F4b91bd6f19d9d.png&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"서울 성동구 아차산로 122 지하 1층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.5438718421645,"longitude":127.057478873633},"aggregateRating":{"@type":"AggregateRating","ratingValue":5,"reviewCount":1,"bestRating":5,"worstRating":0.5}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"성수 방탈출","item":"https://bangtto.com/region/seongsu"},{"@type":"ListItem","position":3,"name":"단편선 성수","item":"https://bangtto.com/store/dpsnnn-seongsu"},{"@type":"ListItem","position":4,"name":"존재할 자격","item":"https://bangtto.com/theme/dpsnnn-seongsu-exist"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/dpsnnn-seongsu-exist" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"존재할 자격 (단편선 성수)","description":"성수 단편선 성수의 드라마·감성 테마 존재할 자격. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/dpsnnn-seongsu-exist","image":"https://wsrv.nl/?url=https%3A%2F%2Fcdn.imweb.me%2Fthumbnail%2F20240425%2F4b91bd6f19d9d.png&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/dpsnnn-seongsu#store","name":"단편선 성수","url":"https://bangtto.com/store/dpsnnn-seongsu"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":1,"maxValue":6},"timeRequired":"PT80M","aggregateRating":{"@type":"AggregateRating","ratingValue":5,"reviewCount":1,"bestRating":5,"worstRating":0.5}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"성수 방탈출","item":"https://bangtto.com/region/seongsu"},{"@type":"ListItem","position":3,"name":"단편선 성수","item":"https://bangtto.com/store/dpsnnn-seongsu"},{"@type":"ListItem","position":4,"name":"존재할 자격","item":"https://bangtto.com/theme/dpsnnn-seongsu-exist"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

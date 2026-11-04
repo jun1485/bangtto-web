@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/jigu-hongdae-lastcity-19" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/jigu-hongdae-lastcity-19" />
-    <script data-seo-url="https://bangtto.com/theme/jigu-hongdae-lastcity-19" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"라스트코어 (지구별 방탈출 홍대라스트시티점)","description":"런던이 그들에게 정복당한 이후로 삶은 더 팍팍해졌다 그래도 오늘은 먹고 살 만큼은 벌었군. 여느 때와 다름없이 가게 문을 닫고 자물쇠를 잠그는 순간 내 주머니 안에 손을 넣더니 저 멀리 도망가는 꼬마 아이. 부주의했다. 싸늘한 밤공기에 씁쓸한 미소를 지으며 텅 빈 주머니에 손을 넣는데, 지폐와 동전들이 그대로 남아있다. 깜짝 놀라 손을 빼 보니 아무렇게나 접힌 처음 보는 갈색 냅킨이 끼워져있다. 냅킨 위 황급히 휘갈겨 쓴 듯한 메모, 'Today, 8PM' 단서는 냅킨에 인쇄된 바의 로고뿐 영문도 모른 채 어느새 처음 보는 바에 도착해 문을 연다","url":"https://bangtto.com/theme/jigu-hongdae-lastcity-19","image":"https://wsrv.nl/?url=https%3A%2F%2Fxn--2e0b040a4xj.com%2Fstorage%2Ftheme%2F2024_08%2F12%2FsMcnvmowtWKavYYLrJsyXlQqD6iRBr9aIcZyUUYH.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"서울 마포구 홍익로 10 (서교푸르지오) 상가건물 지하2층 지구별 방탈출","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.55398906,"longitude":126.92332994},"aggregateRating":{"@type":"AggregateRating","ratingValue":3.8,"reviewCount":2,"bestRating":5,"worstRating":0.5}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"홍대 방탈출","item":"https://bangtto.com/region/hongdae"},{"@type":"ListItem","position":3,"name":"지구별 방탈출 홍대라스트시티점","item":"https://bangtto.com/store/jigu-hongdae-lastcity"},{"@type":"ListItem","position":4,"name":"라스트코어","item":"https://bangtto.com/theme/jigu-hongdae-lastcity-19"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/jigu-hongdae-lastcity-19" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"라스트코어 (지구별 방탈출 홍대라스트시티점)","description":"홍대 지구별 방탈출 홍대라스트시티점의 SF 테마 라스트코어. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/jigu-hongdae-lastcity-19","image":"https://wsrv.nl/?url=https%3A%2F%2Fxn--2e0b040a4xj.com%2Fstorage%2Ftheme%2F2024_08%2F12%2FsMcnvmowtWKavYYLrJsyXlQqD6iRBr9aIcZyUUYH.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/jigu-hongdae-lastcity#store","name":"지구별 방탈출 홍대라스트시티점","url":"https://bangtto.com/store/jigu-hongdae-lastcity"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT90M","aggregateRating":{"@type":"AggregateRating","ratingValue":3.8,"reviewCount":2,"bestRating":5,"worstRating":0.5}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"홍대 방탈출","item":"https://bangtto.com/region/hongdae"},{"@type":"ListItem","position":3,"name":"지구별 방탈출 홍대라스트시티점","item":"https://bangtto.com/store/jigu-hongdae-lastcity"},{"@type":"ListItem","position":4,"name":"라스트코어","item":"https://bangtto.com/theme/jigu-hongdae-lastcity-19"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

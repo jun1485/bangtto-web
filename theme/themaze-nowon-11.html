@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/themaze-nowon-11" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/themaze-nowon-11" />
-    <script data-seo-url="https://bangtto.com/theme/themaze-nowon-11" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"Lost the Prince (더메이즈 노원점)","description":"★초보자 추천 테마★\n\n지긋지긋 한 일상을 마친 날 기다리는 건 시궁창과도 같은 집이다.\n\n누구나 그렇듯 나는 매일 상상한다.\n\n다음 생엔 돈 많고 멋진 귀족 집안에 태어나길!\n\n나의 아버지는 누군지 모른다.\n\n어머니는 나를 남겨두고 일찍 돌아가셨다.\n\n그녀는 내가 아주 귀한 사람이라고 했는데, 내 꼴을 보니\n\n그저 나를 위로하기 위한 어머니의 거짓말이었나보다.\n\n부숴질 것 같은 문을 열자, 식탁 위에 못보던 게 놓여 있다.\n\n“당신은 거지가 아닌 고귀한 혈통입니다.\n\n어머니께서 남겨 놓으신 비밀을 따라 가다보면\n\n진정한 신분을 확인 할 수 있습니다.\"\n\n뜬금없이 무슨 소리지? 정말 나에게 온 편지가 맞는 걸까?\n\n고민할 거 있나, 더 이상 잃을 것도 없는 삶이기에\n\n속는 셈치고 편지를 한 번 믿어 보기로 한다!","url":"https://bangtto.com/theme/themaze-nowon-11","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dthemaze-nowon-11%26v%3Dhttp%253A%252F%252Fthemazenw.co.kr%252Fdata%252Froom%252F11.png&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"서울 노원구 상계동 357-8 6층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.6571550355862,"longitude":127.06325094089}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"노원 방탈출","item":"https://bangtto.com/region/nowon"},{"@type":"ListItem","position":3,"name":"더메이즈 노원점","item":"https://bangtto.com/store/themaze-nowon"},{"@type":"ListItem","position":4,"name":"Lost the Prince","item":"https://bangtto.com/theme/themaze-nowon-11"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/themaze-nowon-11" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"Lost the Prince (더메이즈 노원점)","description":"노원 더메이즈 노원점의 판타지 테마 Lost the Prince. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/themaze-nowon-11","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dthemaze-nowon-11%26v%3Dhttp%253A%252F%252Fthemazenw.co.kr%252Fdata%252Froom%252F11.png&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/themaze-nowon#store","name":"더메이즈 노원점","url":"https://bangtto.com/store/themaze-nowon"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"노원 방탈출","item":"https://bangtto.com/region/nowon"},{"@type":"ListItem","position":3,"name":"더메이즈 노원점","item":"https://bangtto.com/store/themaze-nowon"},{"@type":"ListItem","position":4,"name":"Lost the Prince","item":"https://bangtto.com/theme/themaze-nowon-11"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

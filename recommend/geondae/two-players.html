@@ -10,7 +10,7 @@
     <title>건대 2인 가능 방탈출 63개 비교 | 방또</title>
     <!-- 검색 결과·공유 미리보기 기본 정보 -->
     <meta data-rh="true" name="description" content="건대 매장 18곳의 2인 가능 방탈출 63개를 가격·시간·후기로 비교하세요. 매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요." />
-    <meta data-rh="true" name="robots" content="index,follow,max-image-preview:large" />
+    <meta data-rh="true" name="robots" content="noindex,follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="방또" />
     <meta data-rh="true" property="og:title" content="건대 2인 가능 방탈출 63개 비교 | 방또" />
@@ -120,7 +120,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -132,6 +133,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -198,7 +217,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/recommend/geondae/two-players" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/recommend/geondae/two-players" />
-    <script data-seo-url="https://bangtto.com/recommend/geondae/two-players" type="application/ld+json">[{"@context":"https://schema.org","@type":"ItemList","name":"건대 2인 가능 방탈출","url":"https://bangtto.com/recommend/geondae/two-players","numberOfItems":63,"itemListElement":[{"@type":"ListItem","position":1,"name":"세렌디피티(SERENDIPITY) (넥스트에디션 건대 보네르관)","url":"https://bangtto.com/theme/nextedition-kondae-bonheur-41"},{"@type":"ListItem","position":2,"name":"바야흐로,여름이었다. (드림이스케이프 건대점)","url":"https://bangtto.com/theme/dreamescape-kondae-summer"},{"@type":"ListItem","position":3,"name":"빛을 구해줘 (넥스트에디션 건대2호점)","url":"https://bangtto.com/theme/nextedition-kondae2-68"},{"@type":"ListItem","position":4,"name":"생존자 (넥스트에디션 건대2호점)","url":"https://bangtto.com/theme/nextedition-kondae2-327"},{"@type":"ListItem","position":5,"name":"이층 복도 끝 화장실 (솔버 건대2호점)","url":"https://bangtto.com/theme/solver-kondae2-b"},{"@type":"ListItem","position":6,"name":"커튼콜 (넥스트에디션 건대2호점)","url":"https://bangtto.com/theme/nextedition-kondae2-70"},{"@type":"ListItem","position":7,"name":"ALBA (포인트나인 건대점)","url":"https://bangtto.com/theme/pointnine-kondae-34"},{"@type":"ListItem","position":8,"name":"ALLTHEBOX PARADISE (드림이스케이프 건대점)","url":"https://bangtto.com/theme/dreamescape-kondae-allthebox"},{"@type":"ListItem","position":9,"name":"D-Day (마스터키 건대점)","url":"https://bangtto.com/theme/masterkey-kondae-154"},{"@type":"ListItem","position":10,"name":"DELIVER (마스터키 건대점)","url":"https://bangtto.com/theme/masterkey-kondae-155"},{"@type":"ListItem","position":11,"name":"fl[ae]sh (황금열쇠 건대점)","url":"https://bangtto.com/theme/goldenkey-kondae-7"},{"@type":"ListItem","position":12,"name":"Jack in the Show (포인트나인 건대점)","url":"https://bangtto.com/theme/pointnine-kondae-32"},{"@type":"ListItem","position":13,"name":"LUCID DREAM (자각몽) (솔버 건대1호점)","url":"https://bangtto.com/theme/solver-kondae1-a"},{"@type":"ListItem","position":14,"name":"Make-up (넥스트에디션 건대2호점)","url":"https://bangtto.com/theme/nextedition-kondae2-66"},{"@type":"ListItem","position":15,"name":"NOW HERE (황금열쇠 건대점)","url":"https://bangtto.com/theme/goldenkey-kondae-23"},{"@type":"ListItem","position":16,"name":"RETURN (포인트나인 건대점)","url":"https://bangtto.com/theme/pointnine-kondae-33"},{"@type":"ListItem","position":17,"name":"(나쁜) 아기 돼지 삼형제 (더메이즈 건대점)","url":"https://bangtto.com/theme/themaze-kondae-14"},{"@type":"ListItem","position":18,"name":"501동 사람들 (엑스케이프 건대 1호점)","url":"https://bangtto.com/theme/xcape-kondae1-df5d1a81"},{"@type":"ListItem","position":19,"name":"개수작 (플레이더월드 건대점)","url":"https://bangtto.com/theme/playtheworld-kondae-35"},{"@type":"ListItem","position":20,"name":"교생실습 (마스터키 건대점)","url":"https://bangtto.com/theme/masterkey-kondae-212"},{"@type":"ListItem","position":21,"name":"그날 (플레이33 건대점)","url":"https://bangtto.com/theme/play33-kondae-46"},{"@type":"ListItem","position":22,"name":"그림가문 (머더파커 건대2호점)","url":"https://bangtto.com/theme/murderparker-kondae2-a"},{"@type":"ListItem","position":23,"name":"다이얼 (플레이33 건대점)","url":"https://bangtto.com/theme/play33-kondae-45"},{"@type":"ListItem","position":24,"name":"동화나라 수비대 (넥스트에디션 건대2호점)","url":"https://bangtto.com/theme/nextedition-kondae2-67"},{"@type":"ListItem","position":25,"name":"레드림 컴퍼니 (비밀의화원 건대점)","url":"https://bangtto.com/theme/secretgarden-kondae-32"},{"@type":"ListItem","position":26,"name":"마지막 문 (더메이즈 건대점)","url":"https://bangtto.com/theme/themaze-kondae-18"},{"@type":"ListItem","position":27,"name":"목격자 (플레이33 건대점)","url":"https://bangtto.com/theme/play33-kondae-47"},{"@type":"ListItem","position":28,"name":"무채색 인간 (솔버 건대2호점)","url":"https://bangtto.com/theme/solver-kondae2-c"},{"@type":"ListItem","position":29,"name":"미로(me路) (머더파커 건대2호점)","url":"https://bangtto.com/theme/murderparker-kondae2-c"},{"@type":"ListItem","position":30,"name":"뱀파이어 헌터 (플레이더월드 건대점)","url":"https://bangtto.com/theme/playtheworld-kondae-34"},{"@type":"ListItem","position":31,"name":"베다바리 (엑스크라임 건대 2호점)","url":"https://bangtto.com/theme/xcape-kondae2-670f6940"},{"@type":"ListItem","position":32,"name":"不眠(불면) (더메이즈 건대점)","url":"https://bangtto.com/theme/themaze-kondae-15"},{"@type":"ListItem","position":33,"name":"비밀의 선물 (비밀의화원 건대점)","url":"https://bangtto.com/theme/secretgarden-kondae-97"},{"@type":"ListItem","position":34,"name":"사악한 악마와 달콤한 공장 (플레이더월드 건대점)","url":"https://bangtto.com/theme/playtheworld-kondae-33"},{"@type":"ListItem","position":35,"name":"선고 (플레이더월드 건대점)","url":"https://bangtto.com/theme/playtheworld-kondae-32"},{"@type":"ListItem","position":36,"name":"숨바꼭질 (엑스케이프 건대 1호점)","url":"https://bangtto.com/theme/xcape-kondae1-de272446"},{"@type":"ListItem","position":37,"name":"썸 (넥스트에디션 건대1호점)","url":"https://bangtto.com/theme/nextedition-kondae1-60"},{"@type":"ListItem","position":38,"name":"안녕 (비밀의화원 건대점)","url":"https://bangtto.com/theme/secretgarden-kondae-96"},{"@type":"ListItem","position":39,"name":"오르골 (ORGEL) (제로월드 다이브 건대점)","url":"https://bangtto.com/theme/zeroworld-dive-kondae-38"},{"@type":"ListItem","position":40,"name":"우끼끼 (비밀의화원 건대점)","url":"https://bangtto.com/theme/secretgarden-kondae-34"},{"@type":"ListItem","position":41,"name":"우리의 전 사랑 (비밀의화원 건대점)","url":"https://bangtto.com/theme/secretgarden-kondae-31"},{"@type":"ListItem","position":42,"name":"운필귀정 (엑스크라임 건대 2호점)","url":"https://bangtto.com/theme/xcape-kondae2-6909dc42"},{"@type":"ListItem","position":43,"name":"이도공간 (엑스케이프 건대 1호점)","url":"https://bangtto.com/theme/xcape-kondae1-1fdeef46"},{"@type":"ListItem","position":44,"name":"이름없는집 (뉴케이스 건대 3호점)","url":"https://bangtto.com/theme/xcape-kondae3-1ec6a549"},{"@type":"ListItem","position":45,"name":"이불 밖은 위험해 (넥스트에디션 건대1호점)","url":"https://bangtto.com/theme/nextedition-kondae1-64"},{"@type":"ListItem","position":46,"name":"인지상점 (뉴케이스 건대 3호점)","url":"https://bangtto.com/theme/xcape-kondae3-2d73b210"},{"@type":"ListItem","position":47,"name":"인터뷰 (INTERVIEW) (제로월드 다이브 건대점)","url":"https://bangtto.com/theme/zeroworld-dive-kondae-39"},{"@type":"ListItem","position":48,"name":"전지적 교수님 시점 (플레이더월드 건대점)","url":"https://bangtto.com/theme/playtheworld-kondae-36"},{"@type":"ListItem","position":49,"name":"짜불성설 (엑스케이프 건대 1호점)","url":"https://bangtto.com/theme/xcape-kondae1-83a9f88e"},{"@type":"ListItem","position":50,"name":"청림맨션 (엑스크라임 건대 2호점)","url":"https://bangtto.com/theme/xcape-kondae2-00da8395"},{"@type":"ListItem","position":51,"name":"침묵의 목격자 (뉴케이스 건대 3호점)","url":"https://bangtto.com/theme/xcape-kondae3-f21461ce"},{"@type":"ListItem","position":52,"name":"트룰리 (더메이즈 건대점)","url":"https://bangtto.com/theme/themaze-kondae-17"},{"@type":"ListItem","position":53,"name":"특수사건대응반 (머더파커 건대2호점)","url":"https://bangtto.com/theme/murderparker-kondae2-b"},{"@type":"ListItem","position":54,"name":"핑크슈즈 (비밀의화원 건대점)","url":"https://bangtto.com/theme/secretgarden-kondae-35"},{"@type":"ListItem","position":55,"name":"B아파트 13동 1313호 (넥스트에디션 건대1호점)","url":"https://bangtto.com/theme/nextedition-kondae1-63"},{"@type":"ListItem","position":56,"name":"COLD CASE (미제 사건) (솔버 건대1호점)","url":"https://bangtto.com/theme/solver-kondae1-b"},{"@type":"ListItem","position":57,"name":"Dear Marsy(마르시) (솔버 건대2호점)","url":"https://bangtto.com/theme/solver-kondae2-a"},{"@type":"ListItem","position":58,"name":"Dolphin (드림이스케이프 건대점)","url":"https://bangtto.com/theme/dreamescape-kondae-dolphin"},{"@type":"ListItem","position":59,"name":"MONSTER:10800 (넥스트에디션 건대1호점)","url":"https://bangtto.com/theme/nextedition-kondae1-61"},{"@type":"ListItem","position":60,"name":"SOUL CHASER - 실종 (넥스트에디션 건대1호점)","url":"https://bangtto.com/theme/nextedition-kondae1-114"},{"@type":"ListItem","position":61,"name":"THE CAGE (케이지) (솔버 건대1호점)","url":"https://bangtto.com/theme/solver-kondae1-c"},{"@type":"ListItem","position":62,"name":"TURN (더메이즈 건대점)","url":"https://bangtto.com/theme/themaze-kondae-16"},{"@type":"ListItem","position":63,"name":"V.E.T. (드림이스케이프 건대점)","url":"https://bangtto.com/theme/dreamescape-kondae-vet"}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"건대 방탈출","item":"https://bangtto.com/region/geondae"},{"@type":"ListItem","position":3,"name":"건대 2인 가능 방탈출","item":"https://bangtto.com/recommend/geondae/two-players"}]}]</script>
+    
   </head>
 
   <body>
@@ -208,6 +227,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -216,6 +236,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

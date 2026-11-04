@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/cubeescape-incheon-guwol-14" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/cubeescape-incheon-guwol-14" />
-    <script data-seo-url="https://bangtto.com/theme/cubeescape-incheon-guwol-14" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"타이타닉 (큐브이스케이프 인천구월점)","description":"1912년 4월 10일. 영국의 사우스햄프턴에서 타이타닉호가 출항했다. 에드워드 존 스미스 선장과 승무원, 승객을 합쳐 2,200여명이 배에 탑승했다.\n프랑스의 쉘부르와 아일랜드의 퀸스타운을 거쳐 미국의 뉴욕으로 향하다 4월 14일 23시 40분, 북대서양의 뉴펀들랜드로부터 남서쪽으로 640㎞ 떨어진 바다에서 빙산에 충돌한다.\n3등석 객실에 탑승 중이던 우리 일행은 굉음과 함께 잠에서 깼다. 본능적으로 타이타닉호에서 탈출해야 함을 직감한다. 객실의 문은 복도 쪽에 차기 시작한 물의 수압에 의해 열리지 않는다. 객실 상부로 어떻게든 올라가 밖으로 나갈 수 있는 길을 찾아야만 한다. 완전 침몰까지 우리에게 주어진 시간은 단 한 시간…..\n우리는 이대로 타이타닉호와 영원히 차디찬 얼음 바다 속으로 사라질 것인가!","url":"https://bangtto.com/theme/cubeescape-incheon-guwol-14","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dcubeescape-incheon-guwol-14%26v%3Dhttp%253A%252F%252Fincheon.cubeescape.co.kr%252Ftheme%252Fbasic_room2%252Fimg%252Frain%252Froom14.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"인천 남동구 구월동 1472-2 4층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.4441375480096,"longitude":126.702784613258}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"인천 구월 방탈출","item":"https://bangtto.com/region/incheon-guwol"},{"@type":"ListItem","position":3,"name":"큐브이스케이프 인천구월점","item":"https://bangtto.com/store/cubeescape-incheon-guwol"},{"@type":"ListItem","position":4,"name":"타이타닉","item":"https://bangtto.com/theme/cubeescape-incheon-guwol-14"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/cubeescape-incheon-guwol-14" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"타이타닉 (큐브이스케이프 인천구월점)","description":"인천 구월 큐브이스케이프 인천구월점의 어드벤쳐 테마 타이타닉. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/cubeescape-incheon-guwol-14","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dcubeescape-incheon-guwol-14%26v%3Dhttp%253A%252F%252Fincheon.cubeescape.co.kr%252Ftheme%252Fbasic_room2%252Fimg%252Frain%252Froom14.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/cubeescape-incheon-guwol#store","name":"큐브이스케이프 인천구월점","url":"https://bangtto.com/store/cubeescape-incheon-guwol"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"인천 구월 방탈출","item":"https://bangtto.com/region/incheon-guwol"},{"@type":"ListItem","position":3,"name":"큐브이스케이프 인천구월점","item":"https://bangtto.com/store/cubeescape-incheon-guwol"},{"@type":"ListItem","position":4,"name":"타이타닉","item":"https://bangtto.com/theme/cubeescape-incheon-guwol-14"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

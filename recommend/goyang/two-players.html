@@ -10,7 +10,7 @@
     <title>고양 2인 가능 방탈출 30개 비교 | 방또</title>
     <!-- 검색 결과·공유 미리보기 기본 정보 -->
     <meta data-rh="true" name="description" content="고양 매장 5곳의 2인 가능 방탈출 30개를 가격·시간·후기로 비교하세요. 매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요." />
-    <meta data-rh="true" name="robots" content="index,follow,max-image-preview:large" />
+    <meta data-rh="true" name="robots" content="noindex,follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="방또" />
     <meta data-rh="true" property="og:title" content="고양 2인 가능 방탈출 30개 비교 | 방또" />
@@ -120,7 +120,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -132,6 +133,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -198,7 +217,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/recommend/goyang/two-players" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/recommend/goyang/two-players" />
-    <script data-seo-url="https://bangtto.com/recommend/goyang/two-players" type="application/ld+json">[{"@context":"https://schema.org","@type":"ItemList","name":"고양 2인 가능 방탈출","url":"https://bangtto.com/recommend/goyang/two-players","numberOfItems":30,"itemListElement":[{"@type":"ListItem","position":1,"name":"군함도 (큐방탈출 일산 웨스턴돔점)","url":"https://bangtto.com/theme/qescape-ilsan-westerndom-1xh5mwdu"},{"@type":"ListItem","position":2,"name":"꿈꾸는 다락방 (큐방탈출 일산 웨스턴돔점)","url":"https://bangtto.com/theme/qescape-ilsan-westerndom-h12icgp3"},{"@type":"ListItem","position":3,"name":"나홀로 집에 (더도어즈이스케이프)","url":"https://bangtto.com/theme/thedoors-ilsan-jel90z3z"},{"@type":"ListItem","position":4,"name":"낭랑카페 (룸즈에이 일산 라페스타점)","url":"https://bangtto.com/theme/roomsa-ilsan-lafesta-209"},{"@type":"ListItem","position":5,"name":"대체 불가능한 인생 (더도어즈이스케이프)","url":"https://bangtto.com/theme/thedoors-ilsan-8f70sb9h"},{"@type":"ListItem","position":6,"name":"묘몽 (마스터키 화정점)","url":"https://bangtto.com/theme/masterkey-hwajeong-145"},{"@type":"ListItem","position":7,"name":"밀정 (큐방탈출 일산 웨스턴돔점)","url":"https://bangtto.com/theme/qescape-ilsan-westerndom-ox630s1j"},{"@type":"ListItem","position":8,"name":"반짝반짝 (룸즈에이 일산 웨스턴돔점)","url":"https://bangtto.com/theme/roomsa-ilsan-westerndom-204"},{"@type":"ListItem","position":9,"name":"뽀득뽀득 (룸즈에이 일산 웨스턴돔점)","url":"https://bangtto.com/theme/roomsa-ilsan-westerndom-203"},{"@type":"ListItem","position":10,"name":"사쿠라 하우스(19) (큐방탈출 일산 웨스턴돔점)","url":"https://bangtto.com/theme/qescape-ilsan-westerndom-96r2cx8g"},{"@type":"ListItem","position":11,"name":"서커스 (큐방탈출 일산 웨스턴돔점)","url":"https://bangtto.com/theme/qescape-ilsan-westerndom-2j0f91kt"},{"@type":"ListItem","position":12,"name":"소녀의 꿈(19) (큐방탈출 일산 웨스턴돔점)","url":"https://bangtto.com/theme/qescape-ilsan-westerndom-d4472eqc"},{"@type":"ListItem","position":13,"name":"시간여행자 (마스터키 화정점)","url":"https://bangtto.com/theme/masterkey-hwajeong-157"},{"@type":"ListItem","position":14,"name":"시크릿에이전트 (룸즈에이 일산 웨스턴돔점)","url":"https://bangtto.com/theme/roomsa-ilsan-westerndom-205"},{"@type":"ListItem","position":15,"name":"싸움의기술:zero (마스터키 화정점)","url":"https://bangtto.com/theme/masterkey-hwajeong-137"},{"@type":"ListItem","position":16,"name":"안개꽃 (룸즈에이 일산 라페스타점)","url":"https://bangtto.com/theme/roomsa-ilsan-lafesta-211"},{"@type":"ListItem","position":17,"name":"영웅을 찾아서 (더도어즈이스케이프)","url":"https://bangtto.com/theme/thedoors-ilsan-s23epw5p"},{"@type":"ListItem","position":18,"name":"요코하마 차이나타운 (큐방탈출 일산 웨스턴돔점)","url":"https://bangtto.com/theme/qescape-ilsan-westerndom-oinq9i7z"},{"@type":"ListItem","position":19,"name":"위대하게 은밀하게 (더도어즈이스케이프)","url":"https://bangtto.com/theme/thedoors-ilsan-96r2cx8g"},{"@type":"ListItem","position":20,"name":"이상한 돈가스 (룸즈에이 일산 웨스턴돔점)","url":"https://bangtto.com/theme/roomsa-ilsan-westerndom-206"},{"@type":"ListItem","position":21,"name":"타임키퍼 (룸즈에이 일산 웨스턴돔점)","url":"https://bangtto.com/theme/roomsa-ilsan-westerndom-207"},{"@type":"ListItem","position":22,"name":"프랑켄슈타인의 실험실 (큐방탈출 일산 웨스턴돔점)","url":"https://bangtto.com/theme/qescape-ilsan-westerndom-3vq2370z"},{"@type":"ListItem","position":23,"name":"행방불냥 (룸즈에이 일산 라페스타점)","url":"https://bangtto.com/theme/roomsa-ilsan-lafesta-208"},{"@type":"ListItem","position":24,"name":"향수 (더도어즈이스케이프)","url":"https://bangtto.com/theme/thedoors-ilsan-cx9kxa2h"},{"@type":"ListItem","position":25,"name":"헬프미 (마스터키 화정점)","url":"https://bangtto.com/theme/masterkey-hwajeong-136"},{"@type":"ListItem","position":26,"name":"현월 (마스터키 화정점)","url":"https://bangtto.com/theme/masterkey-hwajeong-135"},{"@type":"ListItem","position":27,"name":"히어로 아카데미 (룸즈에이 일산 라페스타점)","url":"https://bangtto.com/theme/roomsa-ilsan-lafesta-210"},{"@type":"ListItem","position":28,"name":"B지하철13호선 (마스터키 화정점)","url":"https://bangtto.com/theme/masterkey-hwajeong-144"},{"@type":"ListItem","position":29,"name":"who are you? (더도어즈이스케이프)","url":"https://bangtto.com/theme/thedoors-ilsan-16n36okq"},{"@type":"ListItem","position":30,"name":"Z 월드 (큐방탈출 일산 웨스턴돔점)","url":"https://bangtto.com/theme/qescape-ilsan-westerndom-16n36okq"}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"고양 방탈출","item":"https://bangtto.com/region/goyang"},{"@type":"ListItem","position":3,"name":"고양 2인 가능 방탈출","item":"https://bangtto.com/recommend/goyang/two-players"}]}]</script>
+    
   </head>
 
   <body>
@@ -208,6 +227,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -216,6 +236,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

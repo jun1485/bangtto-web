@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/keyescape-jeonju-17" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/keyescape-jeonju-17" />
-    <script data-seo-url="https://bangtto.com/theme/keyescape-jeonju-17" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"혜화잡화점 (키이스케이프 전주점)","description":"홀로 딸을 키우기 위해 잡화점을 운영해오던 나.\n\n20여년전 사고로 딸 소영이를 잃은 후,\n고향을 떠나 한번도 찾지 않았던 잡화점에 오랜만에 들렀다.\n\n결혼식을 코 앞에 둔 딸을 먼저 떠나보낸 고통의 삶을 정리하기 전\n\n마지막으로 오게 된 이 곳 잡화점은 아직도 딸이 살아 있는듯\n온기까지 느껴지는 것 같다.\n\n그 온기에 이끌려 잡화점 이곳저곳 옛추억에 잠겨 살펴보던 중\n낡아버린 우체통 뒤편에서 오래된 편지를 발견한다.\n\n이제야 발견한 나는 전달되지 못할 걸 알면서도 늦은 답장을 보낸다.\n\n그런데 . . . 일어날 수 없는 일이 나에게 일어나기 시작했다.\n\n-별도의 주차장이 준비되어 있지 않습니다.\n(건물주차장은 지정주차로 인하여 이용이 불가합니다.)\n-음주 시 입장이 제한되며, 이로 인한 환불은 불가합니다.","url":"https://bangtto.com/theme/keyescape-jeonju-17","image":"https://wsrv.nl/?url=https%3A%2F%2Fd1kqa23lh2nxjx.cloudfront.net%2Ffile%2Ftheme_info%2F%25ED%2598%259C%25ED%2599%2594%25EC%259E%25A1%25ED%2599%2594%25EC%25A0%2590__sizedown.png&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"전북 전주시 홍산남로 60, 401호","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":35.8155888,"longitude":127.10833748}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"전주 방탈출","item":"https://bangtto.com/region/jeonju"},{"@type":"ListItem","position":3,"name":"키이스케이프 전주점","item":"https://bangtto.com/store/keyescape-jeonju"},{"@type":"ListItem","position":4,"name":"혜화잡화점","item":"https://bangtto.com/theme/keyescape-jeonju-17"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/keyescape-jeonju-17" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"혜화잡화점 (키이스케이프 전주점)","description":"전주 키이스케이프 전주점의 드라마 테마 혜화잡화점. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/keyescape-jeonju-17","image":"https://wsrv.nl/?url=https%3A%2F%2Fd1kqa23lh2nxjx.cloudfront.net%2Ffile%2Ftheme_info%2F%25ED%2598%259C%25ED%2599%2594%25EC%259E%25A1%25ED%2599%2594%25EC%25A0%2590__sizedown.png&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/keyescape-jeonju#store","name":"키이스케이프 전주점","url":"https://bangtto.com/store/keyescape-jeonju"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":1,"maxValue":6},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"전주 방탈출","item":"https://bangtto.com/region/jeonju"},{"@type":"ListItem","position":3,"name":"키이스케이프 전주점","item":"https://bangtto.com/store/keyescape-jeonju"},{"@type":"ListItem","position":4,"name":"혜화잡화점","item":"https://bangtto.com/theme/keyescape-jeonju-17"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

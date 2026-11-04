@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/routeescape-suwon-989c2390" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/routeescape-suwon-989c2390" />
-    <script data-seo-url="https://bangtto.com/theme/routeescape-suwon-989c2390" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"나를 찾아줘 (루트이스케이프 수원점)","description":"대학 천문학 동아리에서 알게 된 제니\n\n친구로 지낸 지 벌써 7년째. 쾌활하고 똑똑하고 예쁘기까지 한 제니는 모두에게 인기가 많았다. 나 역시 제니를 쭉 좋아해 왔고...\n오늘은 기필코 제니에게 고백을 할 거다 며칠 전 이름을 새긴 커플링도 준비해 두었다\n\n그런데... 제니는 또 별을 보러 간 것 같다. 설마 이런 나의 낌새를 알아채고 피하는 건 아닐까?\n\n사실 제니에게 나는 부족하기 그지없다.\n\"까톡\"\n\n\"존 지금 빨리와줘!!!\"\n\nJenny, who I got to know from the astronomy club at University.\nWe've been friends for seven years already. Jenny, who was cheerful, smart, and pretty, was popular with everyone.\nI've liked her all along, too.\nToday, I will definitely confess to Jenny. I also prepared a couple ring with a name engraved a few day ago.\nBut...Jenny seems to have gone to see the stars again.\nDon't tell me she's avoiding me. To be honest... I'm not good enough for Jenny.\n\"Ka Talk\"\n\"John! Please come here now!\"","url":"https://bangtto.com/theme/routeescape-suwon-989c2390","image":"https://wsrv.nl/?url=https%3A%2F%2Fbucheonroute.s3.amazonaws.com%2Ftheme%2F1658124139705.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"경기 수원시 팔달구 향교로12-1 5층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.2677962674418,"longitude":127.002655962682}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"수원 방탈출","item":"https://bangtto.com/region/suwon"},{"@type":"ListItem","position":3,"name":"루트이스케이프 수원점","item":"https://bangtto.com/store/routeescape-suwon"},{"@type":"ListItem","position":4,"name":"나를 찾아줘","item":"https://bangtto.com/theme/routeescape-suwon-989c2390"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/routeescape-suwon-989c2390" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"나를 찾아줘 (루트이스케이프 수원점)","description":"수원 루트이스케이프 수원점의 Drama 테마 나를 찾아줘. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/routeescape-suwon-989c2390","image":"https://wsrv.nl/?url=https%3A%2F%2Fbucheonroute.s3.amazonaws.com%2Ftheme%2F1658124139705.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/routeescape-suwon#store","name":"루트이스케이프 수원점","url":"https://bangtto.com/store/routeescape-suwon"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":1,"maxValue":6},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"수원 방탈출","item":"https://bangtto.com/region/suwon"},{"@type":"ListItem","position":3,"name":"루트이스케이프 수원점","item":"https://bangtto.com/store/routeescape-suwon"},{"@type":"ListItem","position":4,"name":"나를 찾아줘","item":"https://bangtto.com/theme/routeescape-suwon-989c2390"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

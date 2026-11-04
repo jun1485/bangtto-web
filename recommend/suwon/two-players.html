@@ -10,7 +10,7 @@
     <title>수원 2인 가능 방탈출 83개 비교 | 방또</title>
     <!-- 검색 결과·공유 미리보기 기본 정보 -->
     <meta data-rh="true" name="description" content="수원 매장 17곳의 2인 가능 방탈출 83개를 가격·시간·후기로 비교하세요. 매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요." />
-    <meta data-rh="true" name="robots" content="index,follow,max-image-preview:large" />
+    <meta data-rh="true" name="robots" content="noindex,follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="방또" />
     <meta data-rh="true" property="og:title" content="수원 2인 가능 방탈출 83개 비교 | 방또" />
@@ -120,7 +120,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -132,6 +133,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -198,7 +217,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/recommend/suwon/two-players" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/recommend/suwon/two-players" />
-    <script data-seo-url="https://bangtto.com/recommend/suwon/two-players" type="application/ld+json">[{"@context":"https://schema.org","@type":"ItemList","name":"수원 2인 가능 방탈출","url":"https://bangtto.com/recommend/suwon/two-players","numberOfItems":83,"itemListElement":[{"@type":"ListItem","position":1,"name":"[프리미엄]비밀번호 찾기 (셜록홈즈 수원역2호점)","url":"https://bangtto.com/theme/sherlock-suwon-station2-489"},{"@type":"ListItem","position":2,"name":"[프리미엄]아트마와 위대한 유산 (셜록홈즈 수원인계점)","url":"https://bangtto.com/theme/sherlock-ingye-511"},{"@type":"ListItem","position":3,"name":"022 (셜록홈즈 수원역점)","url":"https://bangtto.com/theme/sherlock-suwon-station-402"},{"@type":"ListItem","position":4,"name":"1980 레트로게임룸 (셜록홈즈 수원역점)","url":"https://bangtto.com/theme/sherlock-suwon-station-400"},{"@type":"ListItem","position":5,"name":"402호 병실 (셜록홈즈 수원역2호점)","url":"https://bangtto.com/theme/sherlock-suwon-station2-491"},{"@type":"ListItem","position":6,"name":"501동사람들 (엑스케이프 수원점)","url":"https://bangtto.com/theme/xcape-suwon-df5d1a81"},{"@type":"ListItem","position":7,"name":"각성(Awakening) (싸인이스케이프 성대역점)","url":"https://bangtto.com/theme/signescape-sungdae-b"},{"@type":"ListItem","position":8,"name":"고서연전 (셜록홈즈 수원역2호점)","url":"https://bangtto.com/theme/sherlock-suwon-station2-490"},{"@type":"ListItem","position":9,"name":"고시텔(3층) (싸인이스케이프 성대역점)","url":"https://bangtto.com/theme/signescape-sungdae-e"},{"@type":"ListItem","position":10,"name":"골드마인 (방탈출 넘버원 수원 인계점)","url":"https://bangtto.com/theme/no1escape-suwon-goldmine"},{"@type":"ListItem","position":11,"name":"괴담수집가_김민지괴담 (셜록홈즈 수원역점)","url":"https://bangtto.com/theme/sherlock-suwon-station-399"},{"@type":"ListItem","position":12,"name":"귀빈(손님대접) (룸즈에이 수원역 2호점)","url":"https://bangtto.com/theme/roomsa-suwon-station2-222"},{"@type":"ListItem","position":13,"name":"그는 남쪽을 꿈꾸지 않았다. (셜록홈즈 수원인계점)","url":"https://bangtto.com/theme/sherlock-ingye-510"},{"@type":"ListItem","position":14,"name":"그레이백작가의 밀실 (셜록홈즈 수원역2호점)","url":"https://bangtto.com/theme/sherlock-suwon-station2-487"},{"@type":"ListItem","position":15,"name":"기담 (셜록홈즈 수원인계점)","url":"https://bangtto.com/theme/sherlock-ingye-508"},{"@type":"ListItem","position":16,"name":"기묘한날개짓 (엑스케이프 수원점)","url":"https://bangtto.com/theme/xcape-suwon-86928df7"},{"@type":"ListItem","position":17,"name":"기억 : 끝나지 않을 꿈 (플레이33 수원점)","url":"https://bangtto.com/theme/play33-suwon-40"},{"@type":"ListItem","position":18,"name":"나를 찾아줘 (루트이스케이프 수원점)","url":"https://bangtto.com/theme/routeescape-suwon-989c2390"},{"@type":"ListItem","position":19,"name":"낙화 : 떨어지는 꽃 (상상의문 수원 2호점)","url":"https://bangtto.com/theme/sangsang-suwon2-38"},{"@type":"ListItem","position":20,"name":"데이투어 (둠이스케이프 FEAR점(수원))","url":"https://bangtto.com/theme/doom-suwon-fear-36"},{"@type":"ListItem","position":21,"name":"도고 (소우주)","url":"https://bangtto.com/theme/sowoojoo-suwon-10"},{"@type":"ListItem","position":22,"name":"띵가띵가 (룸즈에이 수원역점)","url":"https://bangtto.com/theme/roomsa-suwon-station-218"},{"@type":"ListItem","position":23,"name":"라이트랠리 (셜록홈즈 수원인계점)","url":"https://bangtto.com/theme/sherlock-ingye-506"},{"@type":"ListItem","position":24,"name":"리멤버 (Remember) (리멤버 방탈출 수원점)","url":"https://bangtto.com/theme/remember-suwon-44f97206"},{"@type":"ListItem","position":25,"name":"마지막 유산 (소우주)","url":"https://bangtto.com/theme/sowoojoo-suwon-11"},{"@type":"ListItem","position":26,"name":"무제 (셜록홈즈 수원인계점)","url":"https://bangtto.com/theme/sherlock-ingye-509"},{"@type":"ListItem","position":27,"name":"바디스네처 (루트이스케이프 수원점)","url":"https://bangtto.com/theme/routeescape-suwon-8e3dcf08"},{"@type":"ListItem","position":28,"name":"발사까지 59분 59초 (셜록홈즈 수원역점)","url":"https://bangtto.com/theme/sherlock-suwon-station-403"},{"@type":"ListItem","position":29,"name":"방과후 추리반 EP1.여고생 살인사건 (소우주)","url":"https://bangtto.com/theme/sowoojoo-suwon-15"},{"@type":"ListItem","position":30,"name":"방과후 추리반 EP2. 여고생 실종사건 (소우주)","url":"https://bangtto.com/theme/sowoojoo-suwon-16"},{"@type":"ListItem","position":31,"name":"벨BELL : 사소한 사실들 (리멤버 방탈출 수원점)","url":"https://bangtto.com/theme/remember-suwon-15bcabc8"},{"@type":"ListItem","position":32,"name":"복도끝 (상상의문 수원점)","url":"https://bangtto.com/theme/sangsang-suwon-26"},{"@type":"ListItem","position":33,"name":"사라진 피카소 (방탈출탐정 수원역점)","url":"https://bangtto.com/theme/escapecafe-suwon-1573626297"},{"@type":"ListItem","position":34,"name":"성지기숙학원 : 특수교정반 (상상의문 수원 2호점)","url":"https://bangtto.com/theme/sangsang-suwon2-37"},{"@type":"ListItem","position":35,"name":"세계날씨본부 (셜록홈즈 수원역점)","url":"https://bangtto.com/theme/sherlock-suwon-station-398"},{"@type":"ListItem","position":36,"name":"숨바꼭질 (엑스케이프 수원점)","url":"https://bangtto.com/theme/xcape-suwon-de272446"},{"@type":"ListItem","position":37,"name":"스토커 (방탈출탐정 수원역점)","url":"https://bangtto.com/theme/escapecafe-suwon-1573110382"},{"@type":"ListItem","position":38,"name":"슬기로운 지구생활 (룸즈에이 수원역 2호점)","url":"https://bangtto.com/theme/roomsa-suwon-station2-223"},{"@type":"ListItem","position":39,"name":"아더스 (방탈출 넘버원 수원 인계점)","url":"https://bangtto.com/theme/no1escape-suwon-others"},{"@type":"ListItem","position":40,"name":"알케이드 빌리지 (상상의문 수원 2호점)","url":"https://bangtto.com/theme/sangsang-suwon2-39"},{"@type":"ListItem","position":41,"name":"어느 봄날의 숨바꼭질 (방탈출 넘버원 수원 인계점)","url":"https://bangtto.com/theme/no1escape-suwon-hide"},{"@type":"ListItem","position":42,"name":"여고괴담 (방탈출탐정 수원역점)","url":"https://bangtto.com/theme/escapecafe-suwon-1573112486"},{"@type":"ListItem","position":43,"name":"영안실 (상상의문 수원점)","url":"https://bangtto.com/theme/sangsang-suwon-30"},{"@type":"ListItem","position":44,"name":"영포에버 (소우주)","url":"https://bangtto.com/theme/sowoojoo-suwon-13"},{"@type":"ListItem","position":45,"name":"옵스큐라 (둠이스케이프 FEAR점(수원))","url":"https://bangtto.com/theme/doom-suwon-fear-35"},{"@type":"ListItem","position":46,"name":"우당탕탕 (룸즈에이 수원역점)","url":"https://bangtto.com/theme/roomsa-suwon-station-220"},{"@type":"ListItem","position":47,"name":"우수사원 (셜록홈즈 수원역2호점)","url":"https://bangtto.com/theme/sherlock-suwon-station2-486"},{"@type":"ListItem","position":48,"name":"우울증(Depression) (싸인이스케이프 성대역점)","url":"https://bangtto.com/theme/signescape-sungdae-a"},{"@type":"ListItem","position":49,"name":"유작 (셜록홈즈 수원역점)","url":"https://bangtto.com/theme/sherlock-suwon-station-404"},{"@type":"ListItem","position":50,"name":"인생은 실전이다 종만아 (셜록홈즈 수원역2호점)","url":"https://bangtto.com/theme/sherlock-suwon-station2-488"},{"@type":"ListItem","position":51,"name":"인지상점 (엑스케이프 수원점)","url":"https://bangtto.com/theme/xcape-suwon-2d73b210"},{"@type":"ListItem","position":52,"name":"인턴(Intern) (싸인이스케이프 성대역점)","url":"https://bangtto.com/theme/signescape-sungdae-c"},{"@type":"ListItem","position":53,"name":"인형의집 (셜록홈즈 수원역점)","url":"https://bangtto.com/theme/sherlock-suwon-station-401"},{"@type":"ListItem","position":54,"name":"자멜신부의 비밀 (싸인이스케이프 성대역점)","url":"https://bangtto.com/theme/signescape-sungdae-d"},{"@type":"ListItem","position":55,"name":"전지적 작가 시점 (룸즈에이 수원역점)","url":"https://bangtto.com/theme/roomsa-suwon-station-219"},{"@type":"ListItem","position":56,"name":"제4창고에서의 탈출 (셜록홈즈 수원역2호점)","url":"https://bangtto.com/theme/sherlock-suwon-station2-484"},{"@type":"ListItem","position":57,"name":"제물의 밤 (엑스케이프 수원점)","url":"https://bangtto.com/theme/xcape-suwon-0f79a24d"},{"@type":"ListItem","position":58,"name":"직박구리:남친탐구생활 (상상의문 수원점)","url":"https://bangtto.com/theme/sangsang-suwon-27"},{"@type":"ListItem","position":59,"name":"춘화각 : 피할 수 없는 저주 (상상의문 수원 2호점)","url":"https://bangtto.com/theme/sangsang-suwon2-40"},{"@type":"ListItem","position":60,"name":"크라임씬 화이트의 죽음 (방탈출탐정 수원역점)","url":"https://bangtto.com/theme/escapecafe-suwon-1573626409"},{"@type":"ListItem","position":61,"name":"트랩 (루트이스케이프 수원점)","url":"https://bangtto.com/theme/routeescape-suwon-161f6015"},{"@type":"ListItem","position":62,"name":"트레저 (루트이스케이프 수원점)","url":"https://bangtto.com/theme/routeescape-suwon-0065fb34"},{"@type":"ListItem","position":63,"name":"퍼펫쇼 (상상의문 수원점)","url":"https://bangtto.com/theme/sangsang-suwon-31"},{"@type":"ListItem","position":64,"name":"평화로운 A마트 (룸즈에이 수원역 2호점)","url":"https://bangtto.com/theme/roomsa-suwon-station2-224"},{"@type":"ListItem","position":65,"name":"풀문 (소우주)","url":"https://bangtto.com/theme/sowoojoo-suwon-9"},{"@type":"ListItem","position":66,"name":"필활 (룸즈에이 수원역점)","url":"https://bangtto.com/theme/roomsa-suwon-station-217"},{"@type":"ListItem","position":67,"name":"해리포터 맨드레이크의 비밀 (리멤버 방탈출 수원점)","url":"https://bangtto.com/theme/remember-suwon-15bcabd0"},{"@type":"ListItem","position":68,"name":"해적선 (방탈출 넘버원 수원 인계점)","url":"https://bangtto.com/theme/no1escape-suwon-pirate"},{"@type":"ListItem","position":69,"name":"허수아비 (둠이스케이프 FEAR점(수원))","url":"https://bangtto.com/theme/doom-suwon-fear-34"},{"@type":"ListItem","position":70,"name":"호텔 캘리포니아 (룸즈에이 수원역 2호점)","url":"https://bangtto.com/theme/roomsa-suwon-station2-221"},{"@type":"ListItem","position":71,"name":"호텔: 1408호 (리멤버 방탈출 수원점)","url":"https://bangtto.com/theme/remember-suwon-15bcabcc"},{"@type":"ListItem","position":72,"name":"혼숨 (상상의문 수원점)","url":"https://bangtto.com/theme/sangsang-suwon-28"},{"@type":"ListItem","position":73,"name":"A TOY (셜록홈즈 수원인계점)","url":"https://bangtto.com/theme/sherlock-ingye-454"},{"@type":"ListItem","position":74,"name":"Arcade man 아케이드 맨 (메타이스케이프)","url":"https://bangtto.com/theme/metaescape-suwon-4"},{"@type":"ListItem","position":75,"name":"ASDF (셜록홈즈 수원역2호점)","url":"https://bangtto.com/theme/sherlock-suwon-station2-485"},{"@type":"ListItem","position":76,"name":"DKDK컴퍼니 (상상의문 수원점)","url":"https://bangtto.com/theme/sangsang-suwon-29"},{"@type":"ListItem","position":77,"name":"Everdream 에버드림 (메타이스케이프)","url":"https://bangtto.com/theme/metaescape-suwon-2"},{"@type":"ListItem","position":78,"name":"HINDSIGHT (상상의문 수원 2호점)","url":"https://bangtto.com/theme/sangsang-suwon2-41"},{"@type":"ListItem","position":79,"name":"Mujeogang 무저갱 : 사라진 사람들 (메타이스케이프)","url":"https://bangtto.com/theme/metaescape-suwon-1"},{"@type":"ListItem","position":80,"name":"OKCUT (상상의문 수원 2호점)","url":"https://bangtto.com/theme/sangsang-suwon2-42"},{"@type":"ListItem","position":81,"name":"SPIN - OFF (소우주)","url":"https://bangtto.com/theme/sowoojoo-suwon-17"},{"@type":"ListItem","position":82,"name":"To. z 투 제트 (메타이스케이프)","url":"https://bangtto.com/theme/metaescape-suwon-3"},{"@type":"ListItem","position":83,"name":"WHO ARE U? (셜록홈즈 수원인계점)","url":"https://bangtto.com/theme/sherlock-ingye-505"}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"수원 방탈출","item":"https://bangtto.com/region/suwon"},{"@type":"ListItem","position":3,"name":"수원 2인 가능 방탈출","item":"https://bangtto.com/recommend/suwon/two-players"}]}]</script>
+    
   </head>
 
   <body>
@@ -208,6 +227,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -216,6 +236,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

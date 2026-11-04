@@ -10,7 +10,7 @@
     <title>부평 2인 가능 방탈출 41개 비교 | 방또</title>
     <!-- 검색 결과·공유 미리보기 기본 정보 -->
     <meta data-rh="true" name="description" content="부평 매장 10곳의 2인 가능 방탈출 41개를 가격·시간·후기로 비교하세요. 매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요." />
-    <meta data-rh="true" name="robots" content="index,follow,max-image-preview:large" />
+    <meta data-rh="true" name="robots" content="noindex,follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="방또" />
     <meta data-rh="true" property="og:title" content="부평 2인 가능 방탈출 41개 비교 | 방또" />
@@ -120,7 +120,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -132,6 +133,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -198,7 +217,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/recommend/bupyeong/two-players" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/recommend/bupyeong/two-players" />
-    <script data-seo-url="https://bangtto.com/recommend/bupyeong/two-players" type="application/ld+json">[{"@context":"https://schema.org","@type":"ItemList","name":"부평 2인 가능 방탈출","url":"https://bangtto.com/recommend/bupyeong/two-players","numberOfItems":41,"itemListElement":[{"@type":"ListItem","position":1,"name":"Italian Job (어메이즈드 부평2호점)","url":"https://bangtto.com/theme/amazed-bupyeong2-italianjob"},{"@type":"ListItem","position":2,"name":"SHIFT : 고쿄의 하루 (어메이즈드 부평3호점)","url":"https://bangtto.com/theme/amazed-bupyeong3-shift"},{"@type":"ListItem","position":3,"name":"HASHIMA (어메이즈드 부평2호점)","url":"https://bangtto.com/theme/amazed-bupyeong2-hashima"},{"@type":"ListItem","position":4,"name":"[프리미엄] 나쁜놈 나쁜놈 나쁜놈 (셜록홈즈 부평점)","url":"https://bangtto.com/theme/sherlock-bupyeong-205"},{"@type":"ListItem","position":5,"name":"[프리미엄]스탕달 신드롬 (셜록홈즈 부평2호점)","url":"https://bangtto.com/theme/sherlock-bupyeong2-406"},{"@type":"ListItem","position":6,"name":"[프리미엄]펜타킬 (셜록홈즈 부평점)","url":"https://bangtto.com/theme/sherlock-bupyeong-351"},{"@type":"ListItem","position":7,"name":"1982, 그날의 사진사 (룸즈에이 부평 2호점)","url":"https://bangtto.com/theme/roomsa-bupyeong2-355"},{"@type":"ListItem","position":8,"name":"1986, 구룡 (룸즈에이 부평 2호점)","url":"https://bangtto.com/theme/roomsa-bupyeong2-343"},{"@type":"ListItem","position":9,"name":"2002, 주안 (룸즈에이 부평 2호점)","url":"https://bangtto.com/theme/roomsa-bupyeong2-344"},{"@type":"ListItem","position":10,"name":"2025, ALEx (룸즈에이 부평 2호점)","url":"https://bangtto.com/theme/roomsa-bupyeong2-347"},{"@type":"ListItem","position":11,"name":"420번지 (상상의문 부평점)","url":"https://bangtto.com/theme/sangsang-bupyeong-33"},{"@type":"ListItem","position":12,"name":"구해줘 햄즈 (플레이더월드 부평점)","url":"https://bangtto.com/theme/playtheworld-bupyeong-31"},{"@type":"ListItem","position":13,"name":"꿈사탕 (셜록홈즈 부평2호점)","url":"https://bangtto.com/theme/sherlock-bupyeong2-407"},{"@type":"ListItem","position":14,"name":"노 웨이 아웃 (플레이더월드 부평점)","url":"https://bangtto.com/theme/playtheworld-bupyeong-27"},{"@type":"ListItem","position":15,"name":"놈즈 : 더 비기닝 (룸즈에이 부평점)","url":"https://bangtto.com/theme/roomsa-bupyeong-285"},{"@type":"ListItem","position":16,"name":"데스게임:벼랑 끝에 선 자들 (셜록홈즈 부평2호점)","url":"https://bangtto.com/theme/sherlock-bupyeong2-408"},{"@type":"ListItem","position":17,"name":"미녀와 야수 (리멤버 방탈출 부평점)","url":"https://bangtto.com/theme/remember-bupyeong-dafcf656"},{"@type":"ListItem","position":18,"name":"미스틱 클럽 (룸즈에이 부평점)","url":"https://bangtto.com/theme/roomsa-bupyeong-303"},{"@type":"ListItem","position":19,"name":"별점테러 짜장나요 (플레이더월드 부평점)","url":"https://bangtto.com/theme/playtheworld-bupyeong-30"},{"@type":"ListItem","position":20,"name":"세이브 더 월드 (플레이더월드 부평점)","url":"https://bangtto.com/theme/playtheworld-bupyeong-28"},{"@type":"ListItem","position":21,"name":"쇼쿠진 (상상의문 부평점)","url":"https://bangtto.com/theme/sangsang-bupyeong-34"},{"@type":"ListItem","position":22,"name":"수상한형제들 (셜록홈즈 부평점)","url":"https://bangtto.com/theme/sherlock-bupyeong-151"},{"@type":"ListItem","position":23,"name":"스네어 (둠이스케이프 DTH점(부평))","url":"https://bangtto.com/theme/doom-bupyeong-dth-25"},{"@type":"ListItem","position":24,"name":"아이언 게이트 프리즌 (룸즈에이 부평점)","url":"https://bangtto.com/theme/roomsa-bupyeong-284"},{"@type":"ListItem","position":25,"name":"언리얼 (둠이스케이프 DTH점(부평))","url":"https://bangtto.com/theme/doom-bupyeong-dth-24"},{"@type":"ListItem","position":26,"name":"옥탑방 신사 (리멤버 방탈출 부평점)","url":"https://bangtto.com/theme/remember-bupyeong-6e95421b"},{"@type":"ListItem","position":27,"name":"이상한 나라의 초대 (셜록홈즈 부평점)","url":"https://bangtto.com/theme/sherlock-bupyeong-339"},{"@type":"ListItem","position":28,"name":"지하감옥 (셜록홈즈 부평점)","url":"https://bangtto.com/theme/sherlock-bupyeong-34"},{"@type":"ListItem","position":29,"name":"트리거 (둠이스케이프 DTH점(부평))","url":"https://bangtto.com/theme/doom-bupyeong-dth-22"},{"@type":"ListItem","position":30,"name":"프로젝트 루나 (셜록홈즈 부평2호점)","url":"https://bangtto.com/theme/sherlock-bupyeong2-405"},{"@type":"ListItem","position":31,"name":"해리포터 마법사의 돌1 (리멤버 방탈출 부평점)","url":"https://bangtto.com/theme/remember-bupyeong-a00d845d"},{"@type":"ListItem","position":32,"name":"해리포터와 마법사의 돌 II (리멤버 방탈출 부평점)","url":"https://bangtto.com/theme/remember-bupyeong-c8511daf"},{"@type":"ListItem","position":33,"name":"행복목욕탕 (상상의문 부평점)","url":"https://bangtto.com/theme/sangsang-bupyeong-36"},{"@type":"ListItem","position":34,"name":"호스피스 (플레이더월드 부평점)","url":"https://bangtto.com/theme/playtheworld-bupyeong-29"},{"@type":"ListItem","position":35,"name":"호텔 : 기억조각 (리멤버 방탈출 부평점)","url":"https://bangtto.com/theme/remember-bupyeong-4a8e2bc9"},{"@type":"ListItem","position":36,"name":"혼:원혼의저주 (셜록홈즈 부평점)","url":"https://bangtto.com/theme/sherlock-bupyeong-112"},{"@type":"ListItem","position":37,"name":"흑신소 (상상의문 부평점)","url":"https://bangtto.com/theme/sangsang-bupyeong-35"},{"@type":"ListItem","position":38,"name":"RE:PEAT (셜록홈즈 부평2호점)","url":"https://bangtto.com/theme/sherlock-bupyeong2-410"},{"@type":"ListItem","position":39,"name":"REC (어메이즈드 부평2호점)","url":"https://bangtto.com/theme/amazed-bupyeong2-rec"},{"@type":"ListItem","position":40,"name":"REDEVIL (리멤버 방탈출 부평점)","url":"https://bangtto.com/theme/remember-bupyeong-67ac24f0"},{"@type":"ListItem","position":41,"name":"The Last Dance (룸즈에이 부평점)","url":"https://bangtto.com/theme/roomsa-bupyeong-324"}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"부평 방탈출","item":"https://bangtto.com/region/bupyeong"},{"@type":"ListItem","position":3,"name":"부평 2인 가능 방탈출","item":"https://bangtto.com/recommend/bupyeong/two-players"}]}]</script>
+    
   </head>
 
   <body>
@@ -208,6 +227,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -216,6 +236,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

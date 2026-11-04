@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/seoulescape-daegu-39" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/seoulescape-daegu-39" />
-    <script data-seo-url="https://bangtto.com/theme/seoulescape-daegu-39" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"카지노 (서울이스케이프룸 대구 동성로점)","description":"공장 내부 깊숙한 곳에 성공적으로 폭탄을 설치하고 나온 당신. 당신이 설치한 시한폭탄이 터지기 전까지 남은시간은 약 90분. 폭탄을 설치하고 서둘러 건물을 나서려는 당신에게 그동안 당신을 비밀리에 도와준 ‘R’ 에게서 새 음성메시지가 도착했다.\n\n“ T요원, 나야 R. 정말 고생 많았어. 당신의 활약 덕분에 지금 조직은 사상 초유의 비상사태를 선포하고 다들 당신을 잡기 위해 혈안이 되어있어. 나도 이제는 Z 에게 의심당하고 있어서 이게 당신에게 보내는 마지막 메시지가 될거야. 마지막으로 당신에게 한가지만 더 부탁할게. 사실 당신이 설치한 폭탄으로 이 건물이 폭파 되어도 조직에게 큰 타격을 주지는 못해. 그들은 그동안 온갖 불법적인 방법으로 어마어마한 부를 쌓아서 스위스 은행의 한 계좌에 축적해오고 있어. 건물 정도야 금방 다시 사겠지. 따라서 정말로 조직을 와해시키고자 한다면, 그들의 금융 자산을 마저 없애야만 해. 다시 한번 ‘엘레베이터’에 타고 6층으로 가봐. 그곳에 그들이 돈을 세탁하는데 이용하는 사설 VIP 도박장이 있어. 조직은 아직 당신이 공장에 있는 줄 알고 있고, 폭탄을 설치한 사실도 몰라. 아마 도박장은 여전히 영업 중일 거야. 도박장의 현재 딜러는 워낙에 속물이라 내가 매수하려고 했지만 자금이 부족해서 실패했어. 그가 부른 가격은 10만 달러야. 당신이 그를 매수할 수 만 있다면, 그는 나조차도 모르는 조직의 비밀을 말해줄거야. 행운을 빌어 T, 그동안 정말 고마웠어. 아마 나를 기억 못하겠지만 사실… 치지직…”\n\n음성 메시지가 갑자기 소음과 함께 끊겼다. 마지막에 R은 무슨 말을 하려던 거지? 윽.. 과거를 떠올리려는 당신에게 다시 극심한 두통이 찾아온다. 아니, 지금은 시간이 없다. 우선 R이 말한대로 도박장으로 향하자.\n\n띵- 엘레베이터 문이 열리면서 도박장의 고급스러운 인테리어가 눈에 들어온다. 이미 다른 VIP 손님들도 몇명 게임을 하고 있는 것 같다. 당신은 R이 준비해준 가방 안에 있던 $5,000 짜리 도박장 칩을 꽉 쥔 체 도박장 안으로 들어선다..","url":"https://bangtto.com/theme/seoulescape-daegu-39","image":"https://wsrv.nl/?url=https%3A%2F%2Fwww.seoul-escape.com%2Fstorage%2Ftheme%2F2022_11%2F30%2FiF12wBWOnAAZB1FXUL2ROhTIzZDFoGr1R4cBU2uI.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"대구 중구 동성로6길 52 3, 4층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":35.8684597,"longitude":128.59821719},"aggregateRating":{"@type":"AggregateRating","ratingValue":4,"reviewCount":1,"bestRating":5,"worstRating":0.5}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"대구 방탈출","item":"https://bangtto.com/region/daegu"},{"@type":"ListItem","position":3,"name":"서울이스케이프룸 대구 동성로점","item":"https://bangtto.com/store/seoulescape-daegu"},{"@type":"ListItem","position":4,"name":"카지노","item":"https://bangtto.com/theme/seoulescape-daegu-39"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/seoulescape-daegu-39" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"카지노 (서울이스케이프룸 대구 동성로점)","description":"대구 서울이스케이프룸 대구 동성로점의 잠입·탈옥 테마 카지노. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/seoulescape-daegu-39","image":"https://wsrv.nl/?url=https%3A%2F%2Fwww.seoul-escape.com%2Fstorage%2Ftheme%2F2022_11%2F30%2FiF12wBWOnAAZB1FXUL2ROhTIzZDFoGr1R4cBU2uI.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/seoulescape-daegu#store","name":"서울이스케이프룸 대구 동성로점","url":"https://bangtto.com/store/seoulescape-daegu"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT75M","aggregateRating":{"@type":"AggregateRating","ratingValue":4,"reviewCount":1,"bestRating":5,"worstRating":0.5}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"대구 방탈출","item":"https://bangtto.com/region/daegu"},{"@type":"ListItem","position":3,"name":"서울이스케이프룸 대구 동성로점","item":"https://bangtto.com/store/seoulescape-daegu"},{"@type":"ListItem","position":4,"name":"카지노","item":"https://bangtto.com/theme/seoulescape-daegu-39"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

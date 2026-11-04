@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/escapebro-yeongdeungpo-3" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/escapebro-yeongdeungpo-3" />
-    <script data-seo-url="https://bangtto.com/theme/escapebro-yeongdeungpo-3" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"파라오의비밀 (탈출브라더스)","description":"가장 많은 재보를 가졌던 람세스3세의 보물을 얻기 위해\n시간여행을 떠난 당신.\n여태 것 수많은 이들이 신들의 저주를 피하지 못하였다.\n과연 당신은 부와 명예를 얻고\n무사히 탈출 할수 있을 것 인가?","url":"https://bangtto.com/theme/escapebro-yeongdeungpo-3","image":"https://wsrv.nl/?url=https%3A%2F%2Fescapebro.co.kr%2Ffile%2Ftheme%2F3_a.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"서울 영등포구 영중로4길 25-1 4층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.5178138558732,"longitude":126.909166782458}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"영등포 방탈출","item":"https://bangtto.com/region/yeongdeungpo"},{"@type":"ListItem","position":3,"name":"탈출브라더스","item":"https://bangtto.com/store/escapebro-yeongdeungpo"},{"@type":"ListItem","position":4,"name":"파라오의비밀","item":"https://bangtto.com/theme/escapebro-yeongdeungpo-3"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/escapebro-yeongdeungpo-3" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"파라오의비밀 (탈출브라더스)","description":"영등포 탈출브라더스의 어드벤처 테마 파라오의비밀. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/escapebro-yeongdeungpo-3","image":"https://wsrv.nl/?url=https%3A%2F%2Fescapebro.co.kr%2Ffile%2Ftheme%2F3_a.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/escapebro-yeongdeungpo#store","name":"탈출브라더스","url":"https://bangtto.com/store/escapebro-yeongdeungpo"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"영등포 방탈출","item":"https://bangtto.com/region/yeongdeungpo"},{"@type":"ListItem","position":3,"name":"탈출브라더스","item":"https://bangtto.com/store/escapebro-yeongdeungpo"},{"@type":"ListItem","position":4,"name":"파라오의비밀","item":"https://bangtto.com/theme/escapebro-yeongdeungpo-3"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

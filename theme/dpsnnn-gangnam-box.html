@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/dpsnnn-gangnam-box" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/dpsnnn-gangnam-box" />
-    <script data-seo-url="https://bangtto.com/theme/dpsnnn-gangnam-box" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"그림자 없는 상자 (단편선 강남)","description":"\"미안해 누나. 근데 내가 맞았어.\n결국 끝도, 시작도 누나한테 달렸어.\"\n안다. 비극에 대처하는 방법은 우리 모두 각자 다르다는 것을.\n또한 안다. 어린 나이의 동생에게 막내의 죽음은 감당하기 힘든 일이었을 것이라는 것을.\n하지만 시현아. 누나도 사람이고, 힘들고, 아파.\n초자연적인 물체니 뭐니... 동생의 망상을 견뎌주는 것도 이제 한계다.\n지쳐버린 나는 이 허무맹랑한 문자를 받고, 마지막으로 쓴소리를 해주러 시현이의 집으로 향했다.","url":"https://bangtto.com/theme/dpsnnn-gangnam-box","image":"https://wsrv.nl/?url=https%3A%2F%2Fcdn.imweb.me%2Fthumbnail%2F20211116%2F0ee5f8df51546.jpeg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"서울 강남구 봉은사로4길 36 지하1층 02호","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.5025182093061,"longitude":127.026818294672},"aggregateRating":{"@type":"AggregateRating","ratingValue":5,"reviewCount":1,"bestRating":5,"worstRating":0.5}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"강남 방탈출","item":"https://bangtto.com/region/gangnam"},{"@type":"ListItem","position":3,"name":"단편선 강남","item":"https://bangtto.com/store/dpsnnn-gangnam"},{"@type":"ListItem","position":4,"name":"그림자 없는 상자","item":"https://bangtto.com/theme/dpsnnn-gangnam-box"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/dpsnnn-gangnam-box" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"그림자 없는 상자 (단편선 강남)","description":"강남 단편선 강남의 드라마·감성 테마 그림자 없는 상자. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/dpsnnn-gangnam-box","image":"https://wsrv.nl/?url=https%3A%2F%2Fcdn.imweb.me%2Fthumbnail%2F20211116%2F0ee5f8df51546.jpeg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/dpsnnn-gangnam#store","name":"단편선 강남","url":"https://bangtto.com/store/dpsnnn-gangnam"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":1,"maxValue":6},"timeRequired":"PT75M","aggregateRating":{"@type":"AggregateRating","ratingValue":5,"reviewCount":1,"bestRating":5,"worstRating":0.5}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"강남 방탈출","item":"https://bangtto.com/region/gangnam"},{"@type":"ListItem","position":3,"name":"단편선 강남","item":"https://bangtto.com/store/dpsnnn-gangnam"},{"@type":"ListItem","position":4,"name":"그림자 없는 상자","item":"https://bangtto.com/theme/dpsnnn-gangnam-box"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

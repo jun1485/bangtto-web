@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/keyescape-gangnam-5" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/keyescape-gangnam-5" />
-    <script data-seo-url="https://bangtto.com/theme/keyescape-gangnam-5" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"월야애담 (키이스케이프 강남점)","description":"月夜愛談\n\n돌쇠야. 나 덕유라네.\n소식들었는가.\n오늘 우리 아버님이 나를 불러서 말씀하시길\n돌쇠 네가 모시는 최대감님댁 아씨 복녀와 정혼을 하기로 정해졌다는구나 .\n\n너도 잘 알고 있듯 나는 우리 다람골의 최고 미인 점순이를 마음에 두고 있지않나.\n\n그러니, 오늘 밤에 나에게 최대감님댁에 몰래 들어갈 수 있는 방법을 알려줄 수 있겠는가.\n그리하면 돌쇠 너의 도움을 절대로 잊지 않을테니...\n\n내일 아침 우리의 혼례를 알리는 방이 붙기 전 내가 직접 들어가서 손을 좀 쓰려 하니 들어가는 방법만 알러주면 되네.\n부탁하네!!\n\n※나레이션 및 일부 지문은 한국인 일행분의 번역이 필요합니다.\n\n-별도의 주차장이 준비되어 있지 않습니다.\n(건물주차장은 지정주차로 인하여 이용이 불가합니다.)\n-음주 시 입장이 제한되며, 이로 인한 환불은 불가합니다.","url":"https://bangtto.com/theme/keyescape-gangnam-5","image":"https://wsrv.nl/?url=https%3A%2F%2Fd1kqa23lh2nxjx.cloudfront.net%2Ffile%2Ftheme_info%2F%25EC%259B%2594%25EC%2595%25BC__sizedown.png&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"서울 강남구 강남대로96길 17, 6층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.50010359,"longitude":127.02843077},"aggregateRating":{"@type":"AggregateRating","ratingValue":3,"reviewCount":1,"bestRating":5,"worstRating":0.5}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"강남 방탈출","item":"https://bangtto.com/region/gangnam"},{"@type":"ListItem","position":3,"name":"키이스케이프 강남점","item":"https://bangtto.com/store/keyescape-gangnam"},{"@type":"ListItem","position":4,"name":"월야애담","item":"https://bangtto.com/theme/keyescape-gangnam-5"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/keyescape-gangnam-5" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"월야애담 (키이스케이프 강남점)","description":"강남 키이스케이프 강남점의 동화 테마 월야애담. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/keyescape-gangnam-5","image":"https://wsrv.nl/?url=https%3A%2F%2Fd1kqa23lh2nxjx.cloudfront.net%2Ffile%2Ftheme_info%2F%25EC%259B%2594%25EC%2595%25BC__sizedown.png&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/keyescape-gangnam#store","name":"키이스케이프 강남점","url":"https://bangtto.com/store/keyescape-gangnam"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":1,"maxValue":6},"timeRequired":"PT60M","aggregateRating":{"@type":"AggregateRating","ratingValue":3,"reviewCount":1,"bestRating":5,"worstRating":0.5}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"강남 방탈출","item":"https://bangtto.com/region/gangnam"},{"@type":"ListItem","position":3,"name":"키이스케이프 강남점","item":"https://bangtto.com/store/keyescape-gangnam"},{"@type":"ListItem","position":4,"name":"월야애담","item":"https://bangtto.com/theme/keyescape-gangnam-5"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

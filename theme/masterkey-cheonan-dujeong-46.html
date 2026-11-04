@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/masterkey-cheonan-dujeong-46" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/masterkey-cheonan-dujeong-46" />
-    <script data-seo-url="https://bangtto.com/theme/masterkey-cheonan-dujeong-46" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"경찰서를 털어라 (플레이포인트랩 천안두정점)","description":"2년전, 이름을 날리던 전문 털이범인 당신은\n마침내 최고의 보석을 손에 넣었다.\n\n하지만 수사망을 피하기 위해 보석을 공사중인 건물에 숨기게 되고\n\n눈을 피해 은둔 생활을 하던 2년의 시간,\n숨겨 놓은 보석을 회수하기위해 같은 장소로 달려갔으나,\n건축중이던 건물이 시경찰국이 되어있었다!!\n과연 당신은 그 보석을 다시 손에 넣을 수 있을 것인가! ​​","url":"https://bangtto.com/theme/masterkey-cheonan-dujeong-46","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dmasterkey-cheonan-dujeong-46%26v%3Dhttp%253A%252F%252Fwww.master-key.co.kr%252Fupload%252Froom%252F46_img1.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"충청남도 천안시 서북구 두정로 177 3F","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":36.8339690890554,"longitude":127.136733472451}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"천안 방탈출","item":"https://bangtto.com/region/cheonan"},{"@type":"ListItem","position":3,"name":"플레이포인트랩 천안두정점","item":"https://bangtto.com/store/masterkey-cheonan-dujeong"},{"@type":"ListItem","position":4,"name":"경찰서를 털어라","item":"https://bangtto.com/theme/masterkey-cheonan-dujeong-46"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/masterkey-cheonan-dujeong-46" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"경찰서를 털어라 (플레이포인트랩 천안두정점)","description":"천안 플레이포인트랩 천안두정점의 코믹/어드벤처 테마 경찰서를 털어라. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/masterkey-cheonan-dujeong-46","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dmasterkey-cheonan-dujeong-46%26v%3Dhttp%253A%252F%252Fwww.master-key.co.kr%252Fupload%252Froom%252F46_img1.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/masterkey-cheonan-dujeong#store","name":"플레이포인트랩 천안두정점","url":"https://bangtto.com/store/masterkey-cheonan-dujeong"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"천안 방탈출","item":"https://bangtto.com/region/cheonan"},{"@type":"ListItem","position":3,"name":"플레이포인트랩 천안두정점","item":"https://bangtto.com/store/masterkey-cheonan-dujeong"},{"@type":"ListItem","position":4,"name":"경찰서를 털어라","item":"https://bangtto.com/theme/masterkey-cheonan-dujeong-46"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

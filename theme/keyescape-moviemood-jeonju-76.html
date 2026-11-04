@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/keyescape-moviemood-jeonju-76" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/keyescape-moviemood-jeonju-76" />
-    <script data-seo-url="https://bangtto.com/theme/keyescape-moviemood-jeonju-76" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"HAVE A GOOD TAPE, DAVE (키이스케이프 무비무드 전주)","description":"누군가에게 어떤 기억은 지우고 싶은 순간이지만,\n또 어떤 기억은 오늘을 버틸 수 있게 해주는 힘이 되기도 합니다.\n그건 여기, 메모리컴퍼니 고객만족팀의 데이브에게도 마찬가지에요.\n데이브는 매일 수많은 사람들의 기억 속을 들여다보며\n그들의 어제를 어루만지고, 오늘의 감정을 지켜냅니다.\n크리스마스 이브인 오늘도 말이죠.\n오늘 데이브가 마주할 기억은 누구의 것일까요.\n그리고 하루의 끝엔, 그의 마음엔 어떤 기억이 남게 될까요.\nHave a Good Tape, Dave.","url":"https://bangtto.com/theme/keyescape-moviemood-jeonju-76","image":"https://wsrv.nl/?url=https%3A%2F%2Fd1kqa23lh2nxjx.cloudfront.net%2Ffile%2Ftheme_info%2Fhaveagoodtape_size%2520down.png&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"전북 전주시 홍산남로 60, 402호","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":35.8155888,"longitude":127.10833748}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"전주 방탈출","item":"https://bangtto.com/region/jeonju"},{"@type":"ListItem","position":3,"name":"키이스케이프 무비무드 전주","item":"https://bangtto.com/store/keyescape-moviemood-jeonju"},{"@type":"ListItem","position":4,"name":"HAVE A GOOD TAPE, DAVE","item":"https://bangtto.com/theme/keyescape-moviemood-jeonju-76"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/keyescape-moviemood-jeonju-76" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"HAVE A GOOD TAPE, DAVE (키이스케이프 무비무드 전주)","description":"전주 키이스케이프 무비무드 전주의 일상/드라마 테마 HAVE A GOOD TAPE, DAVE. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/keyescape-moviemood-jeonju-76","image":"https://wsrv.nl/?url=https%3A%2F%2Fd1kqa23lh2nxjx.cloudfront.net%2Ffile%2Ftheme_info%2Fhaveagoodtape_size%2520down.png&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/keyescape-moviemood-jeonju#store","name":"키이스케이프 무비무드 전주","url":"https://bangtto.com/store/keyescape-moviemood-jeonju"},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"전주 방탈출","item":"https://bangtto.com/region/jeonju"},{"@type":"ListItem","position":3,"name":"키이스케이프 무비무드 전주","item":"https://bangtto.com/store/keyescape-moviemood-jeonju"},{"@type":"ListItem","position":4,"name":"HAVE A GOOD TAPE, DAVE","item":"https://bangtto.com/theme/keyescape-moviemood-jeonju-76"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

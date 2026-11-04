@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/sherlock-gimpo-414" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/sherlock-gimpo-414" />
-    <script data-seo-url="https://bangtto.com/theme/sherlock-gimpo-414" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"락인블랙_13번째 시간을 털어라 (셜록홈즈 김포구래점)","description":"\"진짜 귀한 보물이 뭐냐고?\n블루하트? 컬리넌? 이니그마?\n진짜 귀한보물은 사람들이 그 존재자체도 모른다는 거야.\n대부분 이전 문명의 유물, 그들이 신의 섭리에 거슬러\n문명자체를 멸망하게 만든 초자연적인 보물이 있다는거지.\n우린 마침내 사하라 한가운데에서 Bastian Black의 위치를 찾았네.\n거긴 하루 한번의 시간을 돌릴수 있는 보물\n13번째 시간을 모셔놓은 곳이지.\"\n\"얘기가 좀 길었군\n그곳의 보안장치를 해제해 줄 암호 해독 전문가가 필요하네.\n자네 말고는 적임자를 찾을수 없어.\n이렇게 부탁하겠네. 내 사례는 섭섭치 않게 챙겨주지.\"","url":"https://bangtto.com/theme/sherlock-gimpo-414","image":"https://wsrv.nl/?url=https%3A%2F%2Fsherlock-holmes.co.kr%2Fattach%2Ftheme%2F17239530381.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"경기 김포시 김포한강9로 77 연세프라자 3층 303호","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.6438204,"longitude":126.62547361}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"김포 방탈출","item":"https://bangtto.com/region/gimpo"},{"@type":"ListItem","position":3,"name":"셜록홈즈 김포구래점","item":"https://bangtto.com/store/sherlock-gimpo"},{"@type":"ListItem","position":4,"name":"락인블랙_13번째 시간을 털어라","item":"https://bangtto.com/theme/sherlock-gimpo-414"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/sherlock-gimpo-414" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"락인블랙_13번째 시간을 털어라 (셜록홈즈 김포구래점)","description":"김포 셜록홈즈 김포구래점의 미션,문제방 테마 락인블랙_13번째 시간을 털어라. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/sherlock-gimpo-414","image":"https://wsrv.nl/?url=https%3A%2F%2Fsherlock-holmes.co.kr%2Fattach%2Ftheme%2F17239530381.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/sherlock-gimpo#store","name":"셜록홈즈 김포구래점","url":"https://bangtto.com/store/sherlock-gimpo"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"김포 방탈출","item":"https://bangtto.com/region/gimpo"},{"@type":"ListItem","position":3,"name":"셜록홈즈 김포구래점","item":"https://bangtto.com/store/sherlock-gimpo"},{"@type":"ListItem","position":4,"name":"락인블랙_13번째 시간을 털어라","item":"https://bangtto.com/theme/sherlock-gimpo-414"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

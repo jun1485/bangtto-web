@@ -10,7 +10,7 @@
     <title>평택 2인 가능 방탈출 22개 비교 | 방또</title>
     <!-- 검색 결과·공유 미리보기 기본 정보 -->
     <meta data-rh="true" name="description" content="평택 매장 4곳의 2인 가능 방탈출 22개를 가격·시간·후기로 비교하세요. 매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요." />
-    <meta data-rh="true" name="robots" content="index,follow,max-image-preview:large" />
+    <meta data-rh="true" name="robots" content="noindex,follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="방또" />
     <meta data-rh="true" property="og:title" content="평택 2인 가능 방탈출 22개 비교 | 방또" />
@@ -120,7 +120,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -132,6 +133,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -198,7 +217,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/recommend/pyeongtaek/two-players" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/recommend/pyeongtaek/two-players" />
-    <script data-seo-url="https://bangtto.com/recommend/pyeongtaek/two-players" type="application/ld+json">[{"@context":"https://schema.org","@type":"ItemList","name":"평택 2인 가능 방탈출","url":"https://bangtto.com/recommend/pyeongtaek/two-players","numberOfItems":22,"itemListElement":[{"@type":"ListItem","position":1,"name":"나를 찾아줘 (루트이스케이프 평택점)","url":"https://bangtto.com/theme/routeescape-pyeongtaek-989c2390"},{"@type":"ListItem","position":2,"name":"대탈출2 (마스터키 평택점)","url":"https://bangtto.com/theme/masterkey-pyeongtaek-158"},{"@type":"ListItem","position":3,"name":"대탈출2 (플레이더월드 평택점)","url":"https://bangtto.com/theme/playtheworld-pyeongtaek-90"},{"@type":"ListItem","position":4,"name":"도둑들 (셜록홈즈 평택점)","url":"https://bangtto.com/theme/sherlock-pyeongtaek-145"},{"@type":"ListItem","position":5,"name":"루2지 (루트이스케이프 평택점)","url":"https://bangtto.com/theme/routeescape-pyeongtaek-1c3852c1"},{"@type":"ListItem","position":6,"name":"미녀와야수 (셜록홈즈 평택점)","url":"https://bangtto.com/theme/sherlock-pyeongtaek-157"},{"@type":"ListItem","position":7,"name":"바디스네처 (루트이스케이프 평택점)","url":"https://bangtto.com/theme/routeescape-pyeongtaek-8e3dcf08"},{"@type":"ListItem","position":8,"name":"반고흐의방 (셜록홈즈 평택점)","url":"https://bangtto.com/theme/sherlock-pyeongtaek-61"},{"@type":"ListItem","position":9,"name":"사귀 (마스터키 평택점)","url":"https://bangtto.com/theme/masterkey-pyeongtaek-165"},{"@type":"ListItem","position":10,"name":"사귀 (플레이더월드 평택점)","url":"https://bangtto.com/theme/playtheworld-pyeongtaek-94"},{"@type":"ListItem","position":11,"name":"시간전당포 (마스터키 평택점)","url":"https://bangtto.com/theme/masterkey-pyeongtaek-166"},{"@type":"ListItem","position":12,"name":"시간전당포 (플레이더월드 평택점)","url":"https://bangtto.com/theme/playtheworld-pyeongtaek-95"},{"@type":"ListItem","position":13,"name":"쌩얼 (마스터키 평택점)","url":"https://bangtto.com/theme/masterkey-pyeongtaek-159"},{"@type":"ListItem","position":14,"name":"쌩얼 (플레이더월드 평택점)","url":"https://bangtto.com/theme/playtheworld-pyeongtaek-91"},{"@type":"ListItem","position":15,"name":"지옥의 배달부 (셜록홈즈 평택점)","url":"https://bangtto.com/theme/sherlock-pyeongtaek-294"},{"@type":"ListItem","position":16,"name":"집으로 (마스터키 평택점)","url":"https://bangtto.com/theme/masterkey-pyeongtaek-160"},{"@type":"ListItem","position":17,"name":"집으로 (플레이더월드 평택점)","url":"https://bangtto.com/theme/playtheworld-pyeongtaek-92"},{"@type":"ListItem","position":18,"name":"트랩 (루트이스케이프 평택점)","url":"https://bangtto.com/theme/routeescape-pyeongtaek-161f6015"},{"@type":"ListItem","position":19,"name":"트레저 (루트이스케이프 평택점)","url":"https://bangtto.com/theme/routeescape-pyeongtaek-0065fb34"},{"@type":"ListItem","position":20,"name":"혼:원혼의저주 (셜록홈즈 평택점)","url":"https://bangtto.com/theme/sherlock-pyeongtaek-295"},{"@type":"ListItem","position":21,"name":"MSI 미제사건 전담반 (마스터키 평택점)","url":"https://bangtto.com/theme/masterkey-pyeongtaek-161"},{"@type":"ListItem","position":22,"name":"MSI 미제사건 전담반 (플레이더월드 평택점)","url":"https://bangtto.com/theme/playtheworld-pyeongtaek-93"}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"평택 방탈출","item":"https://bangtto.com/region/pyeongtaek"},{"@type":"ListItem","position":3,"name":"평택 2인 가능 방탈출","item":"https://bangtto.com/recommend/pyeongtaek/two-players"}]}]</script>
+    
   </head>
 
   <body>
@@ -208,6 +227,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -216,6 +236,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/roomsa-pohang-282" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/roomsa-pohang-282" />
-    <script data-seo-url="https://bangtto.com/theme/roomsa-pohang-282" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"안개꽃 (룸즈에이 포항점)","description":"화가인 그가 내게서 떠나간지 어느덧 한 달, 나는 여전히 그와의 시간 속에 머물러 있다. 그리움과 원망을 가득 안고 골목길을 걷던 어느 날, 밤공기를 들이마시며 한 걸음씩 내딛던 나는 작은 골목길과는 어울리지 않는 전시관을 보게 되었다. 처음 보는 전시관이었지만 어디선가 그의 향기가 흘러나오는 듯 했고, 그 추억 속의 향기에 이끌려 전시회장 안으로 들어서게 되었다.","url":"https://bangtto.com/theme/roomsa-pohang-282","image":"https://wsrv.nl/?url=https%3A%2F%2Fimg.reserv.company%2Froomsa%2Fposter-68e8273a4c1a94c3.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"경북 포항시 북구 상원동 462-5, 스타타워 5층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":36.0374250005685,"longitude":129.365035087882}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"포항 방탈출","item":"https://bangtto.com/region/pohang"},{"@type":"ListItem","position":3,"name":"룸즈에이 포항점","item":"https://bangtto.com/store/roomsa-pohang"},{"@type":"ListItem","position":4,"name":"안개꽃","item":"https://bangtto.com/theme/roomsa-pohang-282"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/roomsa-pohang-282" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"안개꽃 (룸즈에이 포항점)","description":"포항 룸즈에이 포항점의 감성/로맨스 테마 안개꽃. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/roomsa-pohang-282","image":"https://wsrv.nl/?url=https%3A%2F%2Fimg.reserv.company%2Froomsa%2Fposter-68e8273a4c1a94c3.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/roomsa-pohang#store","name":"룸즈에이 포항점","url":"https://bangtto.com/store/roomsa-pohang"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"포항 방탈출","item":"https://bangtto.com/region/pohang"},{"@type":"ListItem","position":3,"name":"룸즈에이 포항점","item":"https://bangtto.com/store/roomsa-pohang"},{"@type":"ListItem","position":4,"name":"안개꽃","item":"https://bangtto.com/theme/roomsa-pohang-282"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

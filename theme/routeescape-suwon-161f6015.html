@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/routeescape-suwon-161f6015" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/routeescape-suwon-161f6015" />
-    <script data-seo-url="https://bangtto.com/theme/routeescape-suwon-161f6015" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"트랩 (루트이스케이프 수원점)","description":"등산을 하던 중 나는 구덩이에 빠졌다. 그런 나를 구하려던 일행마저 빠져버렸다.\n\n‘아! 피비린내... 이 구덩이는 뭐란 말인가!!’\n\n깊은 산골.. 휴대폰도 터지지 않는다.\n\n날은 어두워지고 추위에 의식조차 희미해진다.\n\n갑자기 나타난 한 남자,\n\n거인 같은 체구, 험상 굿은 인상.\n\n그는 이 구덩이를 파놓은 놈임에 틀림없다.\n\n그는 구덩이 주위의 밧줄 같은 것을 당겼고, 그의 괴력에 우리는 그물에 걸린 물고기 처럼 끌려 올려졌다\n그리고는 그대로 끌려가 숲 속 창고 같은 곳에 덛져졌는데.......\n\n‘미친..... 우리는 인간사냥의 덫에 걸린 걸까?’\n\nI fell into a pit while climbing, so did rest of the party that tried to get me out of it.\n\n“This smell of blood... And what the hell is this pit?”\n\nDeep in the mountains... The cell phone doesn't even work either.\n\nIt gets dark and this freezing cold is about to make me lose my consciousness.\n\nA giant man who appeared out of nowhere,\n\nHe must be the guy who dug this hole.\n\nThe man pulled something like a rope around the pit, we were pulled up so easily like fish caught in a net. Then he took us to a warehouse deep in a forest.\n\n“Damn... are we caught in a human hunt trap?”","url":"https://bangtto.com/theme/routeescape-suwon-161f6015","image":"https://wsrv.nl/?url=https%3A%2F%2Fbucheonroute.s3.amazonaws.com%2Ftheme%2F%25ED%258A%25B8%25EB%259E%25A9_%25ED%2599%2588%25ED%258E%2598%25EC%259D%25B4%25EC%25A7%2580-%25EC%259A%25A9.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"경기 수원시 팔달구 향교로12-1 5층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.2677962674418,"longitude":127.002655962682}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"수원 방탈출","item":"https://bangtto.com/region/suwon"},{"@type":"ListItem","position":3,"name":"루트이스케이프 수원점","item":"https://bangtto.com/store/routeescape-suwon"},{"@type":"ListItem","position":4,"name":"트랩","item":"https://bangtto.com/theme/routeescape-suwon-161f6015"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/routeescape-suwon-161f6015" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"트랩 (루트이스케이프 수원점)","description":"수원 루트이스케이프 수원점의 fear 테마 트랩. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/routeescape-suwon-161f6015","image":"https://wsrv.nl/?url=https%3A%2F%2Fbucheonroute.s3.amazonaws.com%2Ftheme%2F%25ED%258A%25B8%25EB%259E%25A9_%25ED%2599%2588%25ED%258E%2598%25EC%259D%25B4%25EC%25A7%2580-%25EC%259A%25A9.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/routeescape-suwon#store","name":"루트이스케이프 수원점","url":"https://bangtto.com/store/routeescape-suwon"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":1,"maxValue":6},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"수원 방탈출","item":"https://bangtto.com/region/suwon"},{"@type":"ListItem","position":3,"name":"루트이스케이프 수원점","item":"https://bangtto.com/store/routeescape-suwon"},{"@type":"ListItem","position":4,"name":"트랩","item":"https://bangtto.com/theme/routeescape-suwon-161f6015"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

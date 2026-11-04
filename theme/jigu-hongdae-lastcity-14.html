@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/jigu-hongdae-lastcity-14" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/jigu-hongdae-lastcity-14" />
-    <script data-seo-url="https://bangtto.com/theme/jigu-hongdae-lastcity-14" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"멸종위기종 탐사대 (지구별 방탈출 홍대라스트시티점)","description":"[모집공고] 신비로운 미지의 섬, 브이 아일랜드에서 멸종위기종을 탐사할 수 있는 단 한번의 기회! 탐사 조건에 부합하는 유능한 지원자들께서는 망설이지말고 신청 바랍니다. * 3인 이상 플레이를 권장합니다.","url":"https://bangtto.com/theme/jigu-hongdae-lastcity-14","image":"https://wsrv.nl/?url=https%3A%2F%2Fxn--2e0b040a4xj.com%2Fstorage%2Ftheme%2F2024_08%2F12%2FwwRUAFB6wzTNHW1iUEceA8wXQvgjK2KC6jClLKfk.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"서울 마포구 홍익로 10 (서교푸르지오) 상가건물 지하2층 지구별 방탈출","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.55398906,"longitude":126.92332994},"aggregateRating":{"@type":"AggregateRating","ratingValue":5,"reviewCount":1,"bestRating":5,"worstRating":0.5}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"홍대 방탈출","item":"https://bangtto.com/region/hongdae"},{"@type":"ListItem","position":3,"name":"지구별 방탈출 홍대라스트시티점","item":"https://bangtto.com/store/jigu-hongdae-lastcity"},{"@type":"ListItem","position":4,"name":"멸종위기종 탐사대","item":"https://bangtto.com/theme/jigu-hongdae-lastcity-14"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/jigu-hongdae-lastcity-14" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"멸종위기종 탐사대 (지구별 방탈출 홍대라스트시티점)","description":"홍대 지구별 방탈출 홍대라스트시티점의 어드벤처/미션 테마 멸종위기종 탐사대. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/jigu-hongdae-lastcity-14","image":"https://wsrv.nl/?url=https%3A%2F%2Fxn--2e0b040a4xj.com%2Fstorage%2Ftheme%2F2024_08%2F12%2FwwRUAFB6wzTNHW1iUEceA8wXQvgjK2KC6jClLKfk.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/jigu-hongdae-lastcity#store","name":"지구별 방탈출 홍대라스트시티점","url":"https://bangtto.com/store/jigu-hongdae-lastcity"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT65M","aggregateRating":{"@type":"AggregateRating","ratingValue":5,"reviewCount":1,"bestRating":5,"worstRating":0.5}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"홍대 방탈출","item":"https://bangtto.com/region/hongdae"},{"@type":"ListItem","position":3,"name":"지구별 방탈출 홍대라스트시티점","item":"https://bangtto.com/store/jigu-hongdae-lastcity"},{"@type":"ListItem","position":4,"name":"멸종위기종 탐사대","item":"https://bangtto.com/theme/jigu-hongdae-lastcity-14"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

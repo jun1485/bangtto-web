@@ -10,7 +10,7 @@
     <title>인천 구월 2인 가능 방탈출 23개 비교 | 방또</title>
     <!-- 검색 결과·공유 미리보기 기본 정보 -->
     <meta data-rh="true" name="description" content="인천 구월 매장 5곳의 2인 가능 방탈출 23개를 가격·시간·후기로 비교하세요. 매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요." />
-    <meta data-rh="true" name="robots" content="index,follow,max-image-preview:large" />
+    <meta data-rh="true" name="robots" content="noindex,follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="방또" />
     <meta data-rh="true" property="og:title" content="인천 구월 2인 가능 방탈출 23개 비교 | 방또" />
@@ -120,7 +120,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -132,6 +133,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -198,7 +217,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/recommend/incheon-guwol/two-players" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/recommend/incheon-guwol/two-players" />
-    <script data-seo-url="https://bangtto.com/recommend/incheon-guwol/two-players" type="application/ld+json">[{"@context":"https://schema.org","@type":"ItemList","name":"인천 구월 2인 가능 방탈출","url":"https://bangtto.com/recommend/incheon-guwol/two-players","numberOfItems":23,"itemListElement":[{"@type":"ListItem","position":1,"name":"감옥탈출 (코드케이 구월점)","url":"https://bangtto.com/theme/codek-guwol-s9"},{"@type":"ListItem","position":2,"name":"기담정 (둠이스케이프 1호점)","url":"https://bangtto.com/theme/doom-guwol1-27"},{"@type":"ListItem","position":3,"name":"나폴리탄 (둠이스케이프 1호점)","url":"https://bangtto.com/theme/doom-guwol1-29"},{"@type":"ListItem","position":4,"name":"납치 (2인전용) (코드케이 구월점)","url":"https://bangtto.com/theme/codek-guwol-s12"},{"@type":"ListItem","position":5,"name":"던전을 부탁해 (셜록홈즈 구월인천점)","url":"https://bangtto.com/theme/sherlock-guwol-254"},{"@type":"ListItem","position":6,"name":"디스토피아 (둠이스케이프 2호점)","url":"https://bangtto.com/theme/doom-guwol2-31"},{"@type":"ListItem","position":7,"name":"사라민 (셜록홈즈 구월인천점)","url":"https://bangtto.com/theme/sherlock-guwol-252"},{"@type":"ListItem","position":8,"name":"신데렐라 (큐브이스케이프 인천구월점)","url":"https://bangtto.com/theme/cubeescape-incheon-guwol-12"},{"@type":"ListItem","position":9,"name":"운명 (둠이스케이프 2호점)","url":"https://bangtto.com/theme/doom-guwol2-30"},{"@type":"ListItem","position":10,"name":"인바이트 (둠이스케이프 2호점)","url":"https://bangtto.com/theme/doom-guwol2-33"},{"@type":"ListItem","position":11,"name":"인앤아웃 (둠이스케이프 1호점)","url":"https://bangtto.com/theme/doom-guwol1-28"},{"@type":"ListItem","position":12,"name":"장기밀매 (큐브이스케이프 인천구월점)","url":"https://bangtto.com/theme/cubeescape-incheon-guwol-03"},{"@type":"ListItem","position":13,"name":"좀비 90일후 (코드케이 구월점)","url":"https://bangtto.com/theme/codek-guwol-s11"},{"@type":"ListItem","position":14,"name":"좀비여친 (셜록홈즈 구월인천점)","url":"https://bangtto.com/theme/sherlock-guwol-253"},{"@type":"ListItem","position":15,"name":"죄 (둠이스케이프 2호점)","url":"https://bangtto.com/theme/doom-guwol2-32"},{"@type":"ListItem","position":16,"name":"지옥의 라이더 (셜록홈즈 구월인천점)","url":"https://bangtto.com/theme/sherlock-guwol-139"},{"@type":"ListItem","position":17,"name":"집착 (큐브이스케이프 인천구월점)","url":"https://bangtto.com/theme/cubeescape-incheon-guwol-13"},{"@type":"ListItem","position":18,"name":"충무공 이순신 (코드케이 구월점)","url":"https://bangtto.com/theme/codek-guwol-s8"},{"@type":"ListItem","position":19,"name":"타이타닉 (큐브이스케이프 인천구월점)","url":"https://bangtto.com/theme/cubeescape-incheon-guwol-14"},{"@type":"ListItem","position":20,"name":"파란지붕집 (셜록홈즈 구월인천점)","url":"https://bangtto.com/theme/sherlock-guwol-255"},{"@type":"ListItem","position":21,"name":"호텔:사라진 다이아몬드 (셜록홈즈 구월인천점)","url":"https://bangtto.com/theme/sherlock-guwol-237"},{"@type":"ListItem","position":22,"name":"Rendering (둠이스케이프 1호점)","url":"https://bangtto.com/theme/doom-guwol1-8"},{"@type":"ListItem","position":23,"name":"Towering (큐브이스케이프 인천구월점)","url":"https://bangtto.com/theme/cubeescape-incheon-guwol-06"}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"인천 구월 방탈출","item":"https://bangtto.com/region/incheon-guwol"},{"@type":"ListItem","position":3,"name":"인천 구월 2인 가능 방탈출","item":"https://bangtto.com/recommend/incheon-guwol/two-players"}]}]</script>
+    
   </head>
 
   <body>
@@ -208,6 +227,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -216,6 +236,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

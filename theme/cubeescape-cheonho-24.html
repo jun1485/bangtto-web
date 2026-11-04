@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/cubeescape-cheonho-24" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/cubeescape-cheonho-24" />
-    <script data-seo-url="https://bangtto.com/theme/cubeescape-cheonho-24" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"Aphilia : 장미의 비밀 (큐브이스케이프 천호점)","description":"처음으로 그녀의 집을 방문하는 날이다. 내게는 너무나 과분하고 완벽한 그녀지만 나와 그녀 사이에는 왠지 모를 거리감이 있다. 그녀와 연애하면서도 손조차 잡아보지 못했다. 그런 그녀에게서 연락이 왔다. “오늘밤은 꼭 당신과 함께 있고 싶어요.” 그녀가 가장 좋아하는 와인을 준비해 그녀의 집에 도착했다. 그녀는 웃으며 나를 반겨줬다. “어머, 기억하고 있었네요? 오늘은 제 인생이 바뀐 특별한 날이에요. 조금만 기다려 줄래요? 당신에게 준비한 선물이 있어요.” 그녀의 집에 들어온 순간 잊고 싶었던 기억 하나가 떠올랐다.","url":"https://bangtto.com/theme/cubeescape-cheonho-24","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dcubeescape-cheonho-24%26v%3Dhttp%253A%252F%252Fcheonho.cubeescape.co.kr%252Ftheme%252Fbasic_room2%252Fimg%252Frain%252Froom24.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"서울 강동구 천호대로157길 22 3층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.5386485329963,"longitude":127.127475411588}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"천호 방탈출","item":"https://bangtto.com/region/cheonho"},{"@type":"ListItem","position":3,"name":"큐브이스케이프 천호점","item":"https://bangtto.com/store/cubeescape-cheonho"},{"@type":"ListItem","position":4,"name":"Aphilia : 장미의 비밀","item":"https://bangtto.com/theme/cubeescape-cheonho-24"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/cubeescape-cheonho-24" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"Aphilia : 장미의 비밀 (큐브이스케이프 천호점)","description":"천호 큐브이스케이프 천호점의 추리/스릴러 테마 Aphilia : 장미의 비밀. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/cubeescape-cheonho-24","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dcubeescape-cheonho-24%26v%3Dhttp%253A%252F%252Fcheonho.cubeescape.co.kr%252Ftheme%252Fbasic_room2%252Fimg%252Frain%252Froom24.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/cubeescape-cheonho#store","name":"큐브이스케이프 천호점","url":"https://bangtto.com/store/cubeescape-cheonho"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"천호 방탈출","item":"https://bangtto.com/region/cheonho"},{"@type":"ListItem","position":3,"name":"큐브이스케이프 천호점","item":"https://bangtto.com/store/cubeescape-cheonho"},{"@type":"ListItem","position":4,"name":"Aphilia : 장미의 비밀","item":"https://bangtto.com/theme/cubeescape-cheonho-24"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

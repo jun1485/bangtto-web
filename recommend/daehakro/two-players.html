@@ -10,7 +10,7 @@
     <title>대학로 2인 가능 방탈출 33개 비교 | 방또</title>
     <!-- 검색 결과·공유 미리보기 기본 정보 -->
     <meta data-rh="true" name="description" content="대학로 매장 7곳의 2인 가능 방탈출 33개를 가격·시간·후기로 비교하세요. 매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요." />
-    <meta data-rh="true" name="robots" content="index,follow,max-image-preview:large" />
+    <meta data-rh="true" name="robots" content="noindex,follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="방또" />
     <meta data-rh="true" property="og:title" content="대학로 2인 가능 방탈출 33개 비교 | 방또" />
@@ -120,7 +120,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -132,6 +133,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -198,7 +217,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/recommend/daehakro/two-players" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/recommend/daehakro/two-players" />
-    <script data-seo-url="https://bangtto.com/recommend/daehakro/two-players" type="application/ld+json">[{"@context":"https://schema.org","@type":"ItemList","name":"대학로 2인 가능 방탈출","url":"https://bangtto.com/recommend/daehakro/two-players","numberOfItems":33,"itemListElement":[{"@type":"ListItem","position":1,"name":"STAGE (에필로그)","url":"https://bangtto.com/theme/epilogue-daehakro-3"},{"@type":"ListItem","position":2,"name":"경찰과 도둑 (상상의문 대학로점)","url":"https://bangtto.com/theme/sangsang-daehakro-4"},{"@type":"ListItem","position":3,"name":"글램핑 (덤앤더머 대학로점)","url":"https://bangtto.com/theme/dumbndumber-daehakro-6"},{"@type":"ListItem","position":4,"name":"나이스 (비밀의화원 대학로점)","url":"https://bangtto.com/theme/secretgarden-daehakro-28"},{"@type":"ListItem","position":5,"name":"나이트워크 (상상의문 대학로점)","url":"https://bangtto.com/theme/sangsang-daehakro-10"},{"@type":"ListItem","position":6,"name":"낭랑카페 (룸즈에이 대학로점)","url":"https://bangtto.com/theme/roomsa-daehakro-197"},{"@type":"ListItem","position":7,"name":"다섯 번째 밤 (에필로그)","url":"https://bangtto.com/theme/epilogue-daehakro-4"},{"@type":"ListItem","position":8,"name":"달 : 기억의 조각 (비밀의화원 시네마틱 혜화)","url":"https://bangtto.com/theme/secretgarden-hyehwa-68"},{"@type":"ListItem","position":9,"name":"대감댁변씨 (비밀의화원 대학로점)","url":"https://bangtto.com/theme/secretgarden-daehakro-27"},{"@type":"ListItem","position":10,"name":"도망자 여씨 (비밀의화원 시네마틱 혜화)","url":"https://bangtto.com/theme/secretgarden-hyehwa-71"},{"@type":"ListItem","position":11,"name":"드림 인베이더 (셜록홈즈 대학로점)","url":"https://bangtto.com/theme/sherlock-daehakro-341"},{"@type":"ListItem","position":12,"name":"딜레마 (비밀의화원 시네마틱 혜화)","url":"https://bangtto.com/theme/secretgarden-hyehwa-70"},{"@type":"ListItem","position":13,"name":"러브클리닉 (덤앤더머 대학로점)","url":"https://bangtto.com/theme/dumbndumber-daehakro-3"},{"@type":"ListItem","position":14,"name":"무속인 살인사건 (셜록홈즈 대학로점)","url":"https://bangtto.com/theme/sherlock-daehakro-344"},{"@type":"ListItem","position":15,"name":"미녀와야수 (셜록홈즈 대학로점)","url":"https://bangtto.com/theme/sherlock-daehakro-340"},{"@type":"ListItem","position":16,"name":"비밀의 모험 (비밀의화원 대학로점)","url":"https://bangtto.com/theme/secretgarden-daehakro-24"},{"@type":"ListItem","position":17,"name":"삼남매 이씨 (비밀의화원 시네마틱 혜화)","url":"https://bangtto.com/theme/secretgarden-hyehwa-69"},{"@type":"ListItem","position":18,"name":"슈퍼플레이어:PLAYER1 (비밀의화원 대학로점)","url":"https://bangtto.com/theme/secretgarden-daehakro-25"},{"@type":"ListItem","position":19,"name":"스포일러 (상상의문 대학로점)","url":"https://bangtto.com/theme/sangsang-daehakro-1"},{"@type":"ListItem","position":20,"name":"안개꽃 (룸즈에이 대학로점)","url":"https://bangtto.com/theme/roomsa-daehakro-196"},{"@type":"ListItem","position":21,"name":"엑스튜브 (비밀의화원 대학로점)","url":"https://bangtto.com/theme/secretgarden-daehakro-26"},{"@type":"ListItem","position":22,"name":"위험한 레시피 (셜록홈즈 대학로점)","url":"https://bangtto.com/theme/sherlock-daehakro-345"},{"@type":"ListItem","position":23,"name":"작전명: 옵저버 (덤앤더머 대학로점)","url":"https://bangtto.com/theme/dumbndumber-daehakro-1"},{"@type":"ListItem","position":24,"name":"크라임시티 (덤앤더머 대학로점)","url":"https://bangtto.com/theme/dumbndumber-daehakro-2"},{"@type":"ListItem","position":25,"name":"투 앨리스 (덤앤더머 대학로점)","url":"https://bangtto.com/theme/dumbndumber-daehakro-4"},{"@type":"ListItem","position":26,"name":"푸른수염 (덤앤더머 대학로점)","url":"https://bangtto.com/theme/dumbndumber-daehakro-5"},{"@type":"ListItem","position":27,"name":"행방불냥 (룸즈에이 대학로점)","url":"https://bangtto.com/theme/roomsa-daehakro-198"},{"@type":"ListItem","position":28,"name":"혼:원혼의저주 (셜록홈즈 대학로점)","url":"https://bangtto.com/theme/sherlock-daehakro-342"},{"@type":"ListItem","position":29,"name":"Gain Time (룸즈에이 대학로점)","url":"https://bangtto.com/theme/roomsa-daehakro-199"},{"@type":"ListItem","position":30,"name":"H.E.L.L.P (비밀의화원 시네마틱 혜화)","url":"https://bangtto.com/theme/secretgarden-hyehwa-66"},{"@type":"ListItem","position":31,"name":"MEMORY (에필로그)","url":"https://bangtto.com/theme/epilogue-daehakro-6"},{"@type":"ListItem","position":32,"name":"Monday Night (에필로그)","url":"https://bangtto.com/theme/epilogue-daehakro-1"},{"@type":"ListItem","position":33,"name":"Secret Agent (룸즈에이 대학로점)","url":"https://bangtto.com/theme/roomsa-daehakro-195"}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"대학로 방탈출","item":"https://bangtto.com/region/daehakro"},{"@type":"ListItem","position":3,"name":"대학로 2인 가능 방탈출","item":"https://bangtto.com/recommend/daehakro/two-players"}]}]</script>
+    
   </head>
 
   <body>
@@ -208,6 +227,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -216,6 +236,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

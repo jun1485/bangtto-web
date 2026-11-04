@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/sherlock-cheongju-185" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/sherlock-cheongju-185" />
-    <script data-seo-url="https://bangtto.com/theme/sherlock-cheongju-185" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"도둑들 (셜록홈즈 청주점)","description":"유명화가의 희귀품만 전시해서 그 가치가 높은 크라임 미술관, 이곳은 보안으로도 유명해 한번도 도둑맞은 적이 없다. 당신은 이곳을 털기위해 천재해커 빌리와 손을 잡게 되고 빌리가 한시간동안 경비 시스템을 마비 시킬 수 있다는데..자 주어진 시간은 한시간! 미술관을 털어라!","url":"https://bangtto.com/theme/sherlock-cheongju-185","image":"https://wsrv.nl/?url=https%3A%2F%2Fsherlock-holmes.co.kr%2Fattach%2Ftheme%2F15301531101.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"충북 청주시 상당구 상당로81번길 58 3층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":36.63565386,"longitude":127.48704485}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"청주 방탈출","item":"https://bangtto.com/region/cheongju"},{"@type":"ListItem","position":3,"name":"셜록홈즈 청주점","item":"https://bangtto.com/store/sherlock-cheongju"},{"@type":"ListItem","position":4,"name":"도둑들","item":"https://bangtto.com/theme/sherlock-cheongju-185"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/sherlock-cheongju-185" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"도둑들 (셜록홈즈 청주점)","description":"청주 셜록홈즈 청주점의 잠입·탈옥 테마 도둑들. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/sherlock-cheongju-185","image":"https://wsrv.nl/?url=https%3A%2F%2Fsherlock-holmes.co.kr%2Fattach%2Ftheme%2F15301531101.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/sherlock-cheongju#store","name":"셜록홈즈 청주점","url":"https://bangtto.com/store/sherlock-cheongju"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"청주 방탈출","item":"https://bangtto.com/region/cheongju"},{"@type":"ListItem","position":3,"name":"셜록홈즈 청주점","item":"https://bangtto.com/store/sherlock-cheongju"},{"@type":"ListItem","position":4,"name":"도둑들","item":"https://bangtto.com/theme/sherlock-cheongju-185"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

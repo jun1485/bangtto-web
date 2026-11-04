@@ -10,7 +10,7 @@
     <title>광주 2인 가능 방탈출 65개 비교 | 방또</title>
     <!-- 검색 결과·공유 미리보기 기본 정보 -->
     <meta data-rh="true" name="description" content="광주 매장 10곳의 2인 가능 방탈출 65개를 가격·시간·후기로 비교하세요. 매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요." />
-    <meta data-rh="true" name="robots" content="index,follow,max-image-preview:large" />
+    <meta data-rh="true" name="robots" content="noindex,follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="방또" />
     <meta data-rh="true" property="og:title" content="광주 2인 가능 방탈출 65개 비교 | 방또" />
@@ -120,7 +120,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -132,6 +133,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -198,7 +217,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/recommend/gwangju/two-players" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/recommend/gwangju/two-players" />
-    <script data-seo-url="https://bangtto.com/recommend/gwangju/two-players" type="application/ld+json">[{"@context":"https://schema.org","@type":"ItemList","name":"광주 2인 가능 방탈출","url":"https://bangtto.com/recommend/gwangju/two-players","numberOfItems":65,"itemListElement":[{"@type":"ListItem","position":1,"name":"새벽 베이커리 (비밀의화원 광주점)","url":"https://bangtto.com/theme/secretgarden-gwangju-61"},{"@type":"ListItem","position":2,"name":"(야외테마)Love Blossom (비밀의화원 광주점)","url":"https://bangtto.com/theme/secretgarden-gwangju-64"},{"@type":"ListItem","position":3,"name":"경찰서를털어라 (더코드 광주점)","url":"https://bangtto.com/theme/thecode-gwangju-esc02"},{"@type":"ListItem","position":4,"name":"곤지암 (더코드 광주점)","url":"https://bangtto.com/theme/thecode-gwangju-esc03"},{"@type":"ListItem","position":5,"name":"그럼에도 불구하고, (상상의문 광주점)","url":"https://bangtto.com/theme/sangsang-gwangju-22"},{"@type":"ListItem","position":6,"name":"그레이스 호텔 (룸즈에이 광주상무점)","url":"https://bangtto.com/theme/roomsa-gwangju-sangmu-259"},{"@type":"ListItem","position":7,"name":"꽃배 (숨바꼭질 광주동구점)","url":"https://bangtto.com/theme/hide-gwangju-1"},{"@type":"ListItem","position":8,"name":"나홀로집에 (더코드 광주점)","url":"https://bangtto.com/theme/thecode-gwangju-esc05"},{"@type":"ListItem","position":9,"name":"낭랑카페 (룸즈에이 광주수완점)","url":"https://bangtto.com/theme/roomsa-gwangju-suwan-287"},{"@type":"ListItem","position":10,"name":"너와 나의 이야기 (룸즈에이 광주수완점)","url":"https://bangtto.com/theme/roomsa-gwangju-suwan-290"},{"@type":"ListItem","position":11,"name":"놈즈 : 더 비기닝 (룸즈에이 광주수완 2호점)","url":"https://bangtto.com/theme/roomsa-gwangju-suwan2-374"},{"@type":"ListItem","position":12,"name":"도둑들 (더코드 광주점)","url":"https://bangtto.com/theme/thecode-gwangju-esc06"},{"@type":"ListItem","position":13,"name":"뜻밖의 여행 (룸즈에이 광주상무점)","url":"https://bangtto.com/theme/roomsa-gwangju-sangmu-257"},{"@type":"ListItem","position":14,"name":"띵가띵가 (룸즈에이 광주상무점)","url":"https://bangtto.com/theme/roomsa-gwangju-sangmu-255"},{"@type":"ListItem","position":15,"name":"라스트 잡 (비밀의화원 광주점)","url":"https://bangtto.com/theme/secretgarden-gwangju-63"},{"@type":"ListItem","position":16,"name":"루머 (브레인방탈출 광주점)","url":"https://bangtto.com/theme/brainescape-gwangju-03"},{"@type":"ListItem","position":17,"name":"리비도 (비밀의화원 광주점)","url":"https://bangtto.com/theme/secretgarden-gwangju-59"},{"@type":"ListItem","position":18,"name":"머더파커 광주점의 비밀 (머더파커 광주점)","url":"https://bangtto.com/theme/murderparker-gwangju-b"},{"@type":"ListItem","position":19,"name":"멍사탕 (룸즈에이 광주상무점)","url":"https://bangtto.com/theme/roomsa-gwangju-sangmu-263"},{"@type":"ListItem","position":20,"name":"무고 (비밀의화원 광주점)","url":"https://bangtto.com/theme/secretgarden-gwangju-58"},{"@type":"ListItem","position":21,"name":"무죄(탈옥 하려면 협력하라) (숨바꼭질 광주동구점)","url":"https://bangtto.com/theme/hide-gwangju-3"},{"@type":"ListItem","position":22,"name":"미생 (더코드 광주점)","url":"https://bangtto.com/theme/thecode-gwangju-esc04"},{"@type":"ListItem","position":23,"name":"미스틱 클럽 (룸즈에이 광주수완 2호점)","url":"https://bangtto.com/theme/roomsa-gwangju-suwan2-376"},{"@type":"ListItem","position":24,"name":"방과 후 (룸즈에이 광주수완점)","url":"https://bangtto.com/theme/roomsa-gwangju-suwan-292"},{"@type":"ListItem","position":25,"name":"복도끝 : 못다恨이야기 (시간의문 광주점)","url":"https://bangtto.com/theme/gateoftime-gwangju-320"},{"@type":"ListItem","position":26,"name":"블랙리스트 (브레인방탈출 광주점)","url":"https://bangtto.com/theme/brainescape-gwangju-05"},{"@type":"ListItem","position":27,"name":"비밀의 가족 (비밀의화원 광주점)","url":"https://bangtto.com/theme/secretgarden-gwangju-62"},{"@type":"ListItem","position":28,"name":"뽀득뽀득 (룸즈에이 광주수완점)","url":"https://bangtto.com/theme/roomsa-gwangju-suwan-289"},{"@type":"ListItem","position":29,"name":"서울만가면된다 (상상의문 광주점)","url":"https://bangtto.com/theme/sangsang-gwangju-21"},{"@type":"ListItem","position":30,"name":"선물 (머더파커 광주점)","url":"https://bangtto.com/theme/murderparker-gwangju-c"},{"@type":"ListItem","position":31,"name":"손님(저택 그곳은) (숨바꼭질 광주동구점)","url":"https://bangtto.com/theme/hide-gwangju-4"},{"@type":"ListItem","position":32,"name":"쇼쿠진 (시간의문 광주점)","url":"https://bangtto.com/theme/gateoftime-gwangju-329"},{"@type":"ListItem","position":33,"name":"슈퍼빌런 (브레인방탈출 광주점)","url":"https://bangtto.com/theme/brainescape-gwangju-04"},{"@type":"ListItem","position":34,"name":"스토커 (비밀의화원 광주점)","url":"https://bangtto.com/theme/secretgarden-gwangju-60"},{"@type":"ListItem","position":35,"name":"시크릿 에이전트 (룸즈에이 광주수완점)","url":"https://bangtto.com/theme/roomsa-gwangju-suwan-291"},{"@type":"ListItem","position":36,"name":"시크릿 왕국의 스캔들 (상상의문 광주점)","url":"https://bangtto.com/theme/sangsang-gwangju-15"},{"@type":"ListItem","position":37,"name":"썸 (브레인방탈출 광주점)","url":"https://bangtto.com/theme/brainescape-gwangju-01"},{"@type":"ListItem","position":38,"name":"아이돌 남친 (룸즈에이 광주상무점)","url":"https://bangtto.com/theme/roomsa-gwangju-sangmu-258"},{"@type":"ListItem","position":39,"name":"아이언 게이트 프리즌 (룸즈에이 광주수완 2호점)","url":"https://bangtto.com/theme/roomsa-gwangju-suwan2-373"},{"@type":"ListItem","position":40,"name":"영결식(靈結式) (상상의문 광주점)","url":"https://bangtto.com/theme/sangsang-gwangju-14"},{"@type":"ListItem","position":41,"name":"영안실 (시간의문 광주점)","url":"https://bangtto.com/theme/gateoftime-gwangju-328"},{"@type":"ListItem","position":42,"name":"요정들의 술집 (룸즈에이 광주수완점)","url":"https://bangtto.com/theme/roomsa-gwangju-suwan-286"},{"@type":"ListItem","position":43,"name":"이 소리 저만 들리나요? (룸즈에이 광주상무점)","url":"https://bangtto.com/theme/roomsa-gwangju-sangmu-261"},{"@type":"ListItem","position":44,"name":"이건 계획에 없었는디? (시간의문 광주점)","url":"https://bangtto.com/theme/gateoftime-gwangju-385"},{"@type":"ListItem","position":45,"name":"이상한 돈가스 (룸즈에이 광주상무점)","url":"https://bangtto.com/theme/roomsa-gwangju-sangmu-256"},{"@type":"ListItem","position":46,"name":"인연(우린 인연이 아니었을까?) (숨바꼭질 광주동구점)","url":"https://bangtto.com/theme/hide-gwangju-5"},{"@type":"ListItem","position":47,"name":"전지적 작가 시점 (룸즈에이 광주상무점)","url":"https://bangtto.com/theme/roomsa-gwangju-sangmu-262"},{"@type":"ListItem","position":48,"name":"직박구리 : 남친탐구생활 (시간의문 광주점)","url":"https://bangtto.com/theme/gateoftime-gwangju-188"},{"@type":"ListItem","position":49,"name":"커밍순 (룸즈에이 광주상무점)","url":"https://bangtto.com/theme/roomsa-gwangju-sangmu-260"},{"@type":"ListItem","position":50,"name":"타짜 (더코드 광주점)","url":"https://bangtto.com/theme/thecode-gwangju-esc01"},{"@type":"ListItem","position":51,"name":"탈옥 (더코드 광주점)","url":"https://bangtto.com/theme/thecode-gwangju-esc07"},{"@type":"ListItem","position":52,"name":"탐정 (더코드 광주점)","url":"https://bangtto.com/theme/thecode-gwangju-esc08"},{"@type":"ListItem","position":53,"name":"파커투 (머더파커 광주점)","url":"https://bangtto.com/theme/murderparker-gwangju-a"},{"@type":"ListItem","position":54,"name":"포수 장덕팔 (머더파커 광주점)","url":"https://bangtto.com/theme/murderparker-gwangju-d"},{"@type":"ListItem","position":55,"name":"필라멘트 (브레인방탈출 광주점)","url":"https://bangtto.com/theme/brainescape-gwangju-06"},{"@type":"ListItem","position":56,"name":"한림축산 (머더파커 광주점)","url":"https://bangtto.com/theme/murderparker-gwangju-e"},{"@type":"ListItem","position":57,"name":"호러맨스 (상상의문 광주점)","url":"https://bangtto.com/theme/sangsang-gwangju-16"},{"@type":"ListItem","position":58,"name":"혼숨 (시간의문 광주점)","url":"https://bangtto.com/theme/gateoftime-gwangju-189"},{"@type":"ListItem","position":59,"name":"히어로 아카데미 (룸즈에이 광주수완점)","url":"https://bangtto.com/theme/roomsa-gwangju-suwan-288"},{"@type":"ListItem","position":60,"name":"Chaser:한마음 폐공장 (시간의문 광주점)","url":"https://bangtto.com/theme/gateoftime-gwangju-325"},{"@type":"ListItem","position":61,"name":"DKDK (시간의문 광주점)","url":"https://bangtto.com/theme/gateoftime-gwangju-331"},{"@type":"ListItem","position":62,"name":"HERE I AM (시간의문 광주점)","url":"https://bangtto.com/theme/gateoftime-gwangju-187"},{"@type":"ListItem","position":63,"name":"SHIT (브레인방탈출 광주점)","url":"https://bangtto.com/theme/brainescape-gwangju-02"},{"@type":"ListItem","position":64,"name":"The Last Dance (룸즈에이 광주수완 2호점)","url":"https://bangtto.com/theme/roomsa-gwangju-suwan2-375"},{"@type":"ListItem","position":65,"name":"TITAN : 전쟁의경계 (상상의문 광주점)","url":"https://bangtto.com/theme/sangsang-gwangju-24"}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"광주 방탈출","item":"https://bangtto.com/region/gwangju"},{"@type":"ListItem","position":3,"name":"광주 2인 가능 방탈출","item":"https://bangtto.com/recommend/gwangju/two-players"}]}]</script>
+    
   </head>
 
   <body>
@@ -208,6 +227,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -216,6 +236,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

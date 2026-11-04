@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/roomsa-daejeon-eunhaeng-234" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/roomsa-daejeon-eunhaeng-234" />
-    <script data-seo-url="https://bangtto.com/theme/roomsa-daejeon-eunhaeng-234" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"히어로 아카데미 (룸즈에이 대전은행점)","description":"어릴 적부터 나는 영화에서 나오는 슈퍼맨. 배트맨.\n스파이더맨과 같은 영웅들이 어디엔가는 존재한다고 믿고,\n그들을 동경해왔다.\n\n나이가 들어서도 히어로를 꿈꾸는 나를 주변에서는 비웃었지만,\n진정한 히어로는 그런 것 따위는 가볍게 무시할 수 있는 것이다.\n그래서 나는 결심했다. 진짜 히어로가 되어 보이겠다고.\n\n결심을 하고나서 행동으로 옮기는 건 어렵지 않았다.\n나는 인터넷을 통해서 히어로가 되는 방법 등을 오랜 시간을\n들여 검색했다. 그러던 중 나에게 딱 맞는 곳을 찾을 수 있었다.\n히어로 아카데미가 있다는 것.\n나는 히어로 아카데미의 주소지를 메모지에 적어 무작정 그 곳을 찾아갔다.\n\n나는 히어로 아카데미를 졸업하고 히어로가 될 수 있을까?","url":"https://bangtto.com/theme/roomsa-daejeon-eunhaeng-234","image":"https://wsrv.nl/?url=https%3A%2F%2Fimg.reserv.company%2Froomsa%2Fposter-0769a096f383f3ce.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"대전 중구 은행동 33-2, 4층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":36.3280569348902,"longitude":127.428246742502}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"대전 방탈출","item":"https://bangtto.com/region/daejeon"},{"@type":"ListItem","position":3,"name":"룸즈에이 대전은행점","item":"https://bangtto.com/store/roomsa-daejeon-eunhaeng"},{"@type":"ListItem","position":4,"name":"히어로 아카데미","item":"https://bangtto.com/theme/roomsa-daejeon-eunhaeng-234"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/roomsa-daejeon-eunhaeng-234" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"히어로 아카데미 (룸즈에이 대전은행점)","description":"대전 룸즈에이 대전은행점의 히어로/아케이드 테마 히어로 아카데미. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/roomsa-daejeon-eunhaeng-234","image":"https://wsrv.nl/?url=https%3A%2F%2Fimg.reserv.company%2Froomsa%2Fposter-0769a096f383f3ce.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/roomsa-daejeon-eunhaeng#store","name":"룸즈에이 대전은행점","url":"https://bangtto.com/store/roomsa-daejeon-eunhaeng"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":5},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"대전 방탈출","item":"https://bangtto.com/region/daejeon"},{"@type":"ListItem","position":3,"name":"룸즈에이 대전은행점","item":"https://bangtto.com/store/roomsa-daejeon-eunhaeng"},{"@type":"ListItem","position":4,"name":"히어로 아카데미","item":"https://bangtto.com/theme/roomsa-daejeon-eunhaeng-234"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

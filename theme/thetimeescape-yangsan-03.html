@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/thetimeescape-yangsan-03" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/thetimeescape-yangsan-03" />
-    <script data-seo-url="https://bangtto.com/theme/thetimeescape-yangsan-03" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"레이나의 시약 (더타임이스케이프)","description":"시골의 농사를 지으로 살아가던 나와 나의 부모님.\n\n몇 달전 마을에 원인모를 역병이 퍼지고 그 역병에 어머니도 감염이 되어 버렸다.\n\n병을 고치기 위해 방법을 찾던 중 마을 사람들에게서 마을에서 멀리 떨어진 금지된 숲의 레이나라는 마법사에게 이 병을 치료 할 수 있는 방법이 있다는 소문이 퍼지게 된다.\n\n헛소문일지라도 아버지를 포함한 몇몇의 사람들이 자신들의 가족을 살릴 수 있다는 희망을 안고 금지된 숲으로 향했지만 돌아오지 않았다.\n\n이제 마을에 멀정히 남아 있는 사람은 몇 명이 없지만 가만히 있어도 죽게 될 바에는 차라리 먼저갔던 사람들의 행방도 알아보고 레이나의 시약을 알아내서 역병에 걸린 사람들을 살리자 라고 나를 포함한 몇몇의 사람들이 의견을 모았다.\n과연 우리가 각자의 부모님의 행방과 레이나의 시약을 얻어 마을사람들을 구할 수 있을까?\n\n이런 생각을 하며 모두 한마음으로 금지된 숲의 입구에 발을 들여 놓게 되는데.....","url":"https://bangtto.com/theme/thetimeescape-yangsan-03","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dthetimeescape-yangsan-03%26v%3Dhttp%253A%252F%252Fthetimeescape.co.kr%252Ftheme%252Fbasic_room2%252Fimg%252Frain%252Froom%252Froom03.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"경남 양산시 물금읍 청운로 185 오즈시티 307호","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":35.3172074134969,"longitude":129.002834661257}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"양산 방탈출","item":"https://bangtto.com/region/yangsan"},{"@type":"ListItem","position":3,"name":"더타임이스케이프","item":"https://bangtto.com/store/thetimeescape-yangsan"},{"@type":"ListItem","position":4,"name":"레이나의 시약","item":"https://bangtto.com/theme/thetimeescape-yangsan-03"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/thetimeescape-yangsan-03" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"레이나의 시약 (더타임이스케이프)","description":"양산 더타임이스케이프의 판타지 테마 레이나의 시약. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/thetimeescape-yangsan-03","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dthetimeescape-yangsan-03%26v%3Dhttp%253A%252F%252Fthetimeescape.co.kr%252Ftheme%252Fbasic_room2%252Fimg%252Frain%252Froom%252Froom03.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/thetimeescape-yangsan#store","name":"더타임이스케이프","url":"https://bangtto.com/store/thetimeescape-yangsan"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"양산 방탈출","item":"https://bangtto.com/region/yangsan"},{"@type":"ListItem","position":3,"name":"더타임이스케이프","item":"https://bangtto.com/store/thetimeescape-yangsan"},{"@type":"ListItem","position":4,"name":"레이나의 시약","item":"https://bangtto.com/theme/thetimeescape-yangsan-03"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

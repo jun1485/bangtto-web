@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/escapers-daejeon-hos" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/escapers-daejeon-hos" />
-    <script data-seo-url="https://bangtto.com/theme/escapers-daejeon-hos" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"야간 당직 (이스케이퍼스 대전점(AFSC))","description":"타르타로스 병원에서 안내 말씀드립니다.\n\n금일 당직 근무시 원내 규정을 꼭 숙지해 주시길 바랍니다.\n\n본 병원은 규정위반으로 인해 발생하는 일들에 대해서 책임지지 않습니다.","url":"https://bangtto.com/theme/escapers-daejeon-hos","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Descapers-daejeon-hos%26v%3Dhttp%253A%252F%252Fwww.escapers.co.kr%252Fimg%252Fhos.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"대전 서구 둔산로 32-21 한미빌딩 4층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":36.35069069,"longitude":127.37707853}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"대전 방탈출","item":"https://bangtto.com/region/daejeon"},{"@type":"ListItem","position":3,"name":"이스케이퍼스 대전점(AFSC)","item":"https://bangtto.com/store/escapers-daejeon"},{"@type":"ListItem","position":4,"name":"야간 당직","item":"https://bangtto.com/theme/escapers-daejeon-hos"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/escapers-daejeon-hos" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"야간 당직 (이스케이퍼스 대전점(AFSC))","description":"대전 이스케이퍼스 대전점(AFSC)의 공포 테마 야간 당직. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/escapers-daejeon-hos","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Descapers-daejeon-hos%26v%3Dhttp%253A%252F%252Fwww.escapers.co.kr%252Fimg%252Fhos.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/escapers-daejeon#store","name":"이스케이퍼스 대전점(AFSC)","url":"https://bangtto.com/store/escapers-daejeon"},"numberOfPlayers":{"@type":"QuantitativeValue","maxValue":5},"timeRequired":"PT70M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"대전 방탈출","item":"https://bangtto.com/region/daejeon"},{"@type":"ListItem","position":3,"name":"이스케이퍼스 대전점(AFSC)","item":"https://bangtto.com/store/escapers-daejeon"},{"@type":"ListItem","position":4,"name":"야간 당직","item":"https://bangtto.com/theme/escapers-daejeon-hos"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

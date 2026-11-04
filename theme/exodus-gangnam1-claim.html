@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/exodus-gangnam1-claim" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/exodus-gangnam1-claim" />
-    <script data-seo-url="https://bangtto.com/theme/exodus-gangnam1-claim" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"CLAIM (엑소더스 강남1호점)","description":"\"고객님, 무엇을 도와드릴까요?\"\n오늘은 마법호텔에 첫 출근하는 날.\n겉보기엔 평범하지만, 이곳은 마법사들만이 머무는 특별한 호텔이다.\n새내기 호텔리어가 된 나는 하나씩 맡겨진 일을 시작하지만,\n손님들의 문제는 결코 평범하지 않다.\n향기를 잃어버린 꽃의 방, 차갑게 식어버린 용암의 방,\n모든 그림자가 사라진 그림자의 방, 손님이 거울 속에 갇힌 거울의 방.\n마법세계에서만 일어날 수 있는 특별한 클레임들이 나를 기다리고 있다.\n과연 마법호텔에서 내가 마주할 첫 번째 클레임은 무엇일까?","url":"https://bangtto.com/theme/exodus-gangnam1-claim","image":"https://wsrv.nl/?url=https%3A%2F%2Fexodusescape.co.kr%2Fassets%2Fimg%2Fclaim-poster.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"서울 강남구 봉은사로18길 80 지하1층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.5016033846107,"longitude":127.027357416481},"aggregateRating":{"@type":"AggregateRating","ratingValue":2.5,"reviewCount":1,"bestRating":5,"worstRating":0.5}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"강남 방탈출","item":"https://bangtto.com/region/gangnam"},{"@type":"ListItem","position":3,"name":"엑소더스 강남1호점","item":"https://bangtto.com/store/exodus-gangnam1"},{"@type":"ListItem","position":4,"name":"CLAIM","item":"https://bangtto.com/theme/exodus-gangnam1-claim"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/exodus-gangnam1-claim" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"CLAIM (엑소더스 강남1호점)","description":"강남 엑소더스 강남1호점의 판타지 테마 CLAIM. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/exodus-gangnam1-claim","image":"https://wsrv.nl/?url=https%3A%2F%2Fexodusescape.co.kr%2Fassets%2Fimg%2Fclaim-poster.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/exodus-gangnam1#store","name":"엑소더스 강남1호점","url":"https://bangtto.com/store/exodus-gangnam1"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT70M","aggregateRating":{"@type":"AggregateRating","ratingValue":2.5,"reviewCount":1,"bestRating":5,"worstRating":0.5}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"강남 방탈출","item":"https://bangtto.com/region/gangnam"},{"@type":"ListItem","position":3,"name":"엑소더스 강남1호점","item":"https://bangtto.com/store/exodus-gangnam1"},{"@type":"ListItem","position":4,"name":"CLAIM","item":"https://bangtto.com/theme/exodus-gangnam1-claim"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

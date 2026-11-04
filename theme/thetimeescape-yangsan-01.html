@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/thetimeescape-yangsan-01" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/thetimeescape-yangsan-01" />
-    <script data-seo-url="https://bangtto.com/theme/thetimeescape-yangsan-01" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"사기도박 (더타임이스케이프)","description":"누가 그랬던가? 인생은 도박이라고. 10대때부터 학교 친구들, 20대, 그리고 30대에는 동네에서 알게 된 형, 동생들과 도박을 했다.\n\n십 수년간 온갖종류의 도박은 다 해 본 것 같다.\n\n그리고 잃은 것보다 딴 것이 더 많았고 운이 좋았던 것 뿐이지만 나는 나의 실력이라고 믿으며 도박의 삶을 이어왔다.\n\n도박으로 성공한 사람이 1프로도 안되니 허황된 꿈 꾸지 말고 이제 그만 두라는 친구들의 말에도 난 내가 그 1프로라고 믿고 도박의 삶을 이어왔다.\n\n그러던 어느날 우리동네에 내가 모르는 도박판이 벌어지고 도박을 하다 알게 된 친구녀석이 돈을 잃고 나에게 와서 얘기했다.\n\n‘너라도 쟤들한테는 안되겠더라.’\n\n웃기지만 이 말이 나의 자존심을 건드렸다.\n\n지금 당장 가자고 큰 소리를 치며 그 친구를 따라 난 도박장으로 들어갔지만 그때는 몰랐다.\n\n그 도박장이 나에게 얘기를 꺼낸 녀석과 짜고 치는 사기도박 장인지를....","url":"https://bangtto.com/theme/thetimeescape-yangsan-01","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dthetimeescape-yangsan-01%26v%3Dhttp%253A%252F%252Fthetimeescape.co.kr%252Ftheme%252Fbasic_room2%252Fimg%252Frain%252Froom%252Froom01.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"경남 양산시 물금읍 청운로 185 오즈시티 307호","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":35.3172074134969,"longitude":129.002834661257}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"양산 방탈출","item":"https://bangtto.com/region/yangsan"},{"@type":"ListItem","position":3,"name":"더타임이스케이프","item":"https://bangtto.com/store/thetimeescape-yangsan"},{"@type":"ListItem","position":4,"name":"사기도박","item":"https://bangtto.com/theme/thetimeescape-yangsan-01"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/thetimeescape-yangsan-01" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"사기도박 (더타임이스케이프)","description":"양산 더타임이스케이프의 방탈출 테마 사기도박. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/thetimeescape-yangsan-01","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dthetimeescape-yangsan-01%26v%3Dhttp%253A%252F%252Fthetimeescape.co.kr%252Ftheme%252Fbasic_room2%252Fimg%252Frain%252Froom%252Froom01.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/thetimeescape-yangsan#store","name":"더타임이스케이프","url":"https://bangtto.com/store/thetimeescape-yangsan"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"양산 방탈출","item":"https://bangtto.com/region/yangsan"},{"@type":"ListItem","position":3,"name":"더타임이스케이프","item":"https://bangtto.com/store/thetimeescape-yangsan"},{"@type":"ListItem","position":4,"name":"사기도박","item":"https://bangtto.com/theme/thetimeescape-yangsan-01"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/dpsnnn-seongsu-star" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/dpsnnn-seongsu-star" />
-    <script data-seo-url="https://bangtto.com/theme/dpsnnn-seongsu-star" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"뱃사람의 별 (단편선 성수)","description":"뱃사람의 별은 단편선의 다른 이야기들과의 연관성이 상대적으로 적은 독립적인 이야기입니다.\n단편선을 처음으로 경험하시는 분들께도 추천드립니다.\n플레이어님들에 따라 분위기로 인해 공포도를 다소 느끼실 수 있는 구간이 존재합니다.\n하지만 점프스케어 등의 직접적인 공포 요소는 전혀 등장하지 않으니 안심해주세요 :)\n나는 내 한 몸 들어가는 쪽배를 타고 밤바다를 부유하곤 합니다\n하늘-바다-나 합일하는 무색 속 외로운 고향 빛 한방울 좇는 항해 턱없는 의미이지만\n...","url":"https://bangtto.com/theme/dpsnnn-seongsu-star","image":"https://wsrv.nl/?url=https%3A%2F%2Fcdn.imweb.me%2Fthumbnail%2F20240425%2F8b8cf215fd5ac.jpeg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"서울 성동구 아차산로 122 지하 1층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.5438718421645,"longitude":127.057478873633},"aggregateRating":{"@type":"AggregateRating","ratingValue":5,"reviewCount":1,"bestRating":5,"worstRating":0.5}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"성수 방탈출","item":"https://bangtto.com/region/seongsu"},{"@type":"ListItem","position":3,"name":"단편선 성수","item":"https://bangtto.com/store/dpsnnn-seongsu"},{"@type":"ListItem","position":4,"name":"뱃사람의 별","item":"https://bangtto.com/theme/dpsnnn-seongsu-star"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/dpsnnn-seongsu-star" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"뱃사람의 별 (단편선 성수)","description":"성수 단편선 성수의 드라마/미스터리 테마 뱃사람의 별. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/dpsnnn-seongsu-star","image":"https://wsrv.nl/?url=https%3A%2F%2Fcdn.imweb.me%2Fthumbnail%2F20240425%2F8b8cf215fd5ac.jpeg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/dpsnnn-seongsu#store","name":"단편선 성수","url":"https://bangtto.com/store/dpsnnn-seongsu"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":1,"maxValue":6},"timeRequired":"PT75M","aggregateRating":{"@type":"AggregateRating","ratingValue":5,"reviewCount":1,"bestRating":5,"worstRating":0.5}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"성수 방탈출","item":"https://bangtto.com/region/seongsu"},{"@type":"ListItem","position":3,"name":"단편선 성수","item":"https://bangtto.com/store/dpsnnn-seongsu"},{"@type":"ListItem","position":4,"name":"뱃사람의 별","item":"https://bangtto.com/theme/dpsnnn-seongsu-star"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

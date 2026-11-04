@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/murderparker-yangsan-a" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/murderparker-yangsan-a" />
-    <script data-seo-url="https://bangtto.com/theme/murderparker-yangsan-a" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"머더파커 분노의 살인 (머더파커 양산점)","description":"주한미군 아빠와 한국인 엄마 사이에서 태어난 김파커, 그는 생김새가 다르다는 이유로 아이들에게 따돌림을 당하고 숨바꼭질 중 술래가 된 파커만 남겨둔 채 모두들 집으로 돌아가는데... 분노한 파커는 20년 동안 한명한명 찾아가기 시작한다. 그중에 한명인 당신! 파커의 손에서 벗어나야 한다!","url":"https://bangtto.com/theme/murderparker-yangsan-a","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dmurderparker-yangsan-a%26v%3Dhttp%253A%252F%252Fmurderparker.com%252Fupload_file%252Froom%252Fy-1.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"경남 양산시 물금읍 범어로 64 한양프라자 3층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":35.3285315593292,"longitude":129.014550768489}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"양산 방탈출","item":"https://bangtto.com/region/yangsan"},{"@type":"ListItem","position":3,"name":"머더파커 양산점","item":"https://bangtto.com/store/murderparker-yangsan"},{"@type":"ListItem","position":4,"name":"머더파커 분노의 살인","item":"https://bangtto.com/theme/murderparker-yangsan-a"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/murderparker-yangsan-a" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"머더파커 분노의 살인 (머더파커 양산점)","description":"양산 머더파커 양산점의 공포 테마 머더파커 분노의 살인. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/murderparker-yangsan-a","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dmurderparker-yangsan-a%26v%3Dhttp%253A%252F%252Fmurderparker.com%252Fupload_file%252Froom%252Fy-1.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/murderparker-yangsan#store","name":"머더파커 양산점","url":"https://bangtto.com/store/murderparker-yangsan"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":4},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"양산 방탈출","item":"https://bangtto.com/region/yangsan"},{"@type":"ListItem","position":3,"name":"머더파커 양산점","item":"https://bangtto.com/store/murderparker-yangsan"},{"@type":"ListItem","position":4,"name":"머더파커 분노의 살인","item":"https://bangtto.com/theme/murderparker-yangsan-a"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/dreampicnic-ansan1-10" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/dreampicnic-ansan1-10" />
-    <script data-seo-url="https://bangtto.com/theme/dreampicnic-ansan1-10" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"안산 코노 (꿈소풍 안산1호점)","description":"고등학교 동창의 부탁으로 급하게 코인노래방 알바 대타로 근무하게 된 당신.\n매뉴얼만 따라서 하면 쉬울거라는 친구의 말에 별 생각없이 들어선 코인노래방은 스산하고 이상한 분위기가 감돈다.","url":"https://bangtto.com/theme/dreampicnic-ansan1-10","image":"https://wsrv.nl/?url=https%3A%2F%2Fdreampicnicescape.com%2Fimages%2Ftheme_ansan_coin.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"경기도 안산시 단원구 고잔2길 41 신양복합빌딩, 6층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.3179436,"longitude":126.8356448}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"안산 방탈출","item":"https://bangtto.com/region/ansan"},{"@type":"ListItem","position":3,"name":"꿈소풍 안산1호점","item":"https://bangtto.com/store/dreampicnic-ansan1"},{"@type":"ListItem","position":4,"name":"안산 코노","item":"https://bangtto.com/theme/dreampicnic-ansan1-10"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/dreampicnic-ansan1-10" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"안산 코노 (꿈소풍 안산1호점)","description":"안산 꿈소풍 안산1호점의 공포 테마 안산 코노. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/dreampicnic-ansan1-10","image":"https://wsrv.nl/?url=https%3A%2F%2Fdreampicnicescape.com%2Fimages%2Ftheme_ansan_coin.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/dreampicnic-ansan1#store","name":"꿈소풍 안산1호점","url":"https://bangtto.com/store/dreampicnic-ansan1"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"안산 방탈출","item":"https://bangtto.com/region/ansan"},{"@type":"ListItem","position":3,"name":"꿈소풍 안산1호점","item":"https://bangtto.com/store/dreampicnic-ansan1"},{"@type":"ListItem","position":4,"name":"안산 코노","item":"https://bangtto.com/theme/dreampicnic-ansan1-10"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

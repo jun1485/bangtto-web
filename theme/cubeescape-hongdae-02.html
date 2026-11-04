@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/cubeescape-hongdae-02" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/cubeescape-hongdae-02" />
-    <script data-seo-url="https://bangtto.com/theme/cubeescape-hongdae-02" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"Monkey House (큐브이스케이프 홍대점)","description":"‘난 미치지 않았어! 미치지 않았다고!!’ 그런데… 난 누구지? 내가 왜 여기에있지? 기억이 나질않아.. 어떻게든 이곳에서 나가야만해!! 그리고 다음 약물투입시에 일어난 의문의 폭발 엄청난 소리의 폭발음과 함께 지진이 난것처럼 모든게 뒤흔들렸다. 눈을 떳을때는 모든게 아수라장이었다. 실험도중 사고가 난게 분명했다. 밖에서는 이리저리 뛰어다니는 환자들이 폭동을 일으키는것같았다. 그런데… 이방안에 문은 어디에있는거지? 여태까지의 기억을 더듬어봤지만 매번 눈을떳을때는 간호사와 의사가 보였지만 그들이 들어오는건 본적이없었다. 모든 실마리는 방안에 있다! 방안에서의 흔적을 통해 탈출해야한다.","url":"https://bangtto.com/theme/cubeescape-hongdae-02","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dcubeescape-hongdae-02%26v%3Dhttp%253A%252F%252Fcubeescape.co.kr%252Ftheme%252Fbasic_room2%252Fimg%252Frain%252Froom02.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"서울 마포구 서교동 355-17 무광빌딩 4층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.5534179328622,"longitude":126.920619196404}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"홍대 방탈출","item":"https://bangtto.com/region/hongdae"},{"@type":"ListItem","position":3,"name":"큐브이스케이프 홍대점","item":"https://bangtto.com/store/cubeescape-hongdae"},{"@type":"ListItem","position":4,"name":"Monkey House","item":"https://bangtto.com/theme/cubeescape-hongdae-02"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/cubeescape-hongdae-02" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"Monkey House (큐브이스케이프 홍대점)","description":"홍대 큐브이스케이프 홍대점의 호러/스릴러 테마 Monkey House. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/cubeescape-hongdae-02","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dcubeescape-hongdae-02%26v%3Dhttp%253A%252F%252Fcubeescape.co.kr%252Ftheme%252Fbasic_room2%252Fimg%252Frain%252Froom02.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/cubeescape-hongdae#store","name":"큐브이스케이프 홍대점","url":"https://bangtto.com/store/cubeescape-hongdae"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"홍대 방탈출","item":"https://bangtto.com/region/hongdae"},{"@type":"ListItem","position":3,"name":"큐브이스케이프 홍대점","item":"https://bangtto.com/store/cubeescape-hongdae"},{"@type":"ListItem","position":4,"name":"Monkey House","item":"https://bangtto.com/theme/cubeescape-hongdae-02"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

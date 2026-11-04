@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/trickescape-uijeongbu-hoguwarts" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/trickescape-uijeongbu-hoguwarts" />
-    <script data-seo-url="https://bangtto.com/theme/trickescape-uijeongbu-hoguwarts" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"호구와트 (트릭이스케이프 의정부점)","description":"여느때와 같이 출근을 하기 위해 런던 지하철역 에서 지하철을 기다리던 중 평소 보지못했던 이상한 숫자의 지하철 플랫폼을 보게 되었고 무언가에 이끌리듯 그 곳으로 간 나는 의문의 편지 한 장을 받게 되었다. 그리곤 알 수 없는 힘의 의해 이상한 곳으로 빨려 들어가게 되었는데 어느새 무언가 잘못됐다는 것을 느끼며 주변을 돌아본다. 나는 누구..여긴 어디..","url":"https://bangtto.com/theme/trickescape-uijeongbu-hoguwarts","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dtrickescape-uijeongbu-hoguwarts%26v%3Dhttp%253A%252F%252Fwww.trickescape.com%252Fimgs%252Ftheme_image_hoguwarts.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"경기 의정부시 평화로 550 일신빌딩 3층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.7410781650717,"longitude":127.047395531439}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"의정부 방탈출","item":"https://bangtto.com/region/uijeongbu"},{"@type":"ListItem","position":3,"name":"트릭이스케이프 의정부점","item":"https://bangtto.com/store/trickescape-uijeongbu"},{"@type":"ListItem","position":4,"name":"호구와트","item":"https://bangtto.com/theme/trickescape-uijeongbu-hoguwarts"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/trickescape-uijeongbu-hoguwarts" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"호구와트 (트릭이스케이프 의정부점)","description":"의정부 트릭이스케이프 의정부점의 판타지 테마 호구와트. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/trickescape-uijeongbu-hoguwarts","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dtrickescape-uijeongbu-hoguwarts%26v%3Dhttp%253A%252F%252Fwww.trickescape.com%252Fimgs%252Ftheme_image_hoguwarts.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/trickescape-uijeongbu#store","name":"트릭이스케이프 의정부점","url":"https://bangtto.com/store/trickescape-uijeongbu"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"의정부 방탈출","item":"https://bangtto.com/region/uijeongbu"},{"@type":"ListItem","position":3,"name":"트릭이스케이프 의정부점","item":"https://bangtto.com/store/trickescape-uijeongbu"},{"@type":"ListItem","position":4,"name":"호구와트","item":"https://bangtto.com/theme/trickescape-uijeongbu-hoguwarts"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

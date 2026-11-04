@@ -10,7 +10,7 @@
     <title>잠실 2인 가능 방탈출 30개 비교 | 방또</title>
     <!-- 검색 결과·공유 미리보기 기본 정보 -->
     <meta data-rh="true" name="description" content="잠실 매장 7곳의 2인 가능 방탈출 30개를 가격·시간·후기로 비교하세요. 매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요." />
-    <meta data-rh="true" name="robots" content="index,follow,max-image-preview:large" />
+    <meta data-rh="true" name="robots" content="noindex,follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="방또" />
     <meta data-rh="true" property="og:title" content="잠실 2인 가능 방탈출 30개 비교 | 방또" />
@@ -120,7 +120,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -132,6 +133,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -198,7 +217,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/recommend/jamsil/two-players" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/recommend/jamsil/two-players" />
-    <script data-seo-url="https://bangtto.com/recommend/jamsil/two-players" type="application/ld+json">[{"@context":"https://schema.org","@type":"ItemList","name":"잠실 2인 가능 방탈출","url":"https://bangtto.com/recommend/jamsil/two-players","numberOfItems":30,"itemListElement":[{"@type":"ListItem","position":1,"name":"아랑 餓浪 [롯데월드 X 제로월드] (롯데월드 민속박물관)","url":"https://bangtto.com/theme/lotteworld-museum-57"},{"@type":"ListItem","position":2,"name":"집으로 가자 야호!(70분 Premium) (머더파커 잠실점)","url":"https://bangtto.com/theme/murderparker-jamsil-a"},{"@type":"ListItem","position":3,"name":"끝... 그리고 (셜록홈즈 잠실새내점)","url":"https://bangtto.com/theme/sherlock-jamsilsaenae-442"},{"@type":"ListItem","position":4,"name":"난 그저 여행만 했을 뿐인데.. 70분 (머더파커 WOW 잠실점)","url":"https://bangtto.com/theme/murderparker-wow-jamsil-a"},{"@type":"ListItem","position":5,"name":"데.코.연 (데이트 코스 연구회) (넥스트에디션 잠실점)","url":"https://bangtto.com/theme/nextedition-jamsil-56"},{"@type":"ListItem","position":6,"name":"도망친 곳에 낙원은 없다 (셜록홈즈 잠실새내점)","url":"https://bangtto.com/theme/sherlock-jamsilsaenae-441"},{"@type":"ListItem","position":7,"name":"두목 이스케이프(70분 Premium) (머더파커 잠실점)","url":"https://bangtto.com/theme/murderparker-jamsil-b"},{"@type":"ListItem","position":8,"name":"락 페스티벌 (넥스트에디션 잠실점)","url":"https://bangtto.com/theme/nextedition-jamsil-57"},{"@type":"ListItem","position":9,"name":"마션 (큐브이스케이프 잠실점)","url":"https://bangtto.com/theme/cubeescape-jamsil-15"},{"@type":"ListItem","position":10,"name":"무속인 살인사건 (셜록홈즈 잠실1호점)","url":"https://bangtto.com/theme/sherlock-jamsil1-152"},{"@type":"ListItem","position":11,"name":"미대교수의 비밀 (셜록홈즈 잠실1호점)","url":"https://bangtto.com/theme/sherlock-jamsil1-42"},{"@type":"ListItem","position":12,"name":"바람 [롯데월드 X 제로월드] (롯데월드 민속박물관)","url":"https://bangtto.com/theme/lotteworld-museum-28"},{"@type":"ListItem","position":13,"name":"빛과 그림자 (셜록홈즈 잠실1호점)","url":"https://bangtto.com/theme/sherlock-jamsil1-189"},{"@type":"ListItem","position":14,"name":"산속의 여인 (셜록홈즈 잠실1호점)","url":"https://bangtto.com/theme/sherlock-jamsil1-310"},{"@type":"ListItem","position":15,"name":"신데렐라 (큐브이스케이프 잠실점)","url":"https://bangtto.com/theme/cubeescape-jamsil-12"},{"@type":"ListItem","position":16,"name":"아내, 유하린 37세 (셜록홈즈 잠실새내점)","url":"https://bangtto.com/theme/sherlock-jamsilsaenae-443"},{"@type":"ListItem","position":17,"name":"아틀라스(ATLAS) 70분 (머더파커 WOW 잠실점)","url":"https://bangtto.com/theme/murderparker-wow-jamsil-d"},{"@type":"ListItem","position":18,"name":"웨딩크루즈 살인사건 (셜록홈즈 잠실1호점)","url":"https://bangtto.com/theme/sherlock-jamsil1-52"},{"@type":"ListItem","position":19,"name":"위험한 레시피 (셜록홈즈 잠실1호점)","url":"https://bangtto.com/theme/sherlock-jamsil1-98"},{"@type":"ListItem","position":20,"name":"작은 악마들 (넥스트에디션 잠실점)","url":"https://bangtto.com/theme/nextedition-jamsil-58"},{"@type":"ListItem","position":21,"name":"정육각형(80분 Premium) (머더파커 잠실점)","url":"https://bangtto.com/theme/murderparker-jamsil-c"},{"@type":"ListItem","position":22,"name":"집착 (큐브이스케이프 잠실점)","url":"https://bangtto.com/theme/cubeescape-jamsil-13"},{"@type":"ListItem","position":23,"name":"카타콤 (큐브이스케이프 잠실점)","url":"https://bangtto.com/theme/cubeescape-jamsil-11"},{"@type":"ListItem","position":24,"name":"카페라떼 (넥스트에디션 잠실점)","url":"https://bangtto.com/theme/nextedition-jamsil-59"},{"@type":"ListItem","position":25,"name":"타이타닉 (큐브이스케이프 잠실점)","url":"https://bangtto.com/theme/cubeescape-jamsil-14"},{"@type":"ListItem","position":26,"name":"파란 波瀾 [롯데월드 X 파노라마] (롯데월드 민속박물관)","url":"https://bangtto.com/theme/lotteworld-museum-59"},{"@type":"ListItem","position":27,"name":"파커랜드 70분 (머더파커 WOW 잠실점)","url":"https://bangtto.com/theme/murderparker-wow-jamsil-c"},{"@type":"ListItem","position":28,"name":"학교괴담 태훈이의 죽음 (셜록홈즈 잠실1호점)","url":"https://bangtto.com/theme/sherlock-jamsil1-54"},{"@type":"ListItem","position":29,"name":"G.A.S.A. 70분 (머더파커 WOW 잠실점)","url":"https://bangtto.com/theme/murderparker-wow-jamsil-b"},{"@type":"ListItem","position":30,"name":"Romeo Point (큐브이스케이프 잠실점)","url":"https://bangtto.com/theme/cubeescape-jamsil-08"}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"잠실 방탈출","item":"https://bangtto.com/region/jamsil"},{"@type":"ListItem","position":3,"name":"잠실 2인 가능 방탈출","item":"https://bangtto.com/recommend/jamsil/two-players"}]}]</script>
+    
   </head>
 
   <body>
@@ -208,6 +227,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -216,6 +236,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

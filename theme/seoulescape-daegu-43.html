@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/seoulescape-daegu-43" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/seoulescape-daegu-43" />
-    <script data-seo-url="https://bangtto.com/theme/seoulescape-daegu-43" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"파킹랏 (서울이스케이프룸 대구 동성로점)","description":"크윽..\n\n머리가 깨질것 같은 극심한 두통에 눈을 뜬 당신. 머리로 손을 가져가려 하지만, 이내 두 손이 묶여 있다는 사실을 깨닫는다. 곧이어 깨달은 것은, 아무리 눈을 크게 떠도 아무것도 보이지 않는 칠흙같은 어둠. 당신은 이내 본인이 처한 상황을 빠르게 파악한다. 머리 위에 무언가 자루 같은게 쓰여있는 것 같다. 바닥에 맞닿은 등을 통해서는 차가운 금속의 냉기가 전해진다.\n\n나는 두 손이 묶인 체, 어딘가로 끌려온 것인가?\n\n잠깐.. 그런데 나..는 누구..지..? 윽!!\n\n순간 이 처한 상황 외에 이 세상에 대해 아무것도, 심지어 본인의 이름 조차도 기억이 나지를 않는다는 것을 깨닫고 패닉이 오려는 찰나, 다시 한번 밀려오는 머리가 깨질듯한 고통에 당신은 숨을 몰아쉰다. 한번 정신을 차리기 시작하자, 마치 그동안 까먹고 있었다는 듯이 고통이 밀려온다. 마치 누군가가 무거운 둔기로 머리통을 깨부수려고 한 것만 같다.\n\n몇분이나 지났을까? 욱신욱신 당겨오는 머리 뒤의 고통에 어느정도 익숙해진 당신은, 우선 두손이 묶인체 땅바닥에 굴러다니고 있는 이 빌어먹을 상황에서 벗어나기로 결심한다. 이상하게도, 일단 목표가 생기니 마치 언제 그랬냐는듯이 당신의 숨이 안정되며 몸에 힘이 도는 것 같다. 그래, 일단 이곳에서 벗어나자!","url":"https://bangtto.com/theme/seoulescape-daegu-43","image":"https://wsrv.nl/?url=https%3A%2F%2Fwww.seoul-escape.com%2Fstorage%2Ftheme%2F2022_11%2F10%2FBTBq44Wo9GD3bc1SxQMQYIvdCtqDCU1I5q5J4cQ9.png&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"대구 중구 동성로6길 52 3, 4층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":35.8684597,"longitude":128.59821719}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"대구 방탈출","item":"https://bangtto.com/region/daegu"},{"@type":"ListItem","position":3,"name":"서울이스케이프룸 대구 동성로점","item":"https://bangtto.com/store/seoulescape-daegu"},{"@type":"ListItem","position":4,"name":"파킹랏","item":"https://bangtto.com/theme/seoulescape-daegu-43"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/seoulescape-daegu-43" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"파킹랏 (서울이스케이프룸 대구 동성로점)","description":"대구 서울이스케이프룸 대구 동성로점의 납치 & 탈출 테마 파킹랏. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/seoulescape-daegu-43","image":"https://wsrv.nl/?url=https%3A%2F%2Fwww.seoul-escape.com%2Fstorage%2Ftheme%2F2022_11%2F10%2FBTBq44Wo9GD3bc1SxQMQYIvdCtqDCU1I5q5J4cQ9.png&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/seoulescape-daegu#store","name":"서울이스케이프룸 대구 동성로점","url":"https://bangtto.com/store/seoulescape-daegu"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"대구 방탈출","item":"https://bangtto.com/region/daegu"},{"@type":"ListItem","position":3,"name":"서울이스케이프룸 대구 동성로점","item":"https://bangtto.com/store/seoulescape-daegu"},{"@type":"ListItem","position":4,"name":"파킹랏","item":"https://bangtto.com/theme/seoulescape-daegu-43"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>

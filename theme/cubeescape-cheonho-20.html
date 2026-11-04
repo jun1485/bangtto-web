@@ -118,7 +118,8 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading {
+      #root:empty ~ #boot-loading,
+      #root:has(> main) ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -130,6 +131,24 @@
         padding-bottom: 16vh;
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
+      }
+      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
+      #root > main {
+        visibility: hidden;
+        animation: seo-reveal 0s 8s forwards;
+      }
+      #root:has(> main) ~ #boot-loading {
+        animation: seo-hide 0s 8s forwards;
+      }
+      @keyframes seo-reveal {
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes seo-hide {
+        to {
+          visibility: hidden;
+        }
       }
       #boot-loading .ring {
         position: relative;
@@ -196,7 +215,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/cubeescape-cheonho-20" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/cubeescape-cheonho-20" />
-    <script data-seo-url="https://bangtto.com/theme/cubeescape-cheonho-20" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","name":"The Maze (큐브이스케이프 천호점)","description":"삭제된 기억과 낯선 미로 공간. 인간의 생존 본능을 실험하기 위해 ‘THE MAZE’를 설계하고 있던 내가 왜 이곳에 있는 걸까? 아무리 애를 써도 기억나지 않는다. 심지어 내 이름조차 기억나지 않는다. 이제 그나마 갖고 있는 기억들마저도 사라져간다. 내가 기억하는 있는 것이라고는 해가 지면 이 미로의 문이 닫히게 된다는 것. 그리고 연이은 괴생명체들의 습격으로 인해 잔인하게 죽어갈 뿐이라는 것이다. 해가 질 때까지 남아 있는 시간은 1시간 정도일까. 이 미로부터 빠져나가야만 한다.","url":"https://bangtto.com/theme/cubeescape-cheonho-20","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dcubeescape-cheonho-20%26v%3Dhttp%253A%252F%252Fcheonho.cubeescape.co.kr%252Ftheme%252Fbasic_room2%252Fimg%252Frain%252Froom20.jpg&w=1080&we&output=jpg&q=82","address":{"@type":"PostalAddress","streetAddress":"서울 강동구 천호대로157길 22 3층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.5386485329963,"longitude":127.127475411588}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"천호 방탈출","item":"https://bangtto.com/region/cheonho"},{"@type":"ListItem","position":3,"name":"큐브이스케이프 천호점","item":"https://bangtto.com/store/cubeescape-cheonho"},{"@type":"ListItem","position":4,"name":"The Maze","item":"https://bangtto.com/theme/cubeescape-cheonho-20"}]}]</script>
+    <script data-seo-url="https://bangtto.com/theme/cubeescape-cheonho-20" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"The Maze (큐브이스케이프 천호점)","description":"천호 큐브이스케이프 천호점의 어드벤처/스릴러 테마 The Maze. 난이도·공포도·인원·가격·후기와 예약 오픈 시간을 확인하세요.","url":"https://bangtto.com/theme/cubeescape-cheonho-20","image":"https://wsrv.nl/?url=https%3A%2F%2Fglurczmvlaebtogbuclf.supabase.co%2Ffunctions%2Fv1%2Ftheme-poster%3FforceFunctionRegion%3Dap-northeast-2%26id%3Dcubeescape-cheonho-20%26v%3Dhttp%253A%252F%252Fcheonho.cubeescape.co.kr%252Ftheme%252Fbasic_room2%252Fimg%252Frain%252Froom20.jpg&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/cubeescape-cheonho#store","name":"큐브이스케이프 천호점","url":"https://bangtto.com/store/cubeescape-cheonho"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":2,"maxValue":6},"timeRequired":"PT60M"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"천호 방탈출","item":"https://bangtto.com/region/cheonho"},{"@type":"ListItem","position":3,"name":"큐브이스케이프 천호점","item":"https://bangtto.com/store/cubeescape-cheonho"},{"@type":"ListItem","position":4,"name":"The Maze","item":"https://bangtto.com/theme/cubeescape-cheonho-20"}]}]</script>
   </head>
 
   <body>
@@ -206,6 +225,7 @@
         #boot-loading, #boot-splash { display: none !important; }
         body { overflow: auto; }
         #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
@@ -214,6 +234,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-8cafa2a517f55713c3be4944ba4c0f4e.js" defer></script>
+  <script src="/_expo/static/js/web/entry-1eb19467e9e8aa5d7bb6bcffe8bf125b.js" defer></script>
 </body>
 </html>
