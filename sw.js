@@ -57,11 +57,8 @@ self.addEventListener('notificationclick', (event) => {
   const params = new URLSearchParams({ themeId: themeId || '', playedOn: playedOn || '', partySize: partySize == null ? '' : String(partySize) });
   // 답변 알림은 내 문의·내 요청 화면으로 (앱 안 경로만)
   const reply = type === 'reply' && typeof path === 'string' && /^\/[a-z-]+$/.test(path) ? path : null;
-  // 방또 친구 예약 초대는 초대 화면, 수락은 내 예약 (앱 안 경로만)
-  const invitePath = (type === 'invite' || type === 'invite_accepted') && typeof path === 'string' && /^\/(invite\?[\w=&%:.-]*|reservations)$/.test(path) ? path : null;
-  // 같이 갈 테마 투표 결과·초대는 투표 화면, 단체톡·오픈톡은 대화 창
-  const pollPath = type === 'poll' && typeof path === 'string' && /^\/(vote\/[0-9a-f]{12}(\?chat=1)?|chat\/[0-9a-f]{12}\?kind=talk)$/.test(path) ? path : null;
-  const noticePath = invitePath ?? pollPath;
+  // 화면 경로를 담은 알림(친구 초대·내 예약·투표·단체톡·오픈톡 등)은 종류와 관계없이 그 화면 (앱 안 경로만)
+  const noticePath = type !== 'reply' && type !== 'record' && type !== 'vacancy' && typeof path === 'string' && /^\/[\w\-/]*(\?[\w=&%:.,+-]*)?$/.test(path) ? path : null;
   // 서비스 워커에는 로그인 정보가 없어 알림 id 를 넘겨 앱이 알림함 읽음 처리
   const readable = typeof notificationId === 'string' && /^[0-9a-f-]{36}$/i.test(notificationId);
   const invite = noticePath && readable ? `${noticePath}${noticePath.includes('?') ? '&' : '?'}readNotice=${notificationId}` : noticePath;
