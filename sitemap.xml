@@ -26,13 +26,13 @@
   <url><loc>https://bangtto.com/region/jeju</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/anyang</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/sinchon</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/region/sinrim</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/gimpo</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/uijeongbu</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/busan-haeundae</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/cheongju</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/dongtan</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/yangsan</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/region/sinrim</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/ulsan</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/cheonho</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/suyu</loc><changefreq>weekly</changefreq></url>
@@ -91,6 +91,7 @@
   <url><loc>https://bangtto.com/recommend/nowon/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/jeju/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/anyang/no-fear</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/recommend/sinrim/two-players</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/gimpo/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/uijeongbu/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/yangsan/no-fear</loc><changefreq>weekly</changefreq></url>
@@ -398,6 +399,7 @@
   <url><loc>https://bangtto.com/store/thecode-jinju</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/thecode-seogwipo</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/thedoors-ilsan</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/thefinder-snu</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/thefrank-gangnam</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/themaze-jeju</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/themaze-kondae</loc><changefreq>weekly</changefreq></url>
@@ -1745,6 +1747,11 @@
   <url><loc>https://bangtto.com/theme/thedoors-ilsan-cx9kxa2h</loc></url>
   <url><loc>https://bangtto.com/theme/thedoors-ilsan-jel90z3z</loc></url>
   <url><loc>https://bangtto.com/theme/thedoors-ilsan-s23epw5p</loc></url>
+  <url><loc>https://bangtto.com/theme/thefinder-snu-201</loc></url>
+  <url><loc>https://bangtto.com/theme/thefinder-snu-collector</loc></url>
+  <url><loc>https://bangtto.com/theme/thefinder-snu-four</loc></url>
+  <url><loc>https://bangtto.com/theme/thefinder-snu-hunger</loc></url>
+  <url><loc>https://bangtto.com/theme/thefinder-snu-island</loc></url>
   <url><loc>https://bangtto.com/theme/thefrank-gangnam-5</loc></url>
   <url><loc>https://bangtto.com/theme/thefrank-gangnam-6</loc></url>
   <url><loc>https://bangtto.com/theme/thefrank-gangnam-7</loc></url>
