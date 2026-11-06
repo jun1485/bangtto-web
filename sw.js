@@ -59,8 +59,8 @@ self.addEventListener('notificationclick', (event) => {
   const reply = type === 'reply' && typeof path === 'string' && /^\/[a-z-]+$/.test(path) ? path : null;
   // 방또 친구 예약 초대는 초대 화면, 수락은 내 예약 (앱 안 경로만)
   const invitePath = (type === 'invite' || type === 'invite_accepted') && typeof path === 'string' && /^\/(invite\?[\w=&%:.-]*|reservations)$/.test(path) ? path : null;
-  // 같이 갈 테마 투표 결과는 투표 화면
-  const pollPath = type === 'poll' && typeof path === 'string' && /^\/vote\/[0-9a-f]{12}$/.test(path) ? path : null;
+  // 같이 갈 테마 투표 결과·초대는 투표 화면, 단체톡은 대화 창
+  const pollPath = type === 'poll' && typeof path === 'string' && /^\/vote\/[0-9a-f]{12}(\?chat=1)?$/.test(path) ? path : null;
   const noticePath = invitePath ?? pollPath;
   // 서비스 워커에는 로그인 정보가 없어 알림 id 를 넘겨 앱이 알림함 읽음 처리
   const readable = typeof notificationId === 'string' && /^[0-9a-f-]{36}$/i.test(notificationId);
