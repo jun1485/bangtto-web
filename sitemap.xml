@@ -2,42 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://bangtto.com/</loc><changefreq>daily</changefreq></url>
   <url><loc>https://bangtto.com/privacy</loc></url>
-  <url><loc>https://bangtto.com/region/gangnam</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/hongdae</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/region/gangnam</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/daegu</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/suwon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/gwangju</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/geondae</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/busan-seomyeon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/daejeon</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/region/jeonju</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/bupyeong</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/region/jeonju</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/region/goyang</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/cheonan</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/daehakro</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/bucheon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/jamsil</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/region/goyang</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/region/pyeongtaek</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/region/ansan</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/incheon-guwol</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/region/pyeongtaek</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/anyang</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/region/ansan</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/region/sinchon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/bundang</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/ulsan</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/region/jeju</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/yongin</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/nowon</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/region/jeju</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/region/sinchon</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/region/changwon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/sinrim</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/region/gimpo</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/region/changwon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/uijeongbu</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/region/gimpo</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/busan-haeundae</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/cheongju</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/dongtan</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/suyu</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/region/guri</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/region/busan-gyeongseongdae</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/yangsan</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/busandae</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/busan-hadan</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/region/busan-nampo</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/cheonho</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/siheung</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/songdo</loc><changefreq>weekly</changefreq></url>
@@ -45,7 +48,6 @@
   <url><loc>https://bangtto.com/region/yeongdeungpo</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/chuncheon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/eunpyeong</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/region/busan-nampo</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/asan</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/jinju</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/busan-gwanganri</loc><changefreq>weekly</changefreq></url>
@@ -54,7 +56,6 @@
   <url><loc>https://bangtto.com/region/busan-deokcheon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/icheon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/gunsan</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/region/guri</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/gwangmyeong</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/jonggak</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/wonju</loc><changefreq>weekly</changefreq></url>
@@ -69,36 +70,39 @@
   <url><loc>https://bangtto.com/region/jeongseon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/mokdong</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/hwaseong-hyangnam</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/region/suncheon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/gunpo</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/busan-gijang</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/seongnam</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/hoegi-oedae</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/recommend/gangnam/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/hongdae/no-fear</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/recommend/gangnam/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/daegu/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/suwon/no-fear</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/recommend/gwangju/two-players</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/gwangju/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/geondae/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/busan-seomyeon/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/daejeon/no-fear</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/recommend/jeonju/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/bupyeong/no-fear</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/recommend/jeonju/no-fear</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/recommend/goyang/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/cheonan/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/daehakro/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/bucheon/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/jamsil/no-fear</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/recommend/goyang/no-fear</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/recommend/pyeongtaek/no-fear</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/recommend/ansan/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/incheon-guwol/no-fear</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/recommend/pyeongtaek/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/anyang/no-fear</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/recommend/ansan/no-fear</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/recommend/sinchon/two-players</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/bundang/no-fear</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/recommend/jeju/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/yongin/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/nowon/no-fear</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/recommend/jeju/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/sinrim/two-players</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bangtto.com/recommend/gimpo/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/uijeongbu/no-fear</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/recommend/gimpo/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/recommend/yangsan/no-fear</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/genre/horror</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/genre/thriller</loc><changefreq>weekly</changefreq></url>
@@ -123,6 +127,7 @@
   <url><loc>https://bangtto.com/store/bitphobia-seomyeon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/bitphobia-seomyeon-red</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/bitphobia-stella</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/blackhaven-anyang</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/brainescape-gwangju</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/braingamezone-kaist</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/breakout-gwangalli</loc><changefreq>weekly</changefreq></url>
@@ -130,6 +135,8 @@
   <url><loc>https://bangtto.com/store/breakout-hongdae</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/busted-bucheon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/cescape-moran</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/cheshirehouse-sillim</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/chulizone-daejeon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/clevertown-sinchon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/codeescape-garosu</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/codeescape-masan</loc><changefreq>weekly</changefreq></url>
@@ -137,9 +144,12 @@
   <url><loc>https://bangtto.com/store/codek-gangnam</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/codek-guwol</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/codek-hongdae</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/codemystery-kyungsung</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/codename-bucheon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/coldcase-inha2</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/conan-goyang</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/crimechamber-hongdae</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/crimescene-bupyeong</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/cubeescape-cheonho</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/cubeescape-daejeon-dunsan</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/cubeescape-hongdae</loc><changefreq>weekly</changefreq></url>
@@ -153,6 +163,8 @@
   <url><loc>https://bangtto.com/store/deepthinker-hongdae</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/diaegg-seomyeon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/doghoney-gangnam</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/doit-guri1</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/doit-guri2</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/doloescape-gangnam</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/doom-bupyeong-dth</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/doom-guwol1</loc><changefreq>weekly</changefreq></url>
@@ -168,6 +180,7 @@
   <url><loc>https://bangtto.com/store/dreampicnic-ansan1</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/dreampicnic-ansan2</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/dreampicnic-bucheon</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/dubdu-hongdae</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/dumbndumber-daehakro</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/dumbndumber-seomyeon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/enterpot-hoegi</loc><changefreq>weekly</changefreq></url>
@@ -178,6 +191,7 @@
   <url><loc>https://bangtto.com/store/esc-pyeongtaek</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/escapebro-yeongdeungpo</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/escapecafe-suwon</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/escapelab-suwon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/escapers-daegu</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/escapers-daejeon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/escapers-hongdae1</loc><changefreq>weekly</changefreq></url>
@@ -187,8 +201,10 @@
   <url><loc>https://bangtto.com/store/escapetop-changwon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/escapetop-suwon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/escapetop-ulsan</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/escapeworld-suwon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/escapezone-kangwon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/escgame-sinchon</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/everest-goyang</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/exodus-gangnam1</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/fantasia-gwangju</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/fantastrick-1</loc><changefreq>weekly</changefreq></url>
@@ -199,6 +215,7 @@
   <url><loc>https://bangtto.com/store/gateoftime-gwangju</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/getaway-gangnam</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/goedam-hangang</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/goedam-jeil</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/goldenkey-cheonan</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/goldenkey-daegu</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/goldenkey-daegu-theking</loc><changefreq>weekly</changefreq></url>
@@ -213,7 +230,9 @@
   <url><loc>https://bangtto.com/store/hiddenswitch-hongdae</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/hide-gwangju</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/hide-gwangju2</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/hide-gwangju3</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/hotelletoh-seongsu</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/immersive-hongdae</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/instage-chuncheon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/jejuescape-cityhall</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/jejuescape-jewon</loc><changefreq>weekly</changefreq></url>
@@ -235,6 +254,8 @@
   <url><loc>https://bangtto.com/store/keyescape-theorum</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/keyescape-whosthere</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/keyescape-woojulike</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/keyknock-uijeongbu</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/kidkideuk-gwangju</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/kukuroom-gangnam</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/labyrinth-bucheon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/ledasquare-hongdae</loc><changefreq>weekly</changefreq></url>
@@ -259,6 +280,7 @@
   <url><loc>https://bangtto.com/store/masterkey-pyeongtaek</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/masterkey-seomyeon-origin</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/masterkey-seomyeon-tantan</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/masterkey-sinchon-public</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/metaescape-suwon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/miro-eunpyeong</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/missionescape-pnu</loc><changefreq>weekly</changefreq></url>
@@ -296,6 +318,9 @@
   <url><loc>https://bangtto.com/store/orangetb-daejeon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/pagetoday-gangnam</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/panicescape-mokdong</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/panorama-busan</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/panorama-hongdae</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/panorama-hongdae3</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/play33-daejeon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/play33-hongdae</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/play33-kondae</loc><changefreq>weekly</changefreq></url>
@@ -312,12 +337,15 @@
   <url><loc>https://bangtto.com/store/qescape-ilsan-westerndom</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/questionmark-hongdae</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/rabbithole-hongdae</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/reason-incheon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/recescape-hongdae</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/remember-bupyeong</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/remember-cheonan</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/remember-suwon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/reverseesc-ansan</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/reverseesc-hyangnam</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/roadyumi-hongdae</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/roomexcape-indigo</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/roomlescape-hongdae1</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/roomlescape-sillim</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/roomlescape-sillim2</loc><changefreq>weekly</changefreq></url>
@@ -356,6 +384,7 @@
   <url><loc>https://bangtto.com/store/sangsang-gwangju</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/sangsang-suwon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/sangsang-suwon2</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/secretcode-seogwipo</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/secretdoor-gunpo</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/secretgarden-daegu</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/secretgarden-daehakro</loc><changefreq>weekly</changefreq></url>
@@ -416,6 +445,8 @@
   <url><loc>https://bangtto.com/store/signescape-hongdae</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/signescape-sangsu</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/signescape-sungdae</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/sinnaneun-nampo</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/sixsense-gwangju</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/solver-kondae1</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/solver-kondae2</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/sowoojoo-suwon</loc><changefreq>weekly</changefreq></url>
@@ -429,12 +460,15 @@
   <url><loc>https://bangtto.com/store/thecode-seogwipo</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/thedoors-ilsan</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/thefinder-snu</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/theflight-suwon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/thefrank-gangnam</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/themaze-jeju</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/themaze-kondae</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/themaze-nowon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/theqescape-daejeon</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/thereal-suncheon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/therock-hadan</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/therock-kyungsung</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/therock-pnu</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/thetimeescape-yangsan</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/thetrap-suyu</loc><changefreq>weekly</changefreq></url>
@@ -448,6 +482,7 @@
   <url><loc>https://bangtto.com/store/xcape-kondae2</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/xcape-kondae3</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/xcape-suwon</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/store/yukhyang-seomyeon</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/zeroworld-dive-kondae</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/zeroworld-gangnam</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/store/zeroworld-gimpo</loc><changefreq>weekly</changefreq></url>
@@ -502,6 +537,9 @@
   <url><loc>https://bangtto.com/theme/bitphobia-stella-50</loc></url>
   <url><loc>https://bangtto.com/theme/bitphobia-stella-51</loc></url>
   <url><loc>https://bangtto.com/theme/bitphobia-stella-59</loc></url>
+  <url><loc>https://bangtto.com/theme/blackhaven-anyang-hide</loc></url>
+  <url><loc>https://bangtto.com/theme/blackhaven-anyang-lantern</loc></url>
+  <url><loc>https://bangtto.com/theme/blackhaven-anyang-record</loc></url>
   <url><loc>https://bangtto.com/theme/brainescape-gwangju-01</loc></url>
   <url><loc>https://bangtto.com/theme/brainescape-gwangju-02</loc></url>
   <url><loc>https://bangtto.com/theme/brainescape-gwangju-03</loc></url>
@@ -534,6 +572,12 @@
   <url><loc>https://bangtto.com/theme/busted-bucheon-18</loc></url>
   <url><loc>https://bangtto.com/theme/busted-bucheon-19</loc></url>
   <url><loc>https://bangtto.com/theme/cescape-moran-oddbar</loc></url>
+  <url><loc>https://bangtto.com/theme/cheshirehouse-sillim-changgwi</loc></url>
+  <url><loc>https://bangtto.com/theme/chulizone-daejeon-chainsaw</loc></url>
+  <url><loc>https://bangtto.com/theme/chulizone-daejeon-grandma</loc></url>
+  <url><loc>https://bangtto.com/theme/chulizone-daejeon-professor</loc></url>
+  <url><loc>https://bangtto.com/theme/chulizone-daejeon-recipe</loc></url>
+  <url><loc>https://bangtto.com/theme/chulizone-daejeon-stalker</loc></url>
   <url><loc>https://bangtto.com/theme/clevertown-sinchon-10</loc></url>
   <url><loc>https://bangtto.com/theme/clevertown-sinchon-11</loc></url>
   <url><loc>https://bangtto.com/theme/clevertown-sinchon-12</loc></url>
@@ -573,15 +617,31 @@
   <url><loc>https://bangtto.com/theme/codek-guwol-s8</loc></url>
   <url><loc>https://bangtto.com/theme/codek-guwol-s9</loc></url>
   <url><loc>https://bangtto.com/theme/codek-hongdae-s16</loc></url>
+  <url><loc>https://bangtto.com/theme/codemystery-kyungsung-art</loc></url>
+  <url><loc>https://bangtto.com/theme/codemystery-kyungsung-girlsschool</loc></url>
+  <url><loc>https://bangtto.com/theme/codemystery-kyungsung-gonjiam</loc></url>
+  <url><loc>https://bangtto.com/theme/codemystery-kyungsung-prison</loc></url>
+  <url><loc>https://bangtto.com/theme/codemystery-kyungsung-psycho</loc></url>
   <url><loc>https://bangtto.com/theme/codename-bucheon-1</loc></url>
   <url><loc>https://bangtto.com/theme/coldcase-inha2-2</loc></url>
   <url><loc>https://bangtto.com/theme/coldcase-inha2-3</loc></url>
   <url><loc>https://bangtto.com/theme/coldcase-inha2-4</loc></url>
   <url><loc>https://bangtto.com/theme/coldcase-inha2-5</loc></url>
   <url><loc>https://bangtto.com/theme/coldcase-inha2-8</loc></url>
+  <url><loc>https://bangtto.com/theme/conan-goyang-dream</loc></url>
+  <url><loc>https://bangtto.com/theme/conan-goyang-recipe</loc></url>
+  <url><loc>https://bangtto.com/theme/conan-goyang-salary</loc></url>
+  <url><loc>https://bangtto.com/theme/conan-goyang-shop</loc></url>
+  <url><loc>https://bangtto.com/theme/conan-goyang-ward</loc></url>
   <url><loc>https://bangtto.com/theme/crimechamber-hongdae-1</loc></url>
   <url><loc>https://bangtto.com/theme/crimechamber-hongdae-2</loc></url>
   <url><loc>https://bangtto.com/theme/crimechamber-hongdae-3</loc></url>
+  <url><loc>https://bangtto.com/theme/crimescene-bupyeong-assassination</loc></url>
+  <url><loc>https://bangtto.com/theme/crimescene-bupyeong-beauty</loc></url>
+  <url><loc>https://bangtto.com/theme/crimescene-bupyeong-demon</loc></url>
+  <url><loc>https://bangtto.com/theme/crimescene-bupyeong-eille</loc></url>
+  <url><loc>https://bangtto.com/theme/crimescene-bupyeong-fancy</loc></url>
+  <url><loc>https://bangtto.com/theme/crimescene-bupyeong-thieves</loc></url>
   <url><loc>https://bangtto.com/theme/cubeescape-cheonho-17</loc></url>
   <url><loc>https://bangtto.com/theme/cubeescape-cheonho-19</loc></url>
   <url><loc>https://bangtto.com/theme/cubeescape-cheonho-20</loc></url>
@@ -656,6 +716,13 @@
   <url><loc>https://bangtto.com/theme/doghoney-gangnam-renewal</loc></url>
   <url><loc>https://bangtto.com/theme/doghoney-gangnam-sebun</loc></url>
   <url><loc>https://bangtto.com/theme/doghoney-gangnam-topoftower</loc></url>
+  <url><loc>https://bangtto.com/theme/doit-guri1-bts</loc></url>
+  <url><loc>https://bangtto.com/theme/doit-guri1-dollhouse</loc></url>
+  <url><loc>https://bangtto.com/theme/doit-guri1-pharaoh</loc></url>
+  <url><loc>https://bangtto.com/theme/doit-guri1-tracker</loc></url>
+  <url><loc>https://bangtto.com/theme/doit-guri1-zombie</loc></url>
+  <url><loc>https://bangtto.com/theme/doit-guri2-gallery</loc></url>
+  <url><loc>https://bangtto.com/theme/doit-guri2-hacker</loc></url>
   <url><loc>https://bangtto.com/theme/doloescape-gangnam-4</loc></url>
   <url><loc>https://bangtto.com/theme/doloescape-gangnam-5</loc></url>
   <url><loc>https://bangtto.com/theme/doloescape-gangnam-6</loc></url>
@@ -712,6 +779,13 @@
   <url><loc>https://bangtto.com/theme/dreampicnic-bucheon-6</loc></url>
   <url><loc>https://bangtto.com/theme/dreampicnic-bucheon-7</loc></url>
   <url><loc>https://bangtto.com/theme/dreampicnic-bucheon-8</loc></url>
+  <url><loc>https://bangtto.com/theme/dubdu-hongdae-basic</loc></url>
+  <url><loc>https://bangtto.com/theme/dubdu-hongdae-happy</loc></url>
+  <url><loc>https://bangtto.com/theme/dubdu-hongdae-idea</loc></url>
+  <url><loc>https://bangtto.com/theme/dubdu-hongdae-joy</loc></url>
+  <url><loc>https://bangtto.com/theme/dubdu-hongdae-karma</loc></url>
+  <url><loc>https://bangtto.com/theme/dubdu-hongdae-lastep</loc></url>
+  <url><loc>https://bangtto.com/theme/dubdu-hongdae-noise</loc></url>
   <url><loc>https://bangtto.com/theme/dumbndumber-daehakro-1</loc></url>
   <url><loc>https://bangtto.com/theme/dumbndumber-daehakro-2</loc></url>
   <url><loc>https://bangtto.com/theme/dumbndumber-daehakro-3</loc></url>
@@ -761,6 +835,10 @@
   <url><loc>https://bangtto.com/theme/escapecafe-suwon-1573112486</loc></url>
   <url><loc>https://bangtto.com/theme/escapecafe-suwon-1573626297</loc></url>
   <url><loc>https://bangtto.com/theme/escapecafe-suwon-1573626409</loc></url>
+  <url><loc>https://bangtto.com/theme/escapelab-suwon-ghost</loc></url>
+  <url><loc>https://bangtto.com/theme/escapelab-suwon-lifecare</loc></url>
+  <url><loc>https://bangtto.com/theme/escapelab-suwon-teddy</loc></url>
+  <url><loc>https://bangtto.com/theme/escapelab-suwon-witch</loc></url>
   <url><loc>https://bangtto.com/theme/escapers-daegu-0MTdK2ifMpQuDzpjuMPha5I3LQauoTd8FuQuQgJ1</loc></url>
   <url><loc>https://bangtto.com/theme/escapers-daegu-1wf88SSPK2N4oKIGDLdqro9RpQ8gQ5HfhqXHxNQ0</loc></url>
   <url><loc>https://bangtto.com/theme/escapers-daegu-2p7Xk7TMQ1qGxGzz2gYthFf5e17rhNS0E632b2vl</loc></url>
@@ -823,6 +901,7 @@
   <url><loc>https://bangtto.com/theme/escapetop-ulsan-pirate</loc></url>
   <url><loc>https://bangtto.com/theme/escapetop-ulsan-prison</loc></url>
   <url><loc>https://bangtto.com/theme/escapetop-ulsan-wizard</loc></url>
+  <url><loc>https://bangtto.com/theme/escapeworld-suwon-bangja</loc></url>
   <url><loc>https://bangtto.com/theme/escapezone-kangwon-1479279927</loc></url>
   <url><loc>https://bangtto.com/theme/escapezone-kangwon-1513319214</loc></url>
   <url><loc>https://bangtto.com/theme/escapezone-kangwon-1559288616</loc></url>
@@ -833,6 +912,7 @@
   <url><loc>https://bangtto.com/theme/escgame-sinchon-oldboy</loc></url>
   <url><loc>https://bangtto.com/theme/escgame-sinchon-saw</loc></url>
   <url><loc>https://bangtto.com/theme/escgame-sinchon-shawshank</loc></url>
+  <url><loc>https://bangtto.com/theme/everest-goyang-everest</loc></url>
   <url><loc>https://bangtto.com/theme/exodus-gangnam1-claim</loc></url>
   <url><loc>https://bangtto.com/theme/exodus-gangnam1-wish</loc></url>
   <url><loc>https://bangtto.com/theme/fantasia-gwangju-chanmi</loc></url>
@@ -865,6 +945,7 @@
   <url><loc>https://bangtto.com/theme/getaway-gangnam-7</loc></url>
   <url><loc>https://bangtto.com/theme/getaway-gangnam-9</loc></url>
   <url><loc>https://bangtto.com/theme/goedam-hangang-training</loc></url>
+  <url><loc>https://bangtto.com/theme/goedam-jeil-jeil</loc></url>
   <url><loc>https://bangtto.com/theme/goldenkey-cheonan-32</loc></url>
   <url><loc>https://bangtto.com/theme/goldenkey-cheonan-34</loc></url>
   <url><loc>https://bangtto.com/theme/goldenkey-daegu-1</loc></url>
@@ -914,7 +995,10 @@
   <url><loc>https://bangtto.com/theme/hide-gwangju2-innocent2</loc></url>
   <url><loc>https://bangtto.com/theme/hide-gwangju2-myeongdang</loc></url>
   <url><loc>https://bangtto.com/theme/hide-gwangju2-redevelop</loc></url>
+  <url><loc>https://bangtto.com/theme/hide-gwangju3-closed</loc></url>
+  <url><loc>https://bangtto.com/theme/hide-gwangju3-private</loc></url>
   <url><loc>https://bangtto.com/theme/hotelletoh-seongsu-1</loc></url>
+  <url><loc>https://bangtto.com/theme/immersive-hongdae-withoutyou</loc></url>
   <url><loc>https://bangtto.com/theme/instage-chuncheon-potato</loc></url>
   <url><loc>https://bangtto.com/theme/jejuescape-cityhall-1</loc></url>
   <url><loc>https://bangtto.com/theme/jejuescape-cityhall-2</loc></url>
@@ -996,6 +1080,15 @@
   <url><loc>https://bangtto.com/theme/keyescape-whosthere-63</loc></url>
   <url><loc>https://bangtto.com/theme/keyescape-woojulike-31</loc></url>
   <url><loc>https://bangtto.com/theme/keyescape-woojulike-33</loc></url>
+  <url><loc>https://bangtto.com/theme/keyknock-uijeongbu-agape</loc></url>
+  <url><loc>https://bangtto.com/theme/keyknock-uijeongbu-intelligence</loc></url>
+  <url><loc>https://bangtto.com/theme/kidkideuk-gwangju-as</loc></url>
+  <url><loc>https://bangtto.com/theme/kidkideuk-gwangju-blackout</loc></url>
+  <url><loc>https://bangtto.com/theme/kidkideuk-gwangju-brush</loc></url>
+  <url><loc>https://bangtto.com/theme/kidkideuk-gwangju-defense</loc></url>
+  <url><loc>https://bangtto.com/theme/kidkideuk-gwangju-melody</loc></url>
+  <url><loc>https://bangtto.com/theme/kidkideuk-gwangju-raccoon</loc></url>
+  <url><loc>https://bangtto.com/theme/kidkideuk-gwangju-switch</loc></url>
   <url><loc>https://bangtto.com/theme/kukuroom-gangnam-celeste</loc></url>
   <url><loc>https://bangtto.com/theme/kukuroom-gangnam-fairy</loc></url>
   <url><loc>https://bangtto.com/theme/kukuroom-gangnam-staff</loc></url>
@@ -1101,6 +1194,9 @@
   <url><loc>https://bangtto.com/theme/masterkey-seomyeon-tantan-217</loc></url>
   <url><loc>https://bangtto.com/theme/masterkey-seomyeon-tantan-218</loc></url>
   <url><loc>https://bangtto.com/theme/masterkey-seomyeon-tantan-219</loc></url>
+  <url><loc>https://bangtto.com/theme/masterkey-sinchon-public-hetoo</loc></url>
+  <url><loc>https://bangtto.com/theme/masterkey-sinchon-public-scene</loc></url>
+  <url><loc>https://bangtto.com/theme/masterkey-sinchon-public-wild</loc></url>
   <url><loc>https://bangtto.com/theme/metaescape-suwon-1</loc></url>
   <url><loc>https://bangtto.com/theme/metaescape-suwon-2</loc></url>
   <url><loc>https://bangtto.com/theme/metaescape-suwon-3</loc></url>
@@ -1276,6 +1372,10 @@
   <url><loc>https://bangtto.com/theme/panicescape-mokdong-arrow</loc></url>
   <url><loc>https://bangtto.com/theme/panicescape-mokdong-lord</loc></url>
   <url><loc>https://bangtto.com/theme/panicescape-mokdong-magicacademy</loc></url>
+  <url><loc>https://bangtto.com/theme/panorama-busan-disaster</loc></url>
+  <url><loc>https://bangtto.com/theme/panorama-hongdae-combo</loc></url>
+  <url><loc>https://bangtto.com/theme/panorama-hongdae-ruletheday</loc></url>
+  <url><loc>https://bangtto.com/theme/panorama-hongdae3-puppet</loc></url>
   <url><loc>https://bangtto.com/theme/play33-daejeon-31</loc></url>
   <url><loc>https://bangtto.com/theme/play33-daejeon-33</loc></url>
   <url><loc>https://bangtto.com/theme/play33-daejeon-39</loc></url>
@@ -1334,6 +1434,9 @@
   <url><loc>https://bangtto.com/theme/questionmark-hongdae-1</loc></url>
   <url><loc>https://bangtto.com/theme/rabbithole-hongdae-4</loc></url>
   <url><loc>https://bangtto.com/theme/rabbithole-hongdae-5</loc></url>
+  <url><loc>https://bangtto.com/theme/reason-incheon-chainsaw</loc></url>
+  <url><loc>https://bangtto.com/theme/reason-incheon-heroine</loc></url>
+  <url><loc>https://bangtto.com/theme/reason-incheon-jeongjo</loc></url>
   <url><loc>https://bangtto.com/theme/recescape-hongdae-1449675891</loc></url>
   <url><loc>https://bangtto.com/theme/recescape-hongdae-1449675910</loc></url>
   <url><loc>https://bangtto.com/theme/recescape-hongdae-1449675924</loc></url>
@@ -1362,6 +1465,10 @@
   <url><loc>https://bangtto.com/theme/reverseesc-hyangnam-5f8ee317</loc></url>
   <url><loc>https://bangtto.com/theme/reverseesc-hyangnam-5f8ee349</loc></url>
   <url><loc>https://bangtto.com/theme/reverseesc-hyangnam-d40df376</loc></url>
+  <url><loc>https://bangtto.com/theme/roadyumi-hongdae-insane</loc></url>
+  <url><loc>https://bangtto.com/theme/roomexcape-indigo-dreampost</loc></url>
+  <url><loc>https://bangtto.com/theme/roomexcape-indigo-flyme</loc></url>
+  <url><loc>https://bangtto.com/theme/roomexcape-indigo-holymoly</loc></url>
   <url><loc>https://bangtto.com/theme/roomlescape-hongdae1-5</loc></url>
   <url><loc>https://bangtto.com/theme/roomlescape-hongdae1-6</loc></url>
   <url><loc>https://bangtto.com/theme/roomlescape-sillim-2</loc></url>
@@ -1532,6 +1639,8 @@
   <url><loc>https://bangtto.com/theme/sangsang-suwon2-40</loc></url>
   <url><loc>https://bangtto.com/theme/sangsang-suwon2-41</loc></url>
   <url><loc>https://bangtto.com/theme/sangsang-suwon2-42</loc></url>
+  <url><loc>https://bangtto.com/theme/secretcode-seogwipo-findme</loc></url>
+  <url><loc>https://bangtto.com/theme/secretcode-seogwipo-myth</loc></url>
   <url><loc>https://bangtto.com/theme/secretdoor-gunpo-bunker</loc></url>
   <url><loc>https://bangtto.com/theme/secretdoor-gunpo-closet</loc></url>
   <url><loc>https://bangtto.com/theme/secretgarden-daegu-36</loc></url>
@@ -1830,6 +1939,14 @@
   <url><loc>https://bangtto.com/theme/signescape-sungdae-c</loc></url>
   <url><loc>https://bangtto.com/theme/signescape-sungdae-d</loc></url>
   <url><loc>https://bangtto.com/theme/signescape-sungdae-e</loc></url>
+  <url><loc>https://bangtto.com/theme/sinnaneun-nampo-dumb</loc></url>
+  <url><loc>https://bangtto.com/theme/sinnaneun-nampo-riskiar</loc></url>
+  <url><loc>https://bangtto.com/theme/sinnaneun-nampo-talent</loc></url>
+  <url><loc>https://bangtto.com/theme/sixsense-gwangju-hangul</loc></url>
+  <url><loc>https://bangtto.com/theme/sixsense-gwangju-hotel</loc></url>
+  <url><loc>https://bangtto.com/theme/sixsense-gwangju-panorama</loc></url>
+  <url><loc>https://bangtto.com/theme/sixsense-gwangju-remember</loc></url>
+  <url><loc>https://bangtto.com/theme/sixsense-gwangju-thieves</loc></url>
   <url><loc>https://bangtto.com/theme/solver-kondae1-a</loc></url>
   <url><loc>https://bangtto.com/theme/solver-kondae1-b</loc></url>
   <url><loc>https://bangtto.com/theme/solver-kondae1-c</loc></url>
@@ -1887,6 +2004,9 @@
   <url><loc>https://bangtto.com/theme/thefinder-snu-four</loc></url>
   <url><loc>https://bangtto.com/theme/thefinder-snu-hunger</loc></url>
   <url><loc>https://bangtto.com/theme/thefinder-snu-island</loc></url>
+  <url><loc>https://bangtto.com/theme/theflight-suwon-kozaza</loc></url>
+  <url><loc>https://bangtto.com/theme/theflight-suwon-perfectcell</loc></url>
+  <url><loc>https://bangtto.com/theme/theflight-suwon-storyshop</loc></url>
   <url><loc>https://bangtto.com/theme/thefrank-gangnam-5</loc></url>
   <url><loc>https://bangtto.com/theme/thefrank-gangnam-6</loc></url>
   <url><loc>https://bangtto.com/theme/thefrank-gangnam-7</loc></url>
@@ -1914,11 +2034,19 @@
   <url><loc>https://bangtto.com/theme/theqescape-daejeon-96r2cx8g</loc></url>
   <url><loc>https://bangtto.com/theme/theqescape-daejeon-h12icgp3</loc></url>
   <url><loc>https://bangtto.com/theme/theqescape-daejeon-s23epw5p</loc></url>
+  <url><loc>https://bangtto.com/theme/thereal-suncheon-cursed</loc></url>
+  <url><loc>https://bangtto.com/theme/thereal-suncheon-stalker</loc></url>
+  <url><loc>https://bangtto.com/theme/thereal-suncheon-thieves</loc></url>
   <url><loc>https://bangtto.com/theme/therock-hadan-asylum</loc></url>
   <url><loc>https://bangtto.com/theme/therock-hadan-boobytrap</loc></url>
   <url><loc>https://bangtto.com/theme/therock-hadan-bunker</loc></url>
   <url><loc>https://bangtto.com/theme/therock-hadan-lupin</loc></url>
   <url><loc>https://bangtto.com/theme/therock-hadan-witch</loc></url>
+  <url><loc>https://bangtto.com/theme/therock-kyungsung-club</loc></url>
+  <url><loc>https://bangtto.com/theme/therock-kyungsung-oriental</loc></url>
+  <url><loc>https://bangtto.com/theme/therock-kyungsung-spirited</loc></url>
+  <url><loc>https://bangtto.com/theme/therock-kyungsung-store</loc></url>
+  <url><loc>https://bangtto.com/theme/therock-kyungsung-visit</loc></url>
   <url><loc>https://bangtto.com/theme/therock-pnu-client</loc></url>
   <url><loc>https://bangtto.com/theme/therock-pnu-howl</loc></url>
   <url><loc>https://bangtto.com/theme/therock-pnu-lucid</loc></url>
@@ -1986,6 +2114,13 @@
   <url><loc>https://bangtto.com/theme/xcape-suwon-86928df7</loc></url>
   <url><loc>https://bangtto.com/theme/xcape-suwon-de272446</loc></url>
   <url><loc>https://bangtto.com/theme/xcape-suwon-df5d1a81</loc></url>
+  <url><loc>https://bangtto.com/theme/yukhyang-seomyeon-boring</loc></url>
+  <url><loc>https://bangtto.com/theme/yukhyang-seomyeon-grabber</loc></url>
+  <url><loc>https://bangtto.com/theme/yukhyang-seomyeon-kiki</loc></url>
+  <url><loc>https://bangtto.com/theme/yukhyang-seomyeon-nokids</loc></url>
+  <url><loc>https://bangtto.com/theme/yukhyang-seomyeon-probability</loc></url>
+  <url><loc>https://bangtto.com/theme/yukhyang-seomyeon-timecruise</loc></url>
+  <url><loc>https://bangtto.com/theme/yukhyang-seomyeon-usi</loc></url>
   <url><loc>https://bangtto.com/theme/zeroworld-dive-kondae-38</loc></url>
   <url><loc>https://bangtto.com/theme/zeroworld-dive-kondae-39</loc></url>
   <url><loc>https://bangtto.com/theme/zeroworld-gangnam-24</loc></url>
