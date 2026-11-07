@@ -87,6 +87,21 @@
       body {
         overflow: hidden;
       }
+      /* 아이폰 상태 표시줄 탭을 받도록 페이지를 1px 스크롤할 수 있게 두고, 페이지 자체는 튕기거나 화면 속 스크롤에 끌려가지 않게 함 */
+      html.status-tap {
+        overscroll-behavior-y: none;
+      }
+      html.status-tap body {
+        overflow: visible;
+      }
+      html.status-tap body::before {
+        content: '';
+        display: block;
+        height: 1px;
+      }
+      html.status-tap #root * {
+        overscroll-behavior-y: contain;
+      }
       /* These styles make the root element full-height */
       #root {
         display: flex;
@@ -232,11 +247,11 @@
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
-    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 방탈출 예약 오픈·빈자리 알림·검색·후기</p><h1>미네타닉:사건의 진실</h1><img class="seo-poster" src="https://wsrv.nl/?url=https%3A%2F%2Fbangtto.com%2Fposters%2Fremember-cheonan-e2469311.webp&amp;w=1080&amp;we&amp;output=jpg&amp;q=82" alt="미네타닉:사건의 진실 포스터" width="300" height="420" fetchpriority="high" /><p>천안 · <a href="/store/remember-cheonan">리멤버 방탈출 천안점</a> · 추리</p><ul><li>매장 추천 인원 2~6명</li><li>60분</li><li>난이도 3.5/5</li><li>공포도 1/5</li><li>가격 2인 44,000원 · 3인 66,000원 · 4인 88,000원 · 5인 110,000원 · 6인 132,000원</li></ul><p>주소 충남 천안시 동남구 먹거리11길 31 3층</p><h2>매장 공식 테마 소개</h2><p>운 좋게 마지막 승선권으로 배에 탑승한 우리는<br />미네타닉의 첫 출항을 기념하는 저녁 만찬을 <br />즐기기 위해 파티장으로 향했다. <br /><br />가장 아름다운 배에 숨겨진 진실은?<br />* 이 테마는 타이타닉 사건을 모티브로 가상의 인물과<br />허구의 사건을 다루었으며, 실제 사건과 다름을 밝힙니다.</p><h2>예약 안내</h2><p>예약 상시 오픈 · 오픈 시각 없음</p><p><a href="http://www.rememberesc.com/reservation.html?theme_name=%EB%AF%B8%EB%84%A4%ED%83%80%EB%8B%89%3A%EC%82%AC%EA%B1%B4%EC%9D%98%20%EC%A7%84%EC%8B%A4&amp;location_service=%EC%B2%9C%EC%95%88" rel="noopener">매장 공식 예약 페이지</a> · <a href="http://www.rememberesc.com/theme.html" rel="noopener">테마 정보 출처</a></p><p>별점과 후기는 방또 이용자가 작성한 내용이며 매장 공식 정보와 구분됩니다. 실제 가격·운영 여부는 매장 공식 페이지를 확인해 주세요.</p><h2>리멤버 방탈출 천안점 다른 테마</h2><ul><li><a href="/theme/remember-cheonan-e2469306">기억을 먹어치우는 책</a> · 리멤버 방탈출 천안점</li><li><a href="/theme/remember-cheonan-1cfcf6c9">마음 친구</a> · 리멤버 방탈출 천안점 · 드라마·감성</li><li><a href="/theme/remember-cheonan-1cfcf6c5">삼원색</a> · 리멤버 방탈출 천안점</li><li><a href="/theme/remember-cheonan-1cfcf712">형량</a> · 리멤버 방탈출 천안점 · 추리</li><li><a href="/theme/remember-cheonan-e246930d">회무 : 회색 안개의 끝</a> · 리멤버 방탈출 천안점</li></ul><h2>천안 인기 방탈출</h2><ul><li><a href="/theme/sherlock-cheonan1-292">[19금]찰리와 늠름한(?) 바나나 공장</a> · 셜록홈즈 천안1호점 · 19금,코믹</li><li><a href="/theme/sherlock-cheonan2-259">[프리미엄 테마]미즈몰리아와 수수께끼의 책</a> · 셜록홈즈 천안2호점 · 판타지</li><li><a href="/theme/masterkey-cheonan-dujeong-48">13고스트</a> · 플레이포인트랩 천안두정점 · 공포</li><li><a href="/theme/sageonbalsaeng-cheonan-6">건물주</a> · 사건발생 · 추리</li><li><a href="/theme/masterkey-cheonan-dujeong-46">경찰서를 털어라</a> · 플레이포인트랩 천안두정점 · 코믹/어드벤처</li><li><a href="/theme/goldenkey-cheonan-32">괴물</a> · 황금열쇠 아케이드 천안점 · 다크판타지</li></ul><p><a href="/region/cheonan">천안 방탈출 더 보기</a> · <a href="/genre/mystery">추리 방탈출</a> · <a href="/">다른 방탈출 테마 보기</a></p></main></div>
+    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 방탈출 예약 오픈·빈자리 알림·검색·후기</p><h1>미네타닉:사건의 진실</h1><img class="seo-poster" src="https://wsrv.nl/?url=https%3A%2F%2Fbangtto.com%2Fposters%2Fremember-cheonan-e2469311.webp&amp;w=1080&amp;we&amp;output=jpg&amp;q=82" alt="미네타닉:사건의 진실 포스터" width="300" height="420" fetchpriority="high" /><p>천안 · <a href="/store/remember-cheonan">리멤버 방탈출 천안점</a> · 추리</p><ul><li>매장 추천 인원 2~6명</li><li>60분</li><li>난이도 3.5/5</li><li>공포도 1/5</li><li>가격 2인 44,000원 · 3인 66,000원 · 4인 88,000원 · 5인 110,000원 · 6인 132,000원</li></ul><p>주소 충남 천안시 동남구 먹거리11길 31 3층</p><h2>매장 공식 테마 소개</h2><p>운 좋게 마지막 승선권으로 배에 탑승한 우리는<br />미네타닉의 첫 출항을 기념하는 저녁 만찬을 <br />즐기기 위해 파티장으로 향했다. <br /><br />가장 아름다운 배에 숨겨진 진실은?<br />* 이 테마는 타이타닉 사건을 모티브로 가상의 인물과<br />허구의 사건을 다루었으며, 실제 사건과 다름을 밝힙니다.</p><h2>예약 안내</h2><p>예약 상시 오픈 · 오픈 시각 없음</p><p><a href="http://www.rememberesc.com/reservation.html?theme_name=%EB%AF%B8%EB%84%A4%ED%83%80%EB%8B%89%3A%EC%82%AC%EA%B1%B4%EC%9D%98%20%EC%A7%84%EC%8B%A4&amp;location_service=%EC%B2%9C%EC%95%88" rel="noopener">매장 공식 예약 페이지</a> · <a href="http://www.rememberesc.com/theme.html" rel="noopener">테마 정보 출처</a></p><p>별점과 후기는 방또 이용자가 작성한 내용이며 매장 공식 정보와 구분됩니다. 실제 가격·운영 여부는 매장 공식 페이지를 확인해 주세요.</p><h2>리멤버 방탈출 천안점 다른 테마</h2><ul><li><a href="/theme/remember-cheonan-e2469306">기억을 먹어치우는 책</a> · 리멤버 방탈출 천안점</li><li><a href="/theme/remember-cheonan-1cfcf6c9">마음 친구</a> · 리멤버 방탈출 천안점 · 드라마·감성</li><li><a href="/theme/remember-cheonan-1cfcf6c5">삼원색</a> · 리멤버 방탈출 천안점</li><li><a href="/theme/remember-cheonan-1cfcf712">형량</a> · 리멤버 방탈출 천안점 · 추리</li><li><a href="/theme/remember-cheonan-e246930d">회무 : 회색 안개의 끝</a> · 리멤버 방탈출 천안점</li></ul><h2>천안 인기 방탈출</h2><ul><li><a href="/theme/masterkey-cheonan-dujeong-46">경찰서를 털어라</a> · 플레이포인트랩 천안두정점 · 코믹/어드벤처 · ★2.5 후기 1개</li><li><a href="/theme/sherlock-cheonan1-292">[19금]찰리와 늠름한(?) 바나나 공장</a> · 셜록홈즈 천안1호점 · 19금,코믹</li><li><a href="/theme/sherlock-cheonan2-259">[프리미엄 테마]미즈몰리아와 수수께끼의 책</a> · 셜록홈즈 천안2호점 · 판타지</li><li><a href="/theme/masterkey-cheonan-dujeong-48">13고스트</a> · 플레이포인트랩 천안두정점 · 공포</li><li><a href="/theme/sageonbalsaeng-cheonan-6">건물주</a> · 사건발생 · 추리</li><li><a href="/theme/goldenkey-cheonan-32">괴물</a> · 황금열쇠 아케이드 천안점 · 다크판타지</li></ul><p><a href="/region/cheonan">천안 방탈출 더 보기</a> · <a href="/genre/mystery">추리 방탈출</a> · <a href="/">다른 방탈출 테마 보기</a></p></main></div>
     <div id="boot-loading" role="progressbar" aria-label="방또 불러오는 중">
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-f046a4de29b31da0004d2da3be50f460.js" defer></script>
+  <script src="/_expo/static/js/web/entry-d0cc822e98a8d10b26d22425638d6c0f.js" defer></script>
 </body>
 </html>

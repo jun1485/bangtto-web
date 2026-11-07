@@ -89,6 +89,21 @@
       body {
         overflow: hidden;
       }
+      /* 아이폰 상태 표시줄 탭을 받도록 페이지를 1px 스크롤할 수 있게 두고, 페이지 자체는 튕기거나 화면 속 스크롤에 끌려가지 않게 함 */
+      html.status-tap {
+        overscroll-behavior-y: none;
+      }
+      html.status-tap body {
+        overflow: visible;
+      }
+      html.status-tap body::before {
+        content: '';
+        display: block;
+        height: 1px;
+      }
+      html.status-tap #root * {
+        overscroll-behavior-y: contain;
+      }
       /* These styles make the root element full-height */
       #root {
         display: flex;
@@ -239,6 +254,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/entry-f046a4de29b31da0004d2da3be50f460.js" defer></script>
+  <script src="/_expo/static/js/web/entry-d0cc822e98a8d10b26d22425638d6c0f.js" defer></script>
 </body>
 </html>
