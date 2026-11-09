@@ -1,0 +1,133 @@
+# 방또
+
+> 전국 방탈출 테마 1785개(매장 396곳)의 예약 오픈 시각, 빈자리 알림, 인원·시간·가격·난이도·공포도, 이용자 후기를 모은 방탈출 정보 서비스입니다. (2026-11-09 기준)
+
+방또 정보 안내:
+- 테마 페이지마다 예약 오픈 규칙(예: 매주 월요일 10:00 오픈 · 14일 뒤까지), 인원별 가격, 플레이 시간, 난이도·공포도, 매장 주소, 방또 이용자 후기·평점이 있습니다.
+- 별점과 후기는 방또 이용자가 작성한 내용이며 매장 공식 정보와 구분됩니다.
+- 실제 예약과 결제는 각 매장 공식 예약 사이트에서 진행합니다. 방또는 예약 오픈·빈자리 알림과 기록·후기를 제공합니다.
+- 앱: Google Play "방또" (Android), 웹: https://bangtto.com
+
+## 지역별 방탈출
+- [홍대 방탈출](https://bangtto.com/region/hongdae): 매장 51곳, 테마 185개
+- [강남 방탈출](https://bangtto.com/region/gangnam): 매장 45곳, 테마 159개
+- [대구 방탈출](https://bangtto.com/region/daegu): 매장 19곳, 테마 111개
+- [수원 방탈출](https://bangtto.com/region/suwon): 매장 24곳, 테마 107개
+- [광주 방탈출](https://bangtto.com/region/gwangju): 매장 19곳, 테마 101개
+- [대전 방탈출](https://bangtto.com/region/daejeon): 매장 16곳, 테마 85개
+- [건대 방탈출](https://bangtto.com/region/geondae): 매장 20곳, 테마 82개
+- [부산 서면 방탈출](https://bangtto.com/region/busan-seomyeon): 매장 14곳, 테마 75개
+- [전주 방탈출](https://bangtto.com/region/jeonju): 매장 10곳, 테마 49개
+- [부평 방탈출](https://bangtto.com/region/bupyeong): 매장 11곳, 테마 48개
+- [천안 방탈출](https://bangtto.com/region/cheonan): 매장 9곳, 테마 41개
+- [부천 방탈출](https://bangtto.com/region/bucheon): 매장 8곳, 테마 36개
+- [고양 방탈출](https://bangtto.com/region/goyang): 매장 7곳, 테마 36개
+- [대학로 방탈출](https://bangtto.com/region/daehakro): 매장 7곳, 테마 33개
+- [신촌 방탈출](https://bangtto.com/region/sinchon): 매장 7곳, 테마 31개
+- [잠실 방탈출](https://bangtto.com/region/jamsil): 매장 7곳, 테마 30개
+- [분당 방탈출](https://bangtto.com/region/bundang): 매장 5곳, 테마 28개
+- [인천 구월 방탈출](https://bangtto.com/region/incheon-guwol): 매장 6곳, 테마 27개
+- [평택 방탈출](https://bangtto.com/region/pyeongtaek): 매장 5곳, 테마 27개
+- [안양 방탈출](https://bangtto.com/region/anyang): 매장 6곳, 테마 25개
+- [안산 방탈출](https://bangtto.com/region/ansan): 매장 5곳, 테마 25개
+- [울산 방탈출](https://bangtto.com/region/ulsan): 매장 3곳, 테마 21개
+- [의정부 방탈출](https://bangtto.com/region/uijeongbu): 매장 5곳, 테마 21개
+- [제주 방탈출](https://bangtto.com/region/jeju): 매장 5곳, 테마 21개
+- [용인 방탈출](https://bangtto.com/region/yongin): 매장 4곳, 테마 21개
+- [노원 방탈출](https://bangtto.com/region/nowon): 매장 3곳, 테마 20개
+- [동탄 방탈출](https://bangtto.com/region/dongtan): 매장 4곳, 테마 18개
+- [신림 방탈출](https://bangtto.com/region/sinrim): 매장 6곳, 테마 17개
+- [창원 방탈출](https://bangtto.com/region/changwon): 매장 3곳, 테마 17개
+- [김포 방탈출](https://bangtto.com/region/gimpo): 매장 2곳, 테마 16개
+- [부산 해운대 방탈출](https://bangtto.com/region/busan-haeundae): 매장 2곳, 테마 14개
+- [청주 방탈출](https://bangtto.com/region/cheongju): 매장 3곳, 테마 14개
+- [수유 방탈출](https://bangtto.com/region/suyu): 매장 2곳, 테마 12개
+- [구리 방탈출](https://bangtto.com/region/guri): 매장 3곳, 테마 12개
+- [영등포 방탈출](https://bangtto.com/region/yeongdeungpo): 매장 2곳, 테마 12개
+- [부산 경성대 방탈출](https://bangtto.com/region/busan-gyeongseongdae): 매장 3곳, 테마 11개
+- [양산 방탈출](https://bangtto.com/region/yangsan): 매장 2곳, 테마 11개
+- [부산대 방탈출](https://bangtto.com/region/busandae): 매장 2곳, 테마 10개
+- [부산 하단 방탈출](https://bangtto.com/region/busan-hadan): 매장 2곳, 테마 10개
+- [성신여대 방탈출](https://bangtto.com/region/seongsinyeodae): 매장 2곳, 테마 9개
+- [부산 남포 방탈출](https://bangtto.com/region/busan-nampo): 매장 2곳, 테마 9개
+- [천호 방탈출](https://bangtto.com/region/cheonho): 매장 1곳, 테마 7개
+- [시흥 방탈출](https://bangtto.com/region/siheung): 매장 1곳, 테마 7개
+- [송도 방탈출](https://bangtto.com/region/songdo): 매장 1곳, 테마 7개
+- [여수 방탈출](https://bangtto.com/region/yeosu): 매장 1곳, 테마 7개
+- [춘천 방탈출](https://bangtto.com/region/chuncheon): 매장 2곳, 테마 6개
+- [은평 방탈출](https://bangtto.com/region/eunpyeong): 매장 1곳, 테마 6개
+- [아산 방탈출](https://bangtto.com/region/asan): 매장 1곳, 테마 6개
+- [진주 방탈출](https://bangtto.com/region/jinju): 매장 1곳, 테마 6개
+- [부산 광안리 방탈출](https://bangtto.com/region/busan-gwanganri): 매장 1곳, 테마 5개
+- [인하대 방탈출](https://bangtto.com/region/inhadae): 매장 1곳, 테마 5개
+- [성수 방탈출](https://bangtto.com/region/seongsu): 매장 2곳, 테마 5개
+- [회기·외대 방탈출](https://bangtto.com/region/hoegi-oedae): 매장 2곳, 테마 5개
+- [부산 덕천 방탈출](https://bangtto.com/region/busan-deokcheon): 매장 1곳, 테마 5개
+- [이천 방탈출](https://bangtto.com/region/icheon): 매장 1곳, 테마 5개
+- [군산 방탈출](https://bangtto.com/region/gunsan): 매장 1곳, 테마 5개
+- [광명 방탈출](https://bangtto.com/region/gwangmyeong): 매장 1곳, 테마 5개
+- [종각 방탈출](https://bangtto.com/region/jonggak): 매장 1곳, 테마 5개
+- [원주 방탈출](https://bangtto.com/region/wonju): 매장 1곳, 테마 5개
+- [명동 방탈출](https://bangtto.com/region/myeongdong): 매장 1곳, 테마 4개
+- [구미 방탈출](https://bangtto.com/region/gumi): 매장 1곳, 테마 4개
+- [목포 방탈출](https://bangtto.com/region/mokpo): 매장 1곳, 테마 4개
+- [익산 방탈출](https://bangtto.com/region/iksan): 매장 1곳, 테마 4개
+- [포항 방탈출](https://bangtto.com/region/pohang): 매장 1곳, 테마 4개
+- [하남 미사 방탈출](https://bangtto.com/region/hanam-misa): 매장 1곳, 테마 4개
+- [경주 방탈출](https://bangtto.com/region/gyeongju): 매장 1곳, 테마 4개
+- [왕십리 방탈출](https://bangtto.com/region/wangsipri): 매장 1곳, 테마 4개
+- [정선 방탈출](https://bangtto.com/region/jeongseon): 매장 1곳, 테마 3개
+- [목동 방탈출](https://bangtto.com/region/mokdong): 매장 1곳, 테마 3개
+- [화성 향남 방탈출](https://bangtto.com/region/hwaseong-hyangnam): 매장 1곳, 테마 3개
+- [군포 방탈출](https://bangtto.com/region/gunpo): 매장 1곳, 테마 2개
+- [부산 기장 방탈출](https://bangtto.com/region/busan-gijang): 매장 1곳, 테마 2개
+- [성남 방탈출](https://bangtto.com/region/seongnam): 매장 1곳, 테마 1개
+
+## 장르별 방탈출
+- [공포 방탈출 추천](https://bangtto.com/genre/horror): 테마 214개
+- [스릴러 방탈출 추천](https://bangtto.com/genre/thriller): 테마 255개
+- [추리 방탈출 추천](https://bangtto.com/genre/mystery): 테마 255개
+- [판타지 방탈출 추천](https://bangtto.com/genre/fantasy): 테마 201개
+- [드라마·감성 방탈출 추천](https://bangtto.com/genre/drama): 테마 277개
+- [코믹 방탈출 추천](https://bangtto.com/genre/comic): 테마 124개
+- [잠입·탈옥 방탈출 추천](https://bangtto.com/genre/infiltration): 테마 120개
+- [모험·액션 방탈출 추천](https://bangtto.com/genre/adventure): 테마 144개
+- [SF 방탈출 추천](https://bangtto.com/genre/sf): 테마 35개
+- [게임·미션 방탈출 추천](https://bangtto.com/genre/mission): 테마 132개
+
+## 후기가 많은 방탈출 테마
+- [스위티 (지구별 방탈출 홍대라스트시티점)](https://bangtto.com/theme/jigu-hongdae-lastcity-13): 홍대, 방또 후기 3개 평균 ★3.8
+- [3일 (비트포비아 던전 던전루나)](https://bangtto.com/theme/bitphobia-luna-49): 강남, 방또 후기 2개 평균 ★4.3
+- [강남목욕탕 (비트포비아 던전 강남던전)](https://bangtto.com/theme/bitphobia-gangnam-2): 강남, 방또 후기 2개 평균 ★4.3
+- [경성 연쇄실종사건 (비트포비아 던전 홍대던전Ⅲ)](https://bangtto.com/theme/bitphobia-hongdae3-19): 홍대, 방또 후기 2개 평균 ★4
+- [깜방탈출 (제로월드 홍대점)](https://bangtto.com/theme/zeroworld-hongdae-35): 홍대, 방또 후기 2개 평균 ★4.3
+- [네드 (키이스케이프 더오름)](https://bangtto.com/theme/keyescape-theorum-26): 강남, 방또 후기 2개 평균 ★4.8
+- [데스티니 앤드 타로 (비트포비아 던전 던전스텔라)](https://bangtto.com/theme/bitphobia-stella-50): 강남, 방또 후기 2개 평균 ★3.8
+- [라스트코어 (지구별 방탈출 홍대라스트시티점)](https://bangtto.com/theme/jigu-hongdae-lastcity-19): 홍대, 방또 후기 2개 평균 ★3.8
+- [러너웨이 (싸인이스케이프 강남시티점)](https://bangtto.com/theme/signescape-gangnam-a): 강남, 방또 후기 2개 평균 ★5
+- [머니머니부동산 (키이스케이프 STATION)](https://bangtto.com/theme/keyescape-station-43): 강남, 방또 후기 2개 평균 ★5
+- [머니머니패키지 (키이스케이프 LOG_IN 1)](https://bangtto.com/theme/keyescape-login1-38): 강남, 방또 후기 2개 평균 ★4.8
+- [버디 (오늘의 한 페이지 강남점)](https://bangtto.com/theme/pagetoday-gangnam-333): 강남, 방또 후기 2개 평균 ★4.5
+- [별의별 (플레이포인트랩 해운대 블루오션스테이션)](https://bangtto.com/theme/masterkey-haeundae-203): 부산 해운대, 방또 후기 2개 평균 ★3.3
+- [세렌디피티(SERENDIPITY) (넥스트에디션 건대 보네르관)](https://bangtto.com/theme/nextedition-kondae-bonheur-41): 건대, 방또 후기 2개 평균 ★3.8
+- [용하다 용해!! 용팔도령 (오늘의 한 페이지 강남점)](https://bangtto.com/theme/pagetoday-gangnam-358): 강남, 방또 후기 2개 평균 ★4.8
+- [지난날을 잊었다 (지구별 방탈출 홍대어드벤처점)](https://bangtto.com/theme/jigu-hongdae-adventure-9): 홍대, 방또 후기 2개 평균 ★2.8
+- [카부트 (지구별 방탈출 홍대라스트시티점)](https://bangtto.com/theme/jigu-hongdae-lastcity-22): 홍대, 방또 후기 2개 평균 ★3.8
+- [탐정브레드맨:도넛살인사건 (해피앤딩)](https://bangtto.com/theme/happyanding-hongdae-1): 홍대, 방또 후기 2개 평균 ★4.3
+- [태초의 신부 (판타스트릭 1호점)](https://bangtto.com/theme/fantastrick-1-firstfoundbride): 강남, 방또 후기 2개 평균 ★3.8
+- [화생설화 : Blooming (비트포비아 던전 던전101)](https://bangtto.com/theme/bitphobia-101-1): 홍대, 방또 후기 2개 평균 ★4.5
+- [A GENTLE MONDAY (키이스케이프 LOG_IN 2)](https://bangtto.com/theme/keyescape-login2-42): 강남, 방또 후기 2개 평균 ★4.5
+- [ANOTHER (황금열쇠 강남점(플라워로드))](https://bangtto.com/theme/goldenkey-gangnam-fr-20): 강남, 방또 후기 2개 평균 ★3.8
+- [BACK TO THE SCENE+ (키이스케이프 LOG_IN 2)](https://bangtto.com/theme/keyescape-login2-40): 강남, 방또 후기 2개 평균 ★4.5
+- [BACK화점 (황금열쇠 강남점(플라워로드))](https://bangtto.com/theme/goldenkey-gangnam-fr-6): 강남, 방또 후기 2개 평균 ★4
+- [DONE (제로월드 강남점)](https://bangtto.com/theme/zeroworld-gangnam-26): 강남, 방또 후기 2개 평균 ★5
+- [EP1 : 시간이 멈춘 마을 (포인트나인 강남점)](https://bangtto.com/theme/pointnine-gangnam-8): 강남, 방또 후기 2개 평균 ★3.5
+- [EP2 : 열쇠공의 이중생활 (포인트나인 강남점)](https://bangtto.com/theme/pointnine-gangnam-6): 강남, 방또 후기 2개 평균 ★3.8
+- [FILM BY BOB (키이스케이프 메모리컴퍼니)](https://bangtto.com/theme/keyescape-memorycompany-36): 강남, 방또 후기 2개 평균 ★5
+- [FILM BY EDDY (키이스케이프 메모리컴퍼니)](https://bangtto.com/theme/keyescape-memorycompany-34): 강남, 방또 후기 2개 평균 ★5
+- [FILM BY STEVE (키이스케이프 메모리컴퍼니)](https://bangtto.com/theme/keyescape-memorycompany-35): 강남, 방또 후기 2개 평균 ★5
+
+## 기타
+- [사이트맵](https://bangtto.com/sitemap.xml): 모든 테마·매장·지역 페이지 주소
+- [최근 바뀐 테마](https://bangtto.com/rss.xml)
+- [개인정보처리방침](https://bangtto.com/privacy)
