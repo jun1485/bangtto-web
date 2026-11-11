@@ -1,6 +1,6 @@
 # 방또
 
-> 전국 방탈출 테마 1785개(매장 396곳)의 예약 오픈 시각, 빈자리 알림, 인원·시간·가격·난이도·공포도, 이용자 후기를 모은 방탈출 정보 서비스입니다. (2026-11-10 기준)
+> 전국 방탈출 테마 1785개(매장 396곳)의 예약 오픈 시각, 빈자리 알림, 인원·시간·가격·난이도·공포도, 이용자 후기를 모은 방탈출 정보 서비스입니다. (2026-11-11 기준)
 
 방또 정보 안내:
 - 테마 페이지마다 예약 오픈 규칙(예: 매주 월요일 10:00 오픈 · 14일 뒤까지), 인원별 가격, 플레이 시간, 난이도·공포도, 매장 주소, 방또 이용자 후기·평점이 있습니다.
@@ -96,9 +96,9 @@
 - [게임·미션 방탈출 추천](https://bangtto.com/genre/mission): 테마 132개
 
 ## 후기가 많은 방탈출 테마
+- [3일 (비트포비아 던전 던전루나)](https://bangtto.com/theme/bitphobia-luna-49): 강남, 방또 후기 3개 평균 ★3.8
+- [강남목욕탕 (비트포비아 던전 강남던전)](https://bangtto.com/theme/bitphobia-gangnam-2): 강남, 방또 후기 3개 평균 ★4.5
 - [스위티 (지구별 방탈출 홍대라스트시티점)](https://bangtto.com/theme/jigu-hongdae-lastcity-13): 홍대, 방또 후기 3개 평균 ★3.8
-- [3일 (비트포비아 던전 던전루나)](https://bangtto.com/theme/bitphobia-luna-49): 강남, 방또 후기 2개 평균 ★4.3
-- [강남목욕탕 (비트포비아 던전 강남던전)](https://bangtto.com/theme/bitphobia-gangnam-2): 강남, 방또 후기 2개 평균 ★4.3
 - [경성 연쇄실종사건 (비트포비아 던전 홍대던전Ⅲ)](https://bangtto.com/theme/bitphobia-hongdae3-19): 홍대, 방또 후기 2개 평균 ★4
 - [깜방탈출 (제로월드 홍대점)](https://bangtto.com/theme/zeroworld-hongdae-35): 홍대, 방또 후기 2개 평균 ★4.3
 - [네드 (키이스케이프 더오름)](https://bangtto.com/theme/keyescape-theorum-26): 강남, 방또 후기 2개 평균 ★4.8
