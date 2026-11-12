@@ -91,11 +91,30 @@
       body {
         overflow: hidden;
       }
+      /* 아이폰 상태 표시줄 탭 감지용 페이지 스크롤, 페이지는 튕기지 않음 */
+      html.status-tap {
+        overscroll-behavior-y: none;
+      }
+      /* 스크롤 영역 밖을 밀어도 페이지가 끌려가지 않게 함 */
+      html.status-tap body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        touch-action: pan-x pinch-zoom;
+      }
       /* 아이폰 상태 표시줄 탭 감지용 페이지 여분 길이 */
       html.status-tap body::before {
         content: '';
         display: block;
         height: 1px;
+      }
+      /* 화면 밖에 둔 요소가 페이지 길이를 늘리지 않게 함 */
+      html.status-tap #root {
+        overflow: hidden;
+        overflow: clip;
+      }
+      /* 화면 속 스크롤이 끝에 닿아도 페이지로 넘어가지 않게 함 */
+      html.status-tap [data-page-edge] {
+        overscroll-behavior-y: contain;
       }
       /* These styles make the root element full-height */
       #root {
@@ -242,11 +261,11 @@
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
-    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 방탈출 예약 오픈·빈자리 알림·검색·후기</p><h1>인천 구월 2인 가능 방탈출</h1><p>매장 6곳 · 테마 26개</p><p>매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요.</p><p>후기가 많은 순으로 보여요. 가격과 예약 가능 여부는 매장 공식 예약 페이지에서 최종 확인해 주세요.</p><ul><li><a href="/theme/codek-guwol-s9">감옥탈출</a> · 코드케이 구월점 · 액션 · 60분 · 2인 총 44,000원</li><li><a href="/theme/doom-guwol1-27">기담정</a> · 둠이스케이프 1호점 · 감성 · 70분 · 2인 총 50,000원</li><li><a href="/theme/doom-guwol1-29">나폴리탄</a> · 둠이스케이프 1호점 · 공포 · 70분 · 2인 총 56,000원</li><li><a href="/theme/codek-guwol-s12">납치 (2인전용)</a> · 코드케이 구월점 · 공포 · 60분 · 2인 총 44,000원</li><li><a href="/theme/sherlock-guwol-254">던전을 부탁해</a> · 셜록홈즈 구월인천점 · 판타지 · 60분 · 2인 총 44,000원</li><li><a href="/theme/doom-guwol2-31">디스토피아</a> · 둠이스케이프 2호점 · 공포 · 70분 · 2인 총 52,000원</li><li><a href="/theme/reason-incheon-heroine">비련의 주인공</a> · 리즌 방탈출 · 60분 · 2인 총 50,000원</li><li><a href="/theme/sherlock-guwol-252">사라민</a> · 셜록홈즈 구월인천점 · 역사 · 60분 · 2인 총 44,000원</li><li><a href="/theme/cubeescape-incheon-guwol-12">신데렐라</a> · 큐브이스케이프 인천구월점 · 동화/어드벤쳐 · 60분 · 2인 총 36,000원</li><li><a href="/theme/doom-guwol2-30">운명</a> · 둠이스케이프 2호점 · 추리,멜로 · 70분 · 2인 총 52,000원</li><li><a href="/theme/doom-guwol2-33">인바이트</a> · 둠이스케이프 2호점 · 70분 · 2인 총 52,000원</li><li><a href="/theme/doom-guwol1-28">인앤아웃</a> · 둠이스케이프 1호점 · 판타지 · 65분 · 2인 총 46,000원</li><li><a href="/theme/cubeescape-incheon-guwol-03">장기밀매</a> · 큐브이스케이프 인천구월점 · 호러/19세미만불가 · 60분 · 2인 총 36,000원</li><li><a href="/theme/reason-incheon-chainsaw">전기톱 살인사건</a> · 리즌 방탈출 · 60분 · 2인 총 50,000원</li><li><a href="/theme/reason-incheon-jeongjo">정조 암살사건</a> · 리즌 방탈출 · 60분 · 2인 총 50,000원</li><li><a href="/theme/codek-guwol-s11">좀비 90일후</a> · 코드케이 구월점 · 공포 · 60분 · 2인 총 44,000원</li><li><a href="/theme/sherlock-guwol-253">좀비여친</a> · 셜록홈즈 구월인천점 · 판타지 · 60분 · 2인 총 44,000원</li><li><a href="/theme/doom-guwol2-32">죄</a> · 둠이스케이프 2호점 · 추격 · 70분 · 2인 총 52,000원</li><li><a href="/theme/sherlock-guwol-139">지옥의 라이더</a> · 셜록홈즈 구월인천점 · 판타지 · 60분 · 2인 총 44,000원</li><li><a href="/theme/cubeescape-incheon-guwol-13">집착</a> · 큐브이스케이프 인천구월점 · 추리/스릴러 · 60분 · 2인 총 36,000원</li><li><a href="/theme/codek-guwol-s8">충무공 이순신</a> · 코드케이 구월점 · 액션 · 60분 · 2인 총 44,000원</li><li><a href="/theme/cubeescape-incheon-guwol-14">타이타닉</a> · 큐브이스케이프 인천구월점 · 어드벤쳐 · 60분 · 2인 총 36,000원</li><li><a href="/theme/sherlock-guwol-255">파란지붕집</a> · 셜록홈즈 구월인천점 · 호러 · 60분 · 2인 총 44,000원</li><li><a href="/theme/sherlock-guwol-237">호텔:사라진 다이아몬드</a> · 셜록홈즈 구월인천점 · 추리 · 60분 · 2인 총 44,000원</li><li><a href="/theme/doom-guwol1-8">Rendering</a> · 둠이스케이프 1호점 · 추리,판타지 · 65분 · 2인 총 46,000원</li><li><a href="/theme/cubeescape-incheon-guwol-06">Towering</a> · 큐브이스케이프 인천구월점 · 스릴러 · 60분 · 2인 총 36,000원</li></ul><p><a href="/region/incheon-guwol">인천 구월 전체 방탈출 보기</a></p></main></div>
+    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 방탈출 예약 오픈·빈자리 알림·검색·후기</p><h1>인천 구월 2인 가능 방탈출</h1><p>매장 6곳 · 테마 26개</p><p>매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요.</p><p>후기가 많은 순으로 보여요. 가격과 예약 가능 여부는 매장 공식 예약 페이지에서 최종 확인해 주세요.</p><ul><li><a href="/theme/codek-guwol-s9">감옥탈출</a> · 코드케이 구월점 · 액션 · 60분 · 2인 총 44,000원</li><li><a href="/theme/doom-guwol1-27">기담정</a> · 둠이스케이프 1호점 · 감성 · 70분 · 2인 총 50,000원</li><li><a href="/theme/doom-guwol1-29">나폴리탄</a> · 둠이스케이프 1호점 · 공포 · 70분 · 2인 총 56,000원</li><li><a href="/theme/codek-guwol-s12">납치 (2인전용)</a> · 코드케이 구월점 · 공포 · 60분 · 2인 총 44,000원</li><li><a href="/theme/sherlock-guwol-254">던전을 부탁해</a> · 셜록홈즈 구월인천점 · 판타지 · 60분 · 2인 총 44,000원</li><li><a href="/theme/doom-guwol2-31">디스토피아</a> · 둠이스케이프 2호점 · 공포 · 70분 · 2인 총 52,000원</li><li><a href="/theme/reason-incheon-heroine">비련의 주인공</a> · 리즌 방탈출 · 60분 · 2인 총 50,000원</li><li><a href="/theme/sherlock-guwol-252">사라민</a> · 셜록홈즈 구월인천점 · 역사 · 60분 · 2인 총 44,000원</li><li><a href="/theme/cubeescape-incheon-guwol-12">신데렐라</a> · 큐브이스케이프 인천구월점 · 동화/어드벤쳐 · 60분 · 2인 총 36,000원</li><li><a href="/theme/doom-guwol2-30">운명</a> · 둠이스케이프 2호점 · 추리,멜로 · 70분 · 2인 총 52,000원</li><li><a href="/theme/doom-guwol2-33">인바이트</a> · 둠이스케이프 2호점 · 70분 · 2인 총 52,000원</li><li><a href="/theme/doom-guwol1-28">인앤아웃</a> · 둠이스케이프 1호점 · 판타지 · 65분 · 2인 총 46,000원</li><li><a href="/theme/cubeescape-incheon-guwol-03">장기밀매</a> · 큐브이스케이프 인천구월점 · 호러/19세미만불가 · 60분 · 2인 총 36,000원</li><li><a href="/theme/reason-incheon-chainsaw">전기톱 살인사건</a> · 리즌 방탈출 · 60분 · 2인 총 50,000원</li><li><a href="/theme/reason-incheon-jeongjo">정조 암살사건</a> · 리즌 방탈출 · 60분 · 2인 총 50,000원</li><li><a href="/theme/codek-guwol-s11">좀비 90일후</a> · 코드케이 구월점 · 공포 · 60분 · 2인 총 44,000원</li><li><a href="/theme/sherlock-guwol-253">좀비여친</a> · 셜록홈즈 구월인천점 · 판타지 · 60분 · 2인 총 44,000원</li><li><a href="/theme/doom-guwol2-32">죄</a> · 둠이스케이프 2호점 · 추격 · 70분 · 2인 총 52,000원</li><li><a href="/theme/sherlock-guwol-139">지옥의 라이더</a> · 셜록홈즈 구월인천점 · 판타지 · 60분 · 2인 총 44,000원</li><li><a href="/theme/cubeescape-incheon-guwol-13">집착</a> · 큐브이스케이프 인천구월점 · 추리/스릴러 · 60분 · 2인 총 36,000원</li><li><a href="/theme/codek-guwol-s8">충무공 이순신</a> · 코드케이 구월점 · 액션 · 60분 · 2인 총 37,000원</li><li><a href="/theme/cubeescape-incheon-guwol-14">타이타닉</a> · 큐브이스케이프 인천구월점 · 어드벤쳐 · 60분 · 2인 총 36,000원</li><li><a href="/theme/sherlock-guwol-255">파란지붕집</a> · 셜록홈즈 구월인천점 · 호러 · 60분 · 2인 총 44,000원</li><li><a href="/theme/sherlock-guwol-237">호텔:사라진 다이아몬드</a> · 셜록홈즈 구월인천점 · 추리 · 60분 · 2인 총 44,000원</li><li><a href="/theme/doom-guwol1-8">Rendering</a> · 둠이스케이프 1호점 · 추리,판타지 · 65분 · 2인 총 46,000원</li><li><a href="/theme/cubeescape-incheon-guwol-06">Towering</a> · 큐브이스케이프 인천구월점 · 스릴러 · 60분 · 2인 총 36,000원</li></ul><p><a href="/region/incheon-guwol">인천 구월 전체 방탈출 보기</a></p></main></div>
     <div id="boot-loading" role="progressbar" aria-label="방또 불러오는 중">
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/__expo-metro-runtime-1f8f5d3ca6b7f58204d51e14506d73fb.js" defer></script><script src="/_expo/static/js/web/__common-9d9f27ff59ebd3c19be3f362dfb9944f.js" defer></script><script src="/_expo/static/js/web/catalog-2e151d0cc86f0618279c751abb4bb482.js" defer></script><script src="/_expo/static/js/web/entry-f61d2fac521a132d232a5458058cc0bc.js" defer></script>
+  <script src="/_expo/static/js/web/__expo-metro-runtime-1f8f5d3ca6b7f58204d51e14506d73fb.js" defer></script><script src="/_expo/static/js/web/__common-9d9f27ff59ebd3c19be3f362dfb9944f.js" defer></script><script src="/_expo/static/js/web/catalog-6a9144046bb59fc783dcb8096d050c5b.js" defer></script><script src="/_expo/static/js/web/entry-42806b7cb054db35a0ab6dc1bff321b8.js" defer></script>
 </body>
 </html>

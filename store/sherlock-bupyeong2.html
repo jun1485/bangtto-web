@@ -7,22 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
     <!-- 외부 사이트 이동 시 출처 정보 미전송 -->
     <meta name="referrer" content="no-referrer" />
-    <title>셜록홈즈 부평2호점 방탈출 테마 5개 후기·예약 | 방또</title>
+    <title>셜록홈즈 부평2호점 방탈출 테마 6개 후기·예약 | 방또</title>
     <!-- 검색 결과·공유 미리보기 기본 정보 -->
-    <meta data-rh="true" name="description" content="부평 셜록홈즈 부평2호점의 방탈출 테마 5개([프리미엄]스탕달 신드롬·꿈사탕·데스게임:벼랑 끝에 선 자들·프로젝트 루나 등)의 난이도·공포도·가격·후기와 예약 오픈 시간을 확인하세요." />
+    <meta data-rh="true" name="description" content="부평 셜록홈즈 부평2호점의 방탈출 테마 6개([프리미엄]스탕달 신드롬·꿈사탕·데스게임:벼랑 끝에 선 자들·제4구역 등)의 난이도·공포도·가격·후기와 예약 오픈 시간을 확인하세요." />
     <meta data-rh="true" name="robots" content="index,follow,max-image-preview:large" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="방또" />
-    <meta data-rh="true" property="og:title" content="셜록홈즈 부평2호점 방탈출 테마 5개 후기·예약 | 방또" />
-    <meta data-rh="true" property="og:description" content="부평 셜록홈즈 부평2호점의 방탈출 테마 5개([프리미엄]스탕달 신드롬·꿈사탕·데스게임:벼랑 끝에 선 자들·프로젝트 루나 등)의 난이도·공포도·가격·후기와 예약 오픈 시간을 확인하세요." />
+    <meta data-rh="true" property="og:title" content="셜록홈즈 부평2호점 방탈출 테마 6개 후기·예약 | 방또" />
+    <meta data-rh="true" property="og:description" content="부평 셜록홈즈 부평2호점의 방탈출 테마 6개([프리미엄]스탕달 신드롬·꿈사탕·데스게임:벼랑 끝에 선 자들·제4구역 등)의 난이도·공포도·가격·후기와 예약 오픈 시간을 확인하세요." />
     <meta data-rh="true" property="og:image" content="https://bangtto.com/og-image.png?v=20261106" />
     <meta data-rh="true" property="og:image:width" content="1200" />
     <meta data-rh="true" property="og:image:height" content="630" />
-    <meta data-rh="true" property="og:image:alt" content="셜록홈즈 부평2호점 방탈출 테마 5개 후기·예약 | 방또" />
+    <meta data-rh="true" property="og:image:alt" content="셜록홈즈 부평2호점 방탈출 테마 6개 후기·예약 | 방또" />
     <meta property="og:locale" content="ko_KR" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta data-rh="true" name="twitter:title" content="셜록홈즈 부평2호점 방탈출 테마 5개 후기·예약 | 방또" />
-    <meta data-rh="true" name="twitter:description" content="부평 셜록홈즈 부평2호점의 방탈출 테마 5개([프리미엄]스탕달 신드롬·꿈사탕·데스게임:벼랑 끝에 선 자들·프로젝트 루나 등)의 난이도·공포도·가격·후기와 예약 오픈 시간을 확인하세요." />
+    <meta data-rh="true" name="twitter:title" content="셜록홈즈 부평2호점 방탈출 테마 6개 후기·예약 | 방또" />
+    <meta data-rh="true" name="twitter:description" content="부평 셜록홈즈 부평2호점의 방탈출 테마 6개([프리미엄]스탕달 신드롬·꿈사탕·데스게임:벼랑 끝에 선 자들·제4구역 등)의 난이도·공포도·가격·후기와 예약 오픈 시간을 확인하세요." />
     <meta data-rh="true" name="twitter:image" content="https://bangtto.com/og-image.png?v=20261106" />
     <!-- 홈 화면에 추가한 웹 앱 설정, 아이폰 웹 알림은 홈 화면 앱에서만 동작 -->
     <link rel="manifest" href="/manifest.json" />
@@ -91,11 +91,30 @@
       body {
         overflow: hidden;
       }
+      /* 아이폰 상태 표시줄 탭 감지용 페이지 스크롤, 페이지는 튕기지 않음 */
+      html.status-tap {
+        overscroll-behavior-y: none;
+      }
+      /* 스크롤 영역 밖을 밀어도 페이지가 끌려가지 않게 함 */
+      html.status-tap body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        touch-action: pan-x pinch-zoom;
+      }
       /* 아이폰 상태 표시줄 탭 감지용 페이지 여분 길이 */
       html.status-tap body::before {
         content: '';
         display: block;
         height: 1px;
+      }
+      /* 화면 밖에 둔 요소가 페이지 길이를 늘리지 않게 함 */
+      html.status-tap #root {
+        overflow: hidden;
+        overflow: clip;
+      }
+      /* 화면 속 스크롤이 끝에 닿아도 페이지로 넘어가지 않게 함 */
+      html.status-tap [data-page-edge] {
+        overscroll-behavior-y: contain;
       }
       /* These styles make the root element full-height */
       #root {
@@ -228,7 +247,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/store/sherlock-bupyeong2" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/store/sherlock-bupyeong2" />
-    <script data-seo-url="https://bangtto.com/store/sherlock-bupyeong2" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/sherlock-bupyeong2#store","name":"셜록홈즈 부평2호점","url":"https://bangtto.com/store/sherlock-bupyeong2","address":{"@type":"PostalAddress","streetAddress":"인천 부평구 시장로 19 로터스프라자 7층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.49292065,"longitude":126.7247322},"sameAs":["https://sherlock-holmes.co.kr"],"hasMap":"https://www.google.com/maps/search/?api=1&query=37.49292065,126.7247322"},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"셜록홈즈 부평2호점 위치는 어디인가요?","acceptedAnswer":{"@type":"Answer","text":"부평에 있으며 주소는 인천 부평구 시장로 19 로터스프라자 7층입니다."}},{"@type":"Question","name":"셜록홈즈 부평2호점 테마는 몇 개인가요?","acceptedAnswer":{"@type":"Answer","text":"방또 기준 테마 5개가 있습니다: [프리미엄]스탕달 신드롬, 꿈사탕, 데스게임:벼랑 끝에 선 자들, 프로젝트 루나, RE:PEAT."}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"부평 방탈출","item":"https://bangtto.com/region/bupyeong"},{"@type":"ListItem","position":3,"name":"셜록홈즈 부평2호점","item":"https://bangtto.com/store/sherlock-bupyeong2"}]}]</script>
+    <script data-seo-url="https://bangtto.com/store/sherlock-bupyeong2" type="application/ld+json">[{"@context":"https://schema.org","@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/sherlock-bupyeong2#store","name":"셜록홈즈 부평2호점","url":"https://bangtto.com/store/sherlock-bupyeong2","address":{"@type":"PostalAddress","streetAddress":"인천 부평구 시장로 19 로터스프라자 7층","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.49292065,"longitude":126.7247322},"sameAs":["https://sherlock-holmes.co.kr"],"hasMap":"https://www.google.com/maps/search/?api=1&query=37.49292065,126.7247322"},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"셜록홈즈 부평2호점 위치는 어디인가요?","acceptedAnswer":{"@type":"Answer","text":"부평에 있으며 주소는 인천 부평구 시장로 19 로터스프라자 7층입니다."}},{"@type":"Question","name":"셜록홈즈 부평2호점 테마는 몇 개인가요?","acceptedAnswer":{"@type":"Answer","text":"방또 기준 테마 6개가 있습니다: [프리미엄]스탕달 신드롬, 꿈사탕, 데스게임:벼랑 끝에 선 자들, 제4구역, 프로젝트 루나, RE:PEAT."}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"부평 방탈출","item":"https://bangtto.com/region/bupyeong"},{"@type":"ListItem","position":3,"name":"셜록홈즈 부평2호점","item":"https://bangtto.com/store/sherlock-bupyeong2"}]}]</script>
   </head>
 
   <body>
@@ -242,11 +261,11 @@
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
-    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 방탈출 예약 오픈·빈자리 알림·검색·후기</p><h1>셜록홈즈 부평2호점</h1><p><a href="/region/bupyeong">부평 방탈출</a> · 인천 부평구 시장로 19 로터스프라자 7층</p><p>최종 업데이트 2026-11-09 · 방또</p><h2>테마 5개</h2><ul><li><a href="/theme/sherlock-bupyeong2-406">[프리미엄]스탕달 신드롬</a> · 셜록홈즈 부평2호점 · 공포</li><li><a href="/theme/sherlock-bupyeong2-407">꿈사탕</a> · 셜록홈즈 부평2호점 · 감성,판타지</li><li><a href="/theme/sherlock-bupyeong2-408">데스게임:벼랑 끝에 선 자들</a> · 셜록홈즈 부평2호점 · 스릴러</li><li><a href="/theme/sherlock-bupyeong2-405">프로젝트 루나</a> · 셜록홈즈 부평2호점 · 감성,동화</li><li><a href="/theme/sherlock-bupyeong2-410">RE:PEAT</a> · 셜록홈즈 부평2호점 · 드라마</li></ul><h2>자주 묻는 질문</h2><dl><dt>셜록홈즈 부평2호점 위치는 어디인가요?</dt><dd>부평에 있으며 주소는 인천 부평구 시장로 19 로터스프라자 7층입니다.</dd><dt>셜록홈즈 부평2호점 테마는 몇 개인가요?</dt><dd>방또 기준 테마 5개가 있습니다: [프리미엄]스탕달 신드롬, 꿈사탕, 데스게임:벼랑 끝에 선 자들, 프로젝트 루나, RE:PEAT.</dd></dl></main></div>
+    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 방탈출 예약 오픈·빈자리 알림·검색·후기</p><h1>셜록홈즈 부평2호점</h1><p><a href="/region/bupyeong">부평 방탈출</a> · 인천 부평구 시장로 19 로터스프라자 7층</p><p>최종 업데이트 2026-11-13 · 방또</p><h2>테마 6개</h2><ul><li><a href="/theme/sherlock-bupyeong2-406">[프리미엄]스탕달 신드롬</a> · 셜록홈즈 부평2호점 · 공포</li><li><a href="/theme/sherlock-bupyeong2-407">꿈사탕</a> · 셜록홈즈 부평2호점 · 감성,판타지</li><li><a href="/theme/sherlock-bupyeong2-408">데스게임:벼랑 끝에 선 자들</a> · 셜록홈즈 부평2호점 · 스릴러</li><li><a href="/theme/sherlock-bupyeong2-536">제4구역</a> · 셜록홈즈 부평2호점 · 공포</li><li><a href="/theme/sherlock-bupyeong2-405">프로젝트 루나</a> · 셜록홈즈 부평2호점 · 감성,동화</li><li><a href="/theme/sherlock-bupyeong2-410">RE:PEAT</a> · 셜록홈즈 부평2호점 · 드라마</li></ul><h2>자주 묻는 질문</h2><dl><dt>셜록홈즈 부평2호점 위치는 어디인가요?</dt><dd>부평에 있으며 주소는 인천 부평구 시장로 19 로터스프라자 7층입니다.</dd><dt>셜록홈즈 부평2호점 테마는 몇 개인가요?</dt><dd>방또 기준 테마 6개가 있습니다: [프리미엄]스탕달 신드롬, 꿈사탕, 데스게임:벼랑 끝에 선 자들, 제4구역, 프로젝트 루나, RE:PEAT.</dd></dl></main></div>
     <div id="boot-loading" role="progressbar" aria-label="방또 불러오는 중">
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/__expo-metro-runtime-1f8f5d3ca6b7f58204d51e14506d73fb.js" defer></script><script src="/_expo/static/js/web/__common-9d9f27ff59ebd3c19be3f362dfb9944f.js" defer></script><script src="/_expo/static/js/web/catalog-2e151d0cc86f0618279c751abb4bb482.js" defer></script><script src="/_expo/static/js/web/entry-f61d2fac521a132d232a5458058cc0bc.js" defer></script>
+  <script src="/_expo/static/js/web/__expo-metro-runtime-1f8f5d3ca6b7f58204d51e14506d73fb.js" defer></script><script src="/_expo/static/js/web/__common-9d9f27ff59ebd3c19be3f362dfb9944f.js" defer></script><script src="/_expo/static/js/web/catalog-6a9144046bb59fc783dcb8096d050c5b.js" defer></script><script src="/_expo/static/js/web/entry-42806b7cb054db35a0ab6dc1bff321b8.js" defer></script>
 </body>
 </html>

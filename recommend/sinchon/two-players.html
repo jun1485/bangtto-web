@@ -7,22 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
     <!-- 외부 사이트 이동 시 출처 정보 미전송 -->
     <meta name="referrer" content="no-referrer" />
-    <title>신촌 2인 가능 방탈출 30개 비교 | 방또</title>
+    <title>신촌 2인 가능 방탈출 31개 비교 | 방또</title>
     <!-- 검색 결과·공유 미리보기 기본 정보 -->
-    <meta data-rh="true" name="description" content="신촌 매장 7곳의 2인 가능 방탈출 30개를 가격·시간·후기로 비교하세요. 매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요." />
+    <meta data-rh="true" name="description" content="신촌 매장 7곳의 2인 가능 방탈출 31개를 가격·시간·후기로 비교하세요. 매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요." />
     <meta data-rh="true" name="robots" content="noindex,follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="방또" />
-    <meta data-rh="true" property="og:title" content="신촌 2인 가능 방탈출 30개 비교 | 방또" />
-    <meta data-rh="true" property="og:description" content="신촌 매장 7곳의 2인 가능 방탈출 30개를 가격·시간·후기로 비교하세요. 매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요." />
+    <meta data-rh="true" property="og:title" content="신촌 2인 가능 방탈출 31개 비교 | 방또" />
+    <meta data-rh="true" property="og:description" content="신촌 매장 7곳의 2인 가능 방탈출 31개를 가격·시간·후기로 비교하세요. 매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요." />
     <meta data-rh="true" property="og:image" content="https://bangtto.com/og-image.png?v=20261106" />
     <meta data-rh="true" property="og:image:width" content="1200" />
     <meta data-rh="true" property="og:image:height" content="630" />
-    <meta data-rh="true" property="og:image:alt" content="신촌 2인 가능 방탈출 30개 비교 | 방또" />
+    <meta data-rh="true" property="og:image:alt" content="신촌 2인 가능 방탈출 31개 비교 | 방또" />
     <meta property="og:locale" content="ko_KR" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta data-rh="true" name="twitter:title" content="신촌 2인 가능 방탈출 30개 비교 | 방또" />
-    <meta data-rh="true" name="twitter:description" content="신촌 매장 7곳의 2인 가능 방탈출 30개를 가격·시간·후기로 비교하세요. 매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요." />
+    <meta data-rh="true" name="twitter:title" content="신촌 2인 가능 방탈출 31개 비교 | 방또" />
+    <meta data-rh="true" name="twitter:description" content="신촌 매장 7곳의 2인 가능 방탈출 31개를 가격·시간·후기로 비교하세요. 매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요." />
     <meta data-rh="true" name="twitter:image" content="https://bangtto.com/og-image.png?v=20261106" />
     <!-- 홈 화면에 추가한 웹 앱 설정, 아이폰 웹 알림은 홈 화면 앱에서만 동작 -->
     <link rel="manifest" href="/manifest.json" />
@@ -91,11 +91,30 @@
       body {
         overflow: hidden;
       }
+      /* 아이폰 상태 표시줄 탭 감지용 페이지 스크롤, 페이지는 튕기지 않음 */
+      html.status-tap {
+        overscroll-behavior-y: none;
+      }
+      /* 스크롤 영역 밖을 밀어도 페이지가 끌려가지 않게 함 */
+      html.status-tap body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        touch-action: pan-x pinch-zoom;
+      }
       /* 아이폰 상태 표시줄 탭 감지용 페이지 여분 길이 */
       html.status-tap body::before {
         content: '';
         display: block;
         height: 1px;
+      }
+      /* 화면 밖에 둔 요소가 페이지 길이를 늘리지 않게 함 */
+      html.status-tap #root {
+        overflow: hidden;
+        overflow: clip;
+      }
+      /* 화면 속 스크롤이 끝에 닿아도 페이지로 넘어가지 않게 함 */
+      html.status-tap [data-page-edge] {
+        overscroll-behavior-y: contain;
       }
       /* These styles make the root element full-height */
       #root {
@@ -242,11 +261,11 @@
       </style>
     </noscript>
     <!-- The root element for your Expo app. -->
-    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 방탈출 예약 오픈·빈자리 알림·검색·후기</p><h1>신촌 2인 가능 방탈출</h1><p>매장 7곳 · 테마 30개</p><p>매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요.</p><p>후기가 많은 순으로 보여요. 가격과 예약 가능 여부는 매장 공식 예약 페이지에서 최종 확인해 주세요.</p><ul><li><a href="/theme/clevertown-sinchon-9">3주년 축제한마당(14시 타임 전용)</a> · 클레버타운 · 콩그레츄레이션 · 110분 · 2인 총 40,000원</li><li><a href="/theme/clevertown-sinchon-10">3주년 축제한마당(16시 타임 전용)</a> · 클레버타운 · 콩그레츄레이션 · 110분 · 2인 총 40,000원</li><li><a href="/theme/clevertown-sinchon-11">3주년 축제한마당(19시 타임 전용)</a> · 클레버타운 · 콩그레츄레이션 · 110분 · 2인 총 40,000원</li><li><a href="/theme/clevertown-sinchon-12">3주년 축제한마당(21시 타임 전용)</a> · 클레버타운 · 콩그레츄레이션 · 110분 · 2인 총 40,000원</li><li><a href="/theme/clevertown-sinchon-8">가암성당</a> · 클레버타운 · 잠입 취재 공포물 · 100분 · 2인 총 180,000원</li><li><a href="/theme/masterkey-sinchon-public-hetoo">그도 그럴 것이다</a> · 마스터키 프라임 신촌퍼블릭점 · 스릴러 · 60분 · 2인 총 44,000원</li><li><a href="/theme/clevertown-sinchon-4">난 너의 보이</a> · 클레버타운 · 코믹 · 90분 · 2인 총 56,000원</li><li><a href="/theme/crewescape-sinchon2-2">대저택의비밀</a> · 탐정크루 신촌 2호점 · 추리 · 50분 · 2인 총 26,000원</li><li><a href="/theme/roomexcape-indigo-dreampost">드림포스트</a> · 룸익스케이프 인디고블루점 · 100분 · 2인 총 68,000원</li><li><a href="/theme/escgame-sinchon-mission">미션 임파서블</a> · 방탈출게임 ESC 신촌점 · 60분 · 2인 총 44,000원</li><li><a href="/theme/crewescape-sinchon2-4">소년의마음</a> · 탐정크루 신촌 2호점 · 심리 추적 · 50분 · 2인 총 26,000원</li><li><a href="/theme/escgame-sinchon-shawshank">쇼생크 탈출</a> · 방탈출게임 ESC 신촌점 · 60분 · 2인 총 44,000원</li><li><a href="/theme/escapecity-sinchon-2">신의실수</a> · 이스케이프시티 그랜드 시티 신촌점 · 판타지,신화 · 80분 · 2인 총 56,000원</li><li><a href="/theme/shinbang-sinchon-7">신촌성심병원</a> · 나의신방 신촌점 · 스릴러 · 100분 · 2인 총 200,000원</li><li><a href="/theme/escgame-sinchon-saw">쏘우</a> · 방탈출게임 ESC 신촌점 · 스릴러 · 60분 · 2인 총 44,000원</li><li><a href="/theme/escapecity-sinchon-1">연</a> · 이스케이프시티 그랜드 시티 신촌점 · 판타지 · 80분 · 2인 총 56,000원</li><li><a href="/theme/escgame-sinchon-oldboy">올드보이</a> · 방탈출게임 ESC 신촌점 · 60분 · 2인 총 44,000원</li><li><a href="/theme/masterkey-sinchon-public-wild">인투더와일드</a> · 마스터키 프라임 신촌퍼블릭점 · 모험 · 60분 · 2인 총 44,000원</li><li><a href="/theme/clevertown-sinchon-6">좌뇌우뇌연구소(문제방)</a> · 클레버타운 · 모노룸 아케이드 문제방 · 80분 · 2인 총 48,000원</li><li><a href="/theme/crewescape-sinchon2-1">초코의왕</a> · 탐정크루 신촌 2호점 · 코믹,추리 · 50분 · 2인 총 26,000원</li><li><a href="/theme/crewescape-sinchon2-3">출근길</a> · 탐정크루 신촌 2호점 · 추적 · 50분 · 2인 총 26,000원</li><li><a href="/theme/escapecity-sinchon-3">컨티뉴얼</a> · 이스케이프시티 그랜드 시티 신촌점 · 공포, 스릴러 · 70분 · 2인 총 54,000원</li><li><a href="/theme/crewescape-sinchon2-5">크라임씬-이상한부부이야기</a> · 탐정크루 신촌 2호점 · 범죄 스릴러 · 50분 · 2인 총 26,000원</li><li><a href="/theme/roomexcape-indigo-flyme">플라이 미 투 더 문</a> · 룸익스케이프 인디고블루점 · 100분 · 2인 총 68,000원</li><li><a href="/theme/shinbang-sinchon-10">플로이드 호텔</a> · 나의신방 신촌점 · 문제방 · 150분 · 2인 총 50,000원</li><li><a href="/theme/escgame-sinchon-harrypotter">해리포터</a> · 방탈출게임 ESC 신촌점 · 60분 · 2인 총 44,000원</li><li><a href="/theme/roomexcape-indigo-holymoly">홀리 몰리, 몰 몰 몰!</a> · 룸익스케이프 인디고블루점 · 60분 · 2인 총 48,000원</li><li><a href="/theme/shinbang-sinchon-8">Chaser:한마음 폐공장</a> · 나의신방 신촌점 · 수사/스릴러 · 80분 · 2인 총 60,000원</li><li><a href="/theme/shinbang-sinchon-11">Hanna Is Fired[한나는 해고됐어]</a> · 나의신방 신촌점 · 스릴러 · 70분 · 2인 총 54,000원</li><li><a href="/theme/masterkey-sinchon-public-scene">SCENE : 404 NOT FOUND</a> · 마스터키 프라임 신촌퍼블릭점 · 공포 · 70분 · 2인 총 48,000원</li></ul><p><a href="/region/sinchon">신촌 전체 방탈출 보기</a></p></main></div>
+    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 방탈출 예약 오픈·빈자리 알림·검색·후기</p><h1>신촌 2인 가능 방탈출</h1><p>매장 7곳 · 테마 31개</p><p>매장 예약 가능 인원이 2명을 포함하거나 공식 2인 가격이 있는 테마예요. 추천 인원만 있는 테마는 포함하지 않아요.</p><p>후기가 많은 순으로 보여요. 가격과 예약 가능 여부는 매장 공식 예약 페이지에서 최종 확인해 주세요.</p><ul><li><a href="/theme/clevertown-sinchon-9">3주년 축제한마당(14시 타임 전용)</a> · 클레버타운 · 콩그레츄레이션 · 110분 · 2인 총 40,000원</li><li><a href="/theme/clevertown-sinchon-10">3주년 축제한마당(16시 타임 전용)</a> · 클레버타운 · 콩그레츄레이션 · 110분 · 2인 총 40,000원</li><li><a href="/theme/clevertown-sinchon-11">3주년 축제한마당(19시 타임 전용)</a> · 클레버타운 · 콩그레츄레이션 · 110분 · 2인 총 40,000원</li><li><a href="/theme/clevertown-sinchon-12">3주년 축제한마당(21시 타임 전용)</a> · 클레버타운 · 콩그레츄레이션 · 110분 · 2인 총 40,000원</li><li><a href="/theme/clevertown-sinchon-8">가암성당</a> · 클레버타운 · 잠입 취재 공포물 · 100분 · 2인 총 180,000원</li><li><a href="/theme/masterkey-sinchon-public-hetoo">그도 그럴 것이다</a> · 마스터키 프라임 신촌퍼블릭점 · 스릴러 · 60분 · 2인 총 44,000원</li><li><a href="/theme/clevertown-sinchon-4">난 너의 보이</a> · 클레버타운 · 코믹 · 90분 · 2인 총 56,000원</li><li><a href="/theme/crewescape-sinchon2-2">대저택의비밀</a> · 탐정크루 신촌 2호점 · 추리 · 50분 · 2인 총 26,000원</li><li><a href="/theme/roomexcape-indigo-dreampost">드림포스트</a> · 룸익스케이프 인디고블루점 · 100분 · 2인 총 68,000원</li><li><a href="/theme/escgame-sinchon-mission">미션 임파서블</a> · 방탈출게임 ESC 신촌점 · 60분 · 2인 총 44,000원</li><li><a href="/theme/crewescape-sinchon2-4">소년의마음</a> · 탐정크루 신촌 2호점 · 심리 추적 · 50분 · 2인 총 26,000원</li><li><a href="/theme/escgame-sinchon-shawshank">쇼생크 탈출</a> · 방탈출게임 ESC 신촌점 · 60분 · 2인 총 44,000원</li><li><a href="/theme/escapecity-sinchon-2">신의실수</a> · 이스케이프시티 그랜드 시티 신촌점 · 판타지,신화 · 80분 · 2인 총 56,000원</li><li><a href="/theme/shinbang-sinchon-7">신촌성심병원</a> · 나의신방 신촌점 · 스릴러 · 100분 · 2인 총 200,000원</li><li><a href="/theme/clevertown-sinchon-13">심야성당</a> · 클레버타운 · 공포를 곁들이고 문제를 첨가한 코믹 레크레이션 반머시브 · 150분</li><li><a href="/theme/escgame-sinchon-saw">쏘우</a> · 방탈출게임 ESC 신촌점 · 스릴러 · 60분 · 2인 총 44,000원</li><li><a href="/theme/escapecity-sinchon-1">연</a> · 이스케이프시티 그랜드 시티 신촌점 · 판타지 · 80분 · 2인 총 56,000원</li><li><a href="/theme/escgame-sinchon-oldboy">올드보이</a> · 방탈출게임 ESC 신촌점 · 60분 · 2인 총 44,000원</li><li><a href="/theme/masterkey-sinchon-public-wild">인투더와일드</a> · 마스터키 프라임 신촌퍼블릭점 · 모험 · 60분 · 2인 총 44,000원</li><li><a href="/theme/clevertown-sinchon-6">좌뇌우뇌연구소(문제방)</a> · 클레버타운 · 모노룸 아케이드 문제방 · 80분 · 2인 총 48,000원</li><li><a href="/theme/crewescape-sinchon2-1">초코의왕</a> · 탐정크루 신촌 2호점 · 코믹,추리 · 50분 · 2인 총 26,000원</li><li><a href="/theme/crewescape-sinchon2-3">출근길</a> · 탐정크루 신촌 2호점 · 추적 · 50분 · 2인 총 26,000원</li><li><a href="/theme/escapecity-sinchon-3">컨티뉴얼</a> · 이스케이프시티 그랜드 시티 신촌점 · 공포, 스릴러 · 70분 · 2인 총 54,000원</li><li><a href="/theme/crewescape-sinchon2-5">크라임씬-이상한부부이야기</a> · 탐정크루 신촌 2호점 · 범죄 스릴러 · 50분 · 2인 총 26,000원</li><li><a href="/theme/roomexcape-indigo-flyme">플라이 미 투 더 문</a> · 룸익스케이프 인디고블루점 · 100분 · 2인 총 68,000원</li><li><a href="/theme/shinbang-sinchon-10">플로이드 호텔</a> · 나의신방 신촌점 · 문제방 · 150분 · 2인 총 50,000원</li><li><a href="/theme/escgame-sinchon-harrypotter">해리포터</a> · 방탈출게임 ESC 신촌점 · 60분 · 2인 총 44,000원</li><li><a href="/theme/roomexcape-indigo-holymoly">홀리 몰리, 몰 몰 몰!</a> · 룸익스케이프 인디고블루점 · 60분 · 2인 총 48,000원</li><li><a href="/theme/shinbang-sinchon-8">Chaser:한마음 폐공장</a> · 나의신방 신촌점 · 수사/스릴러 · 80분 · 2인 총 60,000원</li><li><a href="/theme/shinbang-sinchon-11">Hanna Is Fired[한나는 해고됐어]</a> · 나의신방 신촌점 · 스릴러 · 70분 · 2인 총 54,000원</li><li><a href="/theme/masterkey-sinchon-public-scene">SCENE : 404 NOT FOUND</a> · 마스터키 프라임 신촌퍼블릭점 · 공포 · 70분 · 2인 총 48,000원</li></ul><p><a href="/region/sinchon">신촌 전체 방탈출 보기</a></p></main></div>
     <div id="boot-loading" role="progressbar" aria-label="방또 불러오는 중">
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/__expo-metro-runtime-1f8f5d3ca6b7f58204d51e14506d73fb.js" defer></script><script src="/_expo/static/js/web/__common-9d9f27ff59ebd3c19be3f362dfb9944f.js" defer></script><script src="/_expo/static/js/web/catalog-2e151d0cc86f0618279c751abb4bb482.js" defer></script><script src="/_expo/static/js/web/entry-f61d2fac521a132d232a5458058cc0bc.js" defer></script>
+  <script src="/_expo/static/js/web/__expo-metro-runtime-1f8f5d3ca6b7f58204d51e14506d73fb.js" defer></script><script src="/_expo/static/js/web/__common-9d9f27ff59ebd3c19be3f362dfb9944f.js" defer></script><script src="/_expo/static/js/web/catalog-6a9144046bb59fc783dcb8096d050c5b.js" defer></script><script src="/_expo/static/js/web/entry-42806b7cb054db35a0ab6dc1bff321b8.js" defer></script>
 </body>
 </html>
