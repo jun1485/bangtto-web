@@ -91,6 +91,12 @@
       body {
         overflow: hidden;
       }
+      /* 아이폰 상태 표시줄 탭 감지용 페이지 여분 길이 */
+      html.status-tap body::before {
+        content: '';
+        display: block;
+        height: 1px;
+      }
       /* These styles make the root element full-height */
       #root {
         display: flex;
@@ -239,6 +245,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/__expo-metro-runtime-1f8f5d3ca6b7f58204d51e14506d73fb.js" defer></script><script src="/_expo/static/js/web/__common-024367a9f844f737ee2011a3a4cd0f6d.js" defer></script><script src="/_expo/static/js/web/catalog-2e151d0cc86f0618279c751abb4bb482.js" defer></script><script src="/_expo/static/js/web/entry-faf86a55d6273a22948eb1e6bad2459d.js" defer></script>
+  <script src="/_expo/static/js/web/__expo-metro-runtime-1f8f5d3ca6b7f58204d51e14506d73fb.js" defer></script><script src="/_expo/static/js/web/__common-9d9f27ff59ebd3c19be3f362dfb9944f.js" defer></script><script src="/_expo/static/js/web/catalog-2e151d0cc86f0618279c751abb4bb482.js" defer></script><script src="/_expo/static/js/web/entry-f61d2fac521a132d232a5458058cc0bc.js" defer></script>
 </body>
 </html>
