@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://bangtto.com/sitemap.xml
+
+#DaumWebMasterTool:cbef233d37b9265b0552656edd49e0c7f79a4fcbb062d4adf08dc20776b0be50:CNSJIIGOISrSV2aL3hPlgQ==
