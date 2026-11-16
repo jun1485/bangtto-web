@@ -131,3 +131,22 @@
 - [사이트맵](https://bangtto.com/sitemap.xml): 모든 테마·매장·지역 페이지 주소
 - [최근 바뀐 테마](https://bangtto.com/rss.xml)
 - [개인정보처리방침](https://bangtto.com/privacy)
+- [방또 소개](https://bangtto.com/about)
+
+## 방탈출 가이드
+- [방탈출 처음 가기 전 알아둘 것](https://bangtto.com/guide/first-time): 예약부터 입장, 힌트 쓰는 법, 첫 테마 고르는 기준까지 처음 가는 사람이 궁금해하는 것을 순서대로 정리했어요.
+- [방탈출 난이도·공포도 숫자 보는 법](https://bangtto.com/guide/difficulty-fear): 난이도 3과 4는 얼마나 다른지, 공포도가 비어 있는 테마는 어떻게 가늠하는지 숫자를 읽는 방법을 정리했어요.
+- [2인 방탈출 테마 고르는 법](https://bangtto.com/guide/two-players): 둘이서 갈 때 확인할 예약 가능 인원과 가격, 2인에게 맞는 난이도를 정리했어요.
+- [방탈출 예약 오픈 시간에 맞춰 예약하는 요령](https://bangtto.com/guide/open-time): 예약이 열리는 세 가지 방식과 날짜 계산법, 오픈 시각에 놓치지 않는 준비를 정리했어요.
+- [홍대 방탈출 가이드](https://bangtto.com/guide/hongdae): 홍대에서 방탈출을 고를 때 볼 것을 정리했어요. 후기가 많은 테마, 처음 가기 좋은 테마, 가격대와 예약 오픈 시각을 한눈에 볼 수 있어요.
+- [강남 방탈출 가이드](https://bangtto.com/guide/gangnam): 강남에서 방탈출을 고를 때 볼 것을 정리했어요. 후기가 많은 테마, 처음 가기 좋은 테마, 가격대와 예약 오픈 시각을 한눈에 볼 수 있어요.
+- [대구 방탈출 가이드](https://bangtto.com/guide/daegu): 대구에서 방탈출을 고를 때 볼 것을 정리했어요. 후기가 많은 테마, 처음 가기 좋은 테마, 가격대와 예약 오픈 시각을 한눈에 볼 수 있어요.
+- [수원 방탈출 가이드](https://bangtto.com/guide/suwon): 수원에서 방탈출을 고를 때 볼 것을 정리했어요. 후기가 많은 테마, 처음 가기 좋은 테마, 가격대와 예약 오픈 시각을 한눈에 볼 수 있어요.
+- [광주 방탈출 가이드](https://bangtto.com/guide/gwangju): 광주에서 방탈출을 고를 때 볼 것을 정리했어요. 후기가 많은 테마, 처음 가기 좋은 테마, 가격대와 예약 오픈 시각을 한눈에 볼 수 있어요.
+- [건대 방탈출 가이드](https://bangtto.com/guide/geondae): 건대에서 방탈출을 고를 때 볼 것을 정리했어요. 후기가 많은 테마, 처음 가기 좋은 테마, 가격대와 예약 오픈 시각을 한눈에 볼 수 있어요.
+- [이번 주 홍대 방탈출 예약 오픈 시간표](https://bangtto.com/weekly/hongdae)
+- [이번 주 강남 방탈출 예약 오픈 시간표](https://bangtto.com/weekly/gangnam)
+- [이번 주 대구 방탈출 예약 오픈 시간표](https://bangtto.com/weekly/daegu)
+- [이번 주 수원 방탈출 예약 오픈 시간표](https://bangtto.com/weekly/suwon)
+- [이번 주 광주 방탈출 예약 오픈 시간표](https://bangtto.com/weekly/gwangju)
+- [이번 주 건대 방탈출 예약 오픈 시간표](https://bangtto.com/weekly/geondae)

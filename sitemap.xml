@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://bangtto.com/</loc><lastmod>2026-11-15</lastmod><changefreq>daily</changefreq></url>
+  <url><loc>https://bangtto.com/</loc><lastmod>2026-11-16</lastmod><changefreq>daily</changefreq></url>
   <url><loc>https://bangtto.com/privacy</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://bangtto.com/about</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://bangtto.com/terms</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://bangtto.com/guide</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/guide/first-time</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/guide/difficulty-fear</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/guide/two-players</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/guide/open-time</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/guide/hongdae</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/guide/gangnam</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/guide/daegu</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/guide/suwon</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/guide/gwangju</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/guide/geondae</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/weekly/hongdae</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/weekly/gangnam</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/weekly/daegu</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/weekly/suwon</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/weekly/gwangju</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://bangtto.com/weekly/geondae</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/hongdae</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/gangnam</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
   <url><loc>https://bangtto.com/region/daegu</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq></url>
