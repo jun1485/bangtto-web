@@ -1,6 +1,6 @@
 # 방또
 
-> 전국 방탈출 테마 1796개(매장 399곳)의 예약 오픈 시각, 빈자리 알림, 인원·시간·가격·난이도·공포도, 이용자 후기를 모은 방탈출 정보 서비스입니다. (2026-11-17 기준)
+> 전국 방탈출 테마 1797개(매장 399곳)의 예약 오픈 시각, 빈자리 알림, 인원·시간·가격·난이도·공포도, 이용자 후기를 모은 방탈출 정보 서비스입니다. (2026-11-17 기준)
 
 방또 정보 안내:
 - 테마 페이지마다 예약 오픈 규칙(예: 매주 월요일 10:00 오픈 · 14일 뒤까지), 인원별 가격, 플레이 시간, 난이도·공포도, 매장 주소, 방또 이용자 후기·평점이 있습니다.
@@ -16,7 +16,7 @@
 - [광주 방탈출](https://bangtto.com/region/gwangju): 매장 19곳, 테마 101개
 - [대전 방탈출](https://bangtto.com/region/daejeon): 매장 16곳, 테마 85개
 - [건대 방탈출](https://bangtto.com/region/geondae): 매장 20곳, 테마 80개
-- [부산 서면 방탈출](https://bangtto.com/region/busan-seomyeon): 매장 14곳, 테마 77개
+- [부산 서면 방탈출](https://bangtto.com/region/busan-seomyeon): 매장 14곳, 테마 78개
 - [부평 방탈출](https://bangtto.com/region/bupyeong): 매장 11곳, 테마 49개
 - [전주 방탈출](https://bangtto.com/region/jeonju): 매장 10곳, 테마 49개
 - [천안 방탈출](https://bangtto.com/region/cheonan): 매장 9곳, 테마 41개
@@ -84,7 +84,7 @@
 - [성남 방탈출](https://bangtto.com/region/seongnam): 매장 1곳, 테마 1개
 
 ## 장르별 방탈출
-- [공포 방탈출 추천](https://bangtto.com/genre/horror): 테마 217개
+- [공포 방탈출 추천](https://bangtto.com/genre/horror): 테마 218개
 - [스릴러 방탈출 추천](https://bangtto.com/genre/thriller): 테마 256개
 - [추리 방탈출 추천](https://bangtto.com/genre/mystery): 테마 255개
 - [판타지 방탈출 추천](https://bangtto.com/genre/fantasy): 테마 201개
