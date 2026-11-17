@@ -1,6 +1,6 @@
 # 방또
 
-> 전국 방탈출 테마 1798개(매장 399곳)의 예약 오픈 시각, 빈자리 알림, 인원·시간·가격·난이도·공포도, 이용자 후기를 모은 방탈출 정보 서비스입니다. (2026-11-16 기준)
+> 전국 방탈출 테마 1796개(매장 399곳)의 예약 오픈 시각, 빈자리 알림, 인원·시간·가격·난이도·공포도, 이용자 후기를 모은 방탈출 정보 서비스입니다. (2026-11-17 기준)
 
 방또 정보 안내:
 - 테마 페이지마다 예약 오픈 규칙(예: 매주 월요일 10:00 오픈 · 14일 뒤까지), 인원별 가격, 플레이 시간, 난이도·공포도, 매장 주소, 방또 이용자 후기·평점이 있습니다.
@@ -12,21 +12,21 @@
 - [홍대 방탈출](https://bangtto.com/region/hongdae): 매장 51곳, 테마 185개
 - [강남 방탈출](https://bangtto.com/region/gangnam): 매장 45곳, 테마 160개
 - [대구 방탈출](https://bangtto.com/region/daegu): 매장 19곳, 테마 111개
-- [수원 방탈출](https://bangtto.com/region/suwon): 매장 24곳, 테마 107개
+- [수원 방탈출](https://bangtto.com/region/suwon): 매장 24곳, 테마 108개
 - [광주 방탈출](https://bangtto.com/region/gwangju): 매장 19곳, 테마 101개
 - [대전 방탈출](https://bangtto.com/region/daejeon): 매장 16곳, 테마 85개
-- [건대 방탈출](https://bangtto.com/region/geondae): 매장 20곳, 테마 82개
-- [부산 서면 방탈출](https://bangtto.com/region/busan-seomyeon): 매장 14곳, 테마 75개
+- [건대 방탈출](https://bangtto.com/region/geondae): 매장 20곳, 테마 80개
+- [부산 서면 방탈출](https://bangtto.com/region/busan-seomyeon): 매장 14곳, 테마 77개
 - [부평 방탈출](https://bangtto.com/region/bupyeong): 매장 11곳, 테마 49개
 - [전주 방탈출](https://bangtto.com/region/jeonju): 매장 10곳, 테마 49개
-- [신촌 방탈출](https://bangtto.com/region/sinchon): 매장 10곳, 테마 42개
 - [천안 방탈출](https://bangtto.com/region/cheonan): 매장 9곳, 테마 41개
+- [신촌 방탈출](https://bangtto.com/region/sinchon): 매장 10곳, 테마 38개
+- [고양 방탈출](https://bangtto.com/region/goyang): 매장 7곳, 테마 37개
 - [부천 방탈출](https://bangtto.com/region/bucheon): 매장 8곳, 테마 36개
-- [고양 방탈출](https://bangtto.com/region/goyang): 매장 7곳, 테마 36개
 - [대학로 방탈출](https://bangtto.com/region/daehakro): 매장 7곳, 테마 33개
 - [잠실 방탈출](https://bangtto.com/region/jamsil): 매장 7곳, 테마 30개
-- [분당 방탈출](https://bangtto.com/region/bundang): 매장 5곳, 테마 28개
 - [인천 구월 방탈출](https://bangtto.com/region/incheon-guwol): 매장 6곳, 테마 27개
+- [분당 방탈출](https://bangtto.com/region/bundang): 매장 5곳, 테마 27개
 - [평택 방탈출](https://bangtto.com/region/pyeongtaek): 매장 5곳, 테마 27개
 - [안양 방탈출](https://bangtto.com/region/anyang): 매장 6곳, 테마 25개
 - [안산 방탈출](https://bangtto.com/region/ansan): 매장 5곳, 테마 25개
@@ -57,6 +57,7 @@
 - [춘천 방탈출](https://bangtto.com/region/chuncheon): 매장 2곳, 테마 6개
 - [은평 방탈출](https://bangtto.com/region/eunpyeong): 매장 1곳, 테마 6개
 - [아산 방탈출](https://bangtto.com/region/asan): 매장 1곳, 테마 6개
+- [광명 방탈출](https://bangtto.com/region/gwangmyeong): 매장 1곳, 테마 6개
 - [진주 방탈출](https://bangtto.com/region/jinju): 매장 1곳, 테마 6개
 - [부산 광안리 방탈출](https://bangtto.com/region/busan-gwanganri): 매장 1곳, 테마 5개
 - [인하대 방탈출](https://bangtto.com/region/inhadae): 매장 1곳, 테마 5개
@@ -65,7 +66,6 @@
 - [부산 덕천 방탈출](https://bangtto.com/region/busan-deokcheon): 매장 1곳, 테마 5개
 - [이천 방탈출](https://bangtto.com/region/icheon): 매장 1곳, 테마 5개
 - [군산 방탈출](https://bangtto.com/region/gunsan): 매장 1곳, 테마 5개
-- [광명 방탈출](https://bangtto.com/region/gwangmyeong): 매장 1곳, 테마 5개
 - [종각 방탈출](https://bangtto.com/region/jonggak): 매장 1곳, 테마 5개
 - [원주 방탈출](https://bangtto.com/region/wonju): 매장 1곳, 테마 5개
 - [명동 방탈출](https://bangtto.com/region/myeongdong): 매장 1곳, 테마 4개
@@ -84,16 +84,16 @@
 - [성남 방탈출](https://bangtto.com/region/seongnam): 매장 1곳, 테마 1개
 
 ## 장르별 방탈출
-- [공포 방탈출 추천](https://bangtto.com/genre/horror): 테마 216개
+- [공포 방탈출 추천](https://bangtto.com/genre/horror): 테마 217개
 - [스릴러 방탈출 추천](https://bangtto.com/genre/thriller): 테마 256개
 - [추리 방탈출 추천](https://bangtto.com/genre/mystery): 테마 255개
 - [판타지 방탈출 추천](https://bangtto.com/genre/fantasy): 테마 201개
-- [드라마·감성 방탈출 추천](https://bangtto.com/genre/drama): 테마 277개
-- [코믹 방탈출 추천](https://bangtto.com/genre/comic): 테마 124개
-- [잠입·탈옥 방탈출 추천](https://bangtto.com/genre/infiltration): 테마 120개
+- [드라마·감성 방탈출 추천](https://bangtto.com/genre/drama): 테마 274개
+- [코믹 방탈출 추천](https://bangtto.com/genre/comic): 테마 125개
+- [잠입·탈옥 방탈출 추천](https://bangtto.com/genre/infiltration): 테마 121개
 - [모험·액션 방탈출 추천](https://bangtto.com/genre/adventure): 테마 144개
 - [SF 방탈출 추천](https://bangtto.com/genre/sf): 테마 35개
-- [게임·미션 방탈출 추천](https://bangtto.com/genre/mission): 테마 132개
+- [게임·미션 방탈출 추천](https://bangtto.com/genre/mission): 테마 133개
 
 ## 후기가 많은 방탈출 테마
 - [3일 (비트포비아 던전 던전루나)](https://bangtto.com/theme/bitphobia-luna-49): 강남, 방또 후기 3개 평균 ★3.8
