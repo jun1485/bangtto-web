@@ -55,8 +55,8 @@ self.addEventListener('notificationclick', (event) => {
   }
   // 종료 알림은 예약 날짜와 인원을 채운 기록 화면으로 연결
   const params = new URLSearchParams({ themeId: themeId || '', playedOn: playedOn || '', partySize: partySize == null ? '' : String(partySize) });
-  // 답변 알림은 내 문의·내 요청 화면으로 (앱 안 경로만)
-  const reply = type === 'reply' && typeof path === 'string' && /^\/[a-z-]+$/.test(path) ? path : null;
+  // 답변 알림은 내 문의·내 요청, 운영자 새 요청 알림은 요청 관리 화면으로 (앱 안 경로만)
+  const reply = type === 'reply' && typeof path === 'string' && /^\/[a-z-]+(\/[a-z-]+)?$/.test(path) ? path : null;
   // 화면 경로를 담은 알림(친구 초대·내 예약·투표·단체톡·오픈톡 등)은 종류와 관계없이 그 화면 (앱 안 경로만)
   const noticePath = type !== 'reply' && type !== 'record' && type !== 'vacancy' && typeof path === 'string' && /^\/[\w\-/]*(\?[\w=&%:.,+-]*)?$/.test(path) ? path : null;
   // 서비스 워커에는 로그인 정보가 없어 알림 id 를 넘겨 앱이 알림함 읽음 처리
