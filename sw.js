@@ -44,13 +44,24 @@ self.addEventListener('notificationclick', (event) => {
         }).catch(() => undefined)
       : Promise.resolve();
   event.waitUntil(tracked);
-  // 외부 예약 페이지는 앱 창과 별도로 바로 열기
+  // 외부 예약 페이지는 테마 화면을 먼저 열고 그 화면에서 이동, 예약 페이지에서 뒤로 가도 빈 창 대신 테마 화면
   if (typeof reservationUrl === 'string' && /^https?:\/\//i.test(reservationUrl)) {
-    // 앱이 닫혀 있어도 예약 홈페이지 방문 대상 보존
-    const remember = themeId
-      ? caches.open('reservation-visit-v1').then((cache) => cache.put('/reservation-visit', new Response(JSON.stringify({ themeId, openedAt: Date.now() }))))
-      : Promise.resolve();
-    event.waitUntil(remember.catch(() => console.warn('예약 홈페이지 방문 저장 실패')).then(() => self.clients.openWindow(reservationUrl)));
+    if (!themeId) {
+      event.waitUntil(self.clients.openWindow(reservationUrl));
+      return;
+    }
+    // 앱이 닫혀 있어도 예약 홈페이지 방문 대상과 열 예약 주소 보존
+    const remember = caches.open('reservation-visit-v1').then((cache) =>
+      Promise.all([
+        cache.put('/reservation-visit', new Response(JSON.stringify({ themeId, openedAt: Date.now() }))),
+        cache.put('/reservation-open', new Response(JSON.stringify({ url: reservationUrl, at: Date.now() }))),
+      ]),
+    );
+    event.waitUntil(
+      remember
+        .then(() => openAppWindow(`/theme/${encodeURIComponent(themeId)}?reserve=1`))
+        .catch(() => self.clients.openWindow(reservationUrl)),
+    );
     return;
   }
   // 종료 알림은 예약 날짜와 인원을 채운 기록 화면으로 연결
@@ -63,16 +74,19 @@ self.addEventListener('notificationclick', (event) => {
   const readable = typeof notificationId === 'string' && /^[0-9a-f-]{36}$/i.test(notificationId);
   const invite = noticePath && readable ? `${noticePath}${noticePath.includes('?') ? '&' : '?'}readNotice=${notificationId}` : noticePath;
   const url = reply ?? invite ?? (type === 'record' && themeId && /^\d{4}-\d{2}-\d{2}$/.test(playedOn) ? `/record/new?${params}` : themeId ? `/theme/${encodeURIComponent(themeId)}` : '/');
-  event.waitUntil(
-    self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windows) => {
-      // 이 서비스 워커가 맡은 창만 옮길 수 있음, 아니거나 옮기기에 실패하면 새 창으로
-      const open = windows.find((client) => client.url.startsWith(self.location.origin) && 'navigate' in client);
-      if (!open) return self.clients.openWindow(url);
-      return open
-        .focus()
-        .then((client) => (client || open).navigate(url))
-        .then((client) => client || self.clients.openWindow(url))
-        .catch(() => self.clients.openWindow(url));
-    }),
-  );
+  event.waitUntil(openAppWindow(url));
 });
+
+// 열린 앱 창을 그 화면으로 옮기기, 없거나 옮기기에 실패하면 새 창
+function openAppWindow(url) {
+  return self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windows) => {
+    // 이 서비스 워커가 맡은 창만 옮길 수 있음
+    const open = windows.find((client) => client.url.startsWith(self.location.origin) && 'navigate' in client);
+    if (!open) return self.clients.openWindow(url);
+    return open
+      .focus()
+      .then((client) => (client || open).navigate(url))
+      .then((client) => client || self.clients.openWindow(url))
+      .catch(() => self.clients.openWindow(url));
+  });
+}
