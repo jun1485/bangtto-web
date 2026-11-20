@@ -50,6 +50,16 @@ self.addEventListener('notificationclick', (event) => {
       event.waitUntil(self.clients.openWindow(reservationUrl));
       return;
     }
+    // 아이폰은 방또를 거치면 사용자가 한 번 더 눌러야 해서, 돌아올 때 흰 창이 뜨더라도 예약 페이지를 바로 엶 (이냥 결정 11/20)
+    // 방문 기록은 남겨 두어 다음에 방또를 열면 '방금 예약하고 오셨나요?'로 이어 감
+    if (/iPhone|iPad|iPod/.test(self.navigator.userAgent)) {
+      const visit = caches
+        .open('reservation-visit-v1')
+        .then((cache) => cache.put('/reservation-visit', new Response(JSON.stringify({ themeId, openedAt: Date.now() }))))
+        .catch(() => undefined);
+      event.waitUntil(visit.then(() => self.clients.openWindow(reservationUrl)));
+      return;
+    }
     // 앱이 닫혀 있어도 예약 홈페이지 방문 대상과 열 예약 주소 보존
     const remember = caches.open('reservation-visit-v1').then((cache) =>
       Promise.all([
