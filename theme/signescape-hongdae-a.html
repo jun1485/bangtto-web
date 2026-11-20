@@ -148,8 +148,7 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading,
-      #root:has(> main) ~ #boot-loading {
+      #root:empty ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -162,24 +161,7 @@
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
       }
-      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
-      #root > main {
-        visibility: hidden;
-        animation: seo-reveal 0s 8s forwards;
-      }
-      #root:has(> main) ~ #boot-loading {
-        animation: seo-hide 0s 8s forwards;
-      }
-      @keyframes seo-reveal {
-        to {
-          visibility: visible;
-        }
-      }
-      @keyframes seo-hide {
-        to {
-          visibility: hidden;
-        }
-      }
+      /* 페이지 본문이 있는 주소는 앱을 받는 동안에도 본문을 바로 보여 주고, 앱이 그려지면 앱 화면으로 바뀜 */
       #boot-loading .ring {
         position: relative;
         width: 40px;
@@ -266,6 +248,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/__expo-metro-runtime-1f8f5d3ca6b7f58204d51e14506d73fb.js" defer></script><script src="/_expo/static/js/web/__common-99a6389e89ee399bbf5924a20275b4d5.js" defer></script><script src="/_expo/static/js/web/catalog-583105e9474bfe41c0f938de628a2a4b.js" defer></script><script src="/_expo/static/js/web/entry-20209100302ad1110c035a8ffb7c4c32.js" defer></script>
+  <script src="/_expo/static/js/web/__expo-metro-runtime-1f8f5d3ca6b7f58204d51e14506d73fb.js" defer></script><script src="/_expo/static/js/web/__common-78268da81a1dbd3ed6642b9284120fa2.js" defer></script><script src="/_expo/static/js/web/catalog-583105e9474bfe41c0f938de628a2a4b.js" defer></script><script src="/_expo/static/js/web/entry-eadeb3bcaf89d617c14d4f174382e7fd.js" defer></script>
 </body>
 </html>

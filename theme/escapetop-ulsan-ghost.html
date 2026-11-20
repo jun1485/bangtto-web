@@ -10,7 +10,7 @@
     <title>AR 여고괴담 예약 오픈 시간·후기 - 이스케이프탑 울산점 방탈출 | 방또</title>
     <!-- 검색 결과·공유 미리보기 기본 정보 -->
     <meta data-rh="true" name="description" content="울산 이스케이프탑 울산점의 방탈출 테마 AR 여고괴담. 예약 오픈 예약 상시 오픈 · 오픈 시각 없음. 60분 · 1인 22,500원~. 난이도·공포도·후기를 확인하세요." />
-    <meta data-rh="true" name="robots" content="index,follow,max-image-preview:large" />
+    <meta data-rh="true" name="robots" content="noindex,follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="방또" />
     <meta data-rh="true" property="og:title" content="AR 여고괴담 예약 오픈 시간·후기 - 이스케이프탑 울산점 방탈출 | 방또" />
@@ -148,8 +148,7 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading,
-      #root:has(> main) ~ #boot-loading {
+      #root:empty ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -162,24 +161,7 @@
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
       }
-      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
-      #root > main {
-        visibility: hidden;
-        animation: seo-reveal 0s 8s forwards;
-      }
-      #root:has(> main) ~ #boot-loading {
-        animation: seo-hide 0s 8s forwards;
-      }
-      @keyframes seo-reveal {
-        to {
-          visibility: visible;
-        }
-      }
-      @keyframes seo-hide {
-        to {
-          visibility: hidden;
-        }
-      }
+      /* 페이지 본문이 있는 주소는 앱을 받는 동안에도 본문을 바로 보여 주고, 앱이 그려지면 앱 화면으로 바뀜 */
       #boot-loading .ring {
         position: relative;
         width: 40px;
@@ -244,10 +226,9 @@
     <meta name="msvalidate.01" content="77330B8539B93301BD4CB08EDF8BA70F" />
     <!-- 웹 광고 AdSense -->
     <meta name="google-adsense-account" content="ca-pub-1289246991166233" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/escapetop-ulsan-ghost" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/escapetop-ulsan-ghost" />
-    <script data-seo-url="https://bangtto.com/theme/escapetop-ulsan-ghost" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"AR 여고괴담 (이스케이프탑 울산점)","description":"울산 이스케이프탑 울산점의 방탈출 테마 AR 여고괴담. 예약 오픈 예약 상시 오픈 · 오픈 시각 없음. 60분 · 1인 22,500원~. 난이도·공포도·후기를 확인하세요.","url":"https://bangtto.com/theme/escapetop-ulsan-ghost","image":"https://wsrv.nl/?url=https%3A%2F%2Fnaverbooking-phinf.pstatic.net%2F20251222_191%2F1766378833427DSSaW_PNG%2F%25BF%25A9%25B0%25ED%25B1%25AB%25B4%25E3-4%2528%25BF%25EF%25BB%25EA%2529----.PNG&w=1080&we&output=jpg&q=82","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/escapetop-ulsan#store","name":"이스케이프탑 울산점","url":"https://bangtto.com/store/escapetop-ulsan"},"timeRequired":"PT60M","dateModified":"2026-11-19"},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"AR 여고괴담(이스케이프탑 울산점) 예약 오픈은 언제인가요?","acceptedAnswer":{"@type":"Answer","text":"예약 오픈 안내: 예약 상시 오픈 · 오픈 시각 없음. 예약과 결제는 매장 공식 예약 페이지에서 진행합니다."}},{"@type":"Question","name":"AR 여고괴담(이스케이프탑 울산점) 가격은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"인원별 총액은 2인 45,000원입니다. 실제 가격은 매장 공식 페이지에서 확인해 주세요."}},{"@type":"Question","name":"AR 여고괴담(이스케이프탑 울산점) 플레이 시간은 얼마나 되나요?","acceptedAnswer":{"@type":"Answer","text":"플레이 시간은 60분입니다."}},{"@type":"Question","name":"AR 여고괴담(이스케이프탑 울산점) 난이도와 공포도는 어느 정도인가요?","acceptedAnswer":{"@type":"Answer","text":"난이도 2/5, 공포도 0.5/5입니다."}},{"@type":"Question","name":"AR 여고괴담(이스케이프탑 울산점) 위치는 어디인가요?","acceptedAnswer":{"@type":"Answer","text":"울산 이스케이프탑 울산점에 있습니다. 주소는 울산 남구 삼산중로74번길 10 5층입니다."}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"울산 방탈출","item":"https://bangtto.com/region/ulsan"},{"@type":"ListItem","position":3,"name":"이스케이프탑 울산점","item":"https://bangtto.com/store/escapetop-ulsan"},{"@type":"ListItem","position":4,"name":"AR 여고괴담","item":"https://bangtto.com/theme/escapetop-ulsan-ghost"}]}]</script>
+    
   </head>
 
   <body>
@@ -266,6 +247,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/__expo-metro-runtime-1f8f5d3ca6b7f58204d51e14506d73fb.js" defer></script><script src="/_expo/static/js/web/__common-99a6389e89ee399bbf5924a20275b4d5.js" defer></script><script src="/_expo/static/js/web/catalog-583105e9474bfe41c0f938de628a2a4b.js" defer></script><script src="/_expo/static/js/web/entry-20209100302ad1110c035a8ffb7c4c32.js" defer></script>
+  <script src="/_expo/static/js/web/__expo-metro-runtime-1f8f5d3ca6b7f58204d51e14506d73fb.js" defer></script><script src="/_expo/static/js/web/__common-78268da81a1dbd3ed6642b9284120fa2.js" defer></script><script src="/_expo/static/js/web/catalog-583105e9474bfe41c0f938de628a2a4b.js" defer></script><script src="/_expo/static/js/web/entry-eadeb3bcaf89d617c14d4f174382e7fd.js" defer></script>
 </body>
 </html>

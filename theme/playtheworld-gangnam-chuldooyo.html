@@ -10,7 +10,7 @@
     <title>이상한 나라로 출두요 예약 오픈 시간·후기 - 플레이더월드 강남점 방탈출 | 방또</title>
     <!-- 검색 결과·공유 미리보기 기본 정보 -->
     <meta data-rh="true" name="description" content="강남 플레이더월드 강남점의 방탈출 테마 이상한 나라로 출두요. 예약 오픈 매일 00:00에 6일 뒤 날짜 오픈. 1~2명 · 100분 · 1인 22,000원~. 난이도·공포도·후기를 확인하세요." />
-    <meta data-rh="true" name="robots" content="index,follow,max-image-preview:large" />
+    <meta data-rh="true" name="robots" content="noindex,follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="방또" />
     <meta data-rh="true" property="og:title" content="이상한 나라로 출두요 예약 오픈 시간·후기 - 플레이더월드 강남점 방탈출 | 방또" />
@@ -150,8 +150,7 @@
         display: none;
       }
       /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
-      #root:empty ~ #boot-loading,
-      #root:has(> main) ~ #boot-loading {
+      #root:empty ~ #boot-loading {
         display: flex;
         position: fixed;
         inset: 0;
@@ -164,24 +163,7 @@
         background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
         pointer-events: none;
       }
-      /* 검색엔진용 글은 앱을 받는 동안 로딩 화면 뒤에 숨기고, 앱이 끝내 그려지지 않으면 드러냄 */
-      #root > main {
-        visibility: hidden;
-        animation: seo-reveal 0s 8s forwards;
-      }
-      #root:has(> main) ~ #boot-loading {
-        animation: seo-hide 0s 8s forwards;
-      }
-      @keyframes seo-reveal {
-        to {
-          visibility: visible;
-        }
-      }
-      @keyframes seo-hide {
-        to {
-          visibility: hidden;
-        }
-      }
+      /* 페이지 본문이 있는 주소는 앱을 받는 동안에도 본문을 바로 보여 주고, 앱이 그려지면 앱 화면으로 바뀜 */
       #boot-loading .ring {
         position: relative;
         width: 40px;
@@ -246,10 +228,9 @@
     <meta name="msvalidate.01" content="77330B8539B93301BD4CB08EDF8BA70F" />
     <!-- 웹 광고 AdSense -->
     <meta name="google-adsense-account" content="ca-pub-1289246991166233" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
   <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/theme/playtheworld-gangnam-chuldooyo" />
     <meta data-rh="true" property="og:url" content="https://bangtto.com/theme/playtheworld-gangnam-chuldooyo" />
-    <script data-seo-url="https://bangtto.com/theme/playtheworld-gangnam-chuldooyo" type="application/ld+json">[{"@context":"https://schema.org","@type":"Game","name":"이상한 나라로 출두요 (플레이더월드 강남점)","description":"강남 플레이더월드 강남점의 방탈출 테마 이상한 나라로 출두요. 예약 오픈 매일 00:00에 6일 뒤 날짜 오픈. 1~2명 · 100분 · 1인 22,000원~. 난이도·공포도·후기를 확인하세요.","url":"https://bangtto.com/theme/playtheworld-gangnam-chuldooyo","image":"https://bangtto.com/og-image.png?v=20261106","provider":{"@type":"EntertainmentBusiness","@id":"https://bangtto.com/store/playtheworld-gangnam#store","name":"플레이더월드 강남점","url":"https://bangtto.com/store/playtheworld-gangnam"},"numberOfPlayers":{"@type":"QuantitativeValue","minValue":1,"maxValue":2},"timeRequired":"PT100M","dateModified":"2026-11-19"},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"이상한 나라로 출두요(플레이더월드 강남점) 예약 오픈은 언제인가요?","acceptedAnswer":{"@type":"Answer","text":"예약 오픈 안내: 매일 00:00에 6일 뒤 날짜 오픈. 예약과 결제는 매장 공식 예약 페이지에서 진행합니다."}},{"@type":"Question","name":"이상한 나라로 출두요(플레이더월드 강남점) 인원은 몇 명인가요?","acceptedAnswer":{"@type":"Answer","text":"예약 가능 인원 1~2명입니다."}},{"@type":"Question","name":"이상한 나라로 출두요(플레이더월드 강남점) 가격은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"인원별 총액은 1인 35,000원, 2인 44,000원입니다. 실제 가격은 매장 공식 페이지에서 확인해 주세요."}},{"@type":"Question","name":"이상한 나라로 출두요(플레이더월드 강남점) 플레이 시간은 얼마나 되나요?","acceptedAnswer":{"@type":"Answer","text":"플레이 시간은 100분입니다."}},{"@type":"Question","name":"이상한 나라로 출두요(플레이더월드 강남점) 난이도와 공포도는 어느 정도인가요?","acceptedAnswer":{"@type":"Answer","text":"난이도 4/5, 공포도 0/5입니다."}},{"@type":"Question","name":"이상한 나라로 출두요(플레이더월드 강남점) 위치는 어디인가요?","acceptedAnswer":{"@type":"Answer","text":"강남 플레이더월드 강남점에 있습니다. 주소는 서울 서초구 사평대로56길 14 지하1층입니다."}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"강남 방탈출","item":"https://bangtto.com/region/gangnam"},{"@type":"ListItem","position":3,"name":"플레이더월드 강남점","item":"https://bangtto.com/store/playtheworld-gangnam"},{"@type":"ListItem","position":4,"name":"이상한 나라로 출두요","item":"https://bangtto.com/theme/playtheworld-gangnam-chuldooyo"}]}]</script>
+    
   </head>
 
   <body>
@@ -268,6 +249,6 @@
       <div class="ring"></div>
     </div>
     <div id="boot-splash" aria-hidden="true"></div>
-  <script src="/_expo/static/js/web/__expo-metro-runtime-1f8f5d3ca6b7f58204d51e14506d73fb.js" defer></script><script src="/_expo/static/js/web/__common-99a6389e89ee399bbf5924a20275b4d5.js" defer></script><script src="/_expo/static/js/web/catalog-583105e9474bfe41c0f938de628a2a4b.js" defer></script><script src="/_expo/static/js/web/entry-20209100302ad1110c035a8ffb7c4c32.js" defer></script>
+  <script src="/_expo/static/js/web/__expo-metro-runtime-1f8f5d3ca6b7f58204d51e14506d73fb.js" defer></script><script src="/_expo/static/js/web/__common-78268da81a1dbd3ed6642b9284120fa2.js" defer></script><script src="/_expo/static/js/web/catalog-583105e9474bfe41c0f938de628a2a4b.js" defer></script><script src="/_expo/static/js/web/entry-eadeb3bcaf89d617c14d4f174382e7fd.js" defer></script>
 </body>
 </html>
