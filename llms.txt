@@ -100,6 +100,7 @@
 - [네드 (키이스케이프 더오름)](https://bangtto.com/theme/keyescape-theorum-26): 강남, 방또 후기 3개 평균 ★4.8
 - [러너웨이 (싸인이스케이프 강남시티점)](https://bangtto.com/theme/signescape-gangnam-a): 강남, 방또 후기 3개 평균 ★4.5
 - [스위티 (지구별 방탈출 홍대라스트시티점)](https://bangtto.com/theme/jigu-hongdae-lastcity-13): 홍대, 방또 후기 3개 평균 ★3.8
+- [DONE (제로월드 강남점)](https://bangtto.com/theme/zeroworld-gangnam-26): 강남, 방또 후기 3개 평균 ★4.3
 - [NOX (제로월드 홍대점)](https://bangtto.com/theme/zeroworld-hongdae-33): 홍대, 방또 후기 3개 평균 ★4.2
 - [3일 (비트포비아 던전 던전루나)](https://bangtto.com/theme/bitphobia-luna-49): 강남, 방또 후기 2개 평균 ★3.8
 - [경성 연쇄실종사건 (비트포비아 던전 홍대던전Ⅲ)](https://bangtto.com/theme/bitphobia-hongdae3-19): 홍대, 방또 후기 2개 평균 ★4
@@ -125,7 +126,6 @@
 - [호텔 레토 (호텔레토)](https://bangtto.com/theme/hotelletoh-seongsu-1): 성수, 방또 후기 2개 평균 ★4
 - [화생설화 : Blooming (비트포비아 던전 던전101)](https://bangtto.com/theme/bitphobia-101-1): 홍대, 방또 후기 2개 평균 ★4.5
 - [A GENTLE MONDAY (키이스케이프 LOG_IN 2)](https://bangtto.com/theme/keyescape-login2-42): 강남, 방또 후기 2개 평균 ★4.5
-- [ANOTHER (황금열쇠 강남점(플라워로드))](https://bangtto.com/theme/goldenkey-gangnam-fr-20): 강남, 방또 후기 2개 평균 ★3.8
 
 ## 기타
 - [사이트맵](https://bangtto.com/sitemap.xml): 모든 테마·매장·지역 페이지 주소
