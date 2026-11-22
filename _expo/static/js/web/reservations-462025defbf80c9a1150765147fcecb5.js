@@ -1,1 +1,2 @@
 __d(function(g,r,i,a,m,e,d){"use strict";Object.defineProperty(e,'__esModule',{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return u}});var t=r(d[0]),n=r(d[1]);function u(){return(0,n.jsx)(t.Redirect,{href:{pathname:'/favorites',params:{view:'reservations'}}})}},788,[805,6]);
+//# debugId=e4468999-6225-4518-9fa5-7d4ff7f995e3
