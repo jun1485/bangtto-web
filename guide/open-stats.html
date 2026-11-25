@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko" data-posters="hosted">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <!-- 홈 화면 앱에서 아이폰 홈 막대 높이를 안전 영역 값으로 받음 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+    <!-- 외부 사이트 이동 시 출처 정보 미전송 -->
+    <meta name="referrer" content="no-referrer" />
+    <title>방탈출 예약 오픈 시각과 날짜 통계 | 방또</title>
+    <!-- 검색 결과·공유 미리보기 기본 정보 -->
+    <meta data-rh="true" name="description" content="방또가 확인한 전국 매장 396곳의 예약 오픈 규칙을 모아, 몇 시에 며칠 뒤 날짜가 열리는지와 지역별 차이를 정리했어요." />
+    <meta data-rh="true" name="robots" content="index,follow,max-image-preview:large" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="방또" />
+    <meta data-rh="true" property="og:title" content="방탈출 예약 오픈 시각과 날짜 통계 | 방또" />
+    <meta data-rh="true" property="og:description" content="방또가 확인한 전국 매장 396곳의 예약 오픈 규칙을 모아, 몇 시에 며칠 뒤 날짜가 열리는지와 지역별 차이를 정리했어요." />
+    <meta data-rh="true" property="og:image" content="https://bangtto.com/og-image.png?v=20261106" />
+    <meta data-rh="true" property="og:image:width" content="1200" />
+    <meta data-rh="true" property="og:image:height" content="630" />
+    <meta data-rh="true" property="og:image:alt" content="방탈출 예약 오픈 시각과 날짜 통계 | 방또" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta data-rh="true" name="twitter:title" content="방탈출 예약 오픈 시각과 날짜 통계 | 방또" />
+    <meta data-rh="true" name="twitter:description" content="방또가 확인한 전국 매장 396곳의 예약 오픈 규칙을 모아, 몇 시에 며칠 뒤 날짜가 열리는지와 지역별 차이를 정리했어요." />
+    <meta data-rh="true" name="twitter:image" content="https://bangtto.com/og-image.png?v=20261106" />
+    <!-- 홈 화면에 추가한 웹 앱 설정, 아이폰 웹 알림은 홈 화면 앱에서만 동작 -->
+    <link rel="manifest" href="/manifest.json" />
+    <!-- 검색엔진이 최근 바뀐 페이지를 찾는 RSS -->
+    <link rel="alternate" type="application/rss+xml" title="방또" href="https://bangtto.com/rss.xml" />
+    <!-- 첫 로딩 화면 시작 그림을 앱 JS 보다 먼저 받음 -->
+    <link rel="preload" as="image" href="/startup/splash.jpg?v=20261104" fetchpriority="high" media="(display-mode: standalone)" />
+    <!-- 안드로이드는 앱 설치 대신 홈 화면 바로가기로 추가 -->
+    <script>
+      if (/Android/i.test(navigator.userAgent)) document.querySelector('link[rel="manifest"]').href = '/manifest-android.json';
+    </script>
+    <link rel="apple-touch-icon" href="/apple-touch-icon-512.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="방또" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <!-- 기기·브라우저 다크 모드에서도 밝은 화면 고정 -->
+    <meta name="color-scheme" content="only light" />
+    <!-- 아이폰 홈 화면 웹앱 실행 직후 기기 크기별 시작 그림 -->
+    <link rel="apple-touch-startup-image" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/startup/iphone-1320x2868.jpg" />
+    <link rel="apple-touch-startup-image" media="(device-width: 420px) and (device-height: 912px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/startup/iphone-1260x2736.jpg" />
+    <link rel="apple-touch-startup-image" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/startup/iphone-1290x2796.jpg" />
+    <link rel="apple-touch-startup-image" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/startup/iphone-1206x2622.jpg" />
+    <link rel="apple-touch-startup-image" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/startup/iphone-1284x2778.jpg" />
+    <link rel="apple-touch-startup-image" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/startup/iphone-1179x2556.jpg" />
+    <link rel="apple-touch-startup-image" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/startup/iphone-1170x2532.jpg" />
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/startup/iphone-1242x2688.jpg" />
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/startup/iphone-1125x2436.jpg" />
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/startup/iphone-828x1792.jpg" />
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/startup/iphone-1242x2208.jpg" />
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/startup/iphone-750x1334.jpg" />
+    <!-- 홈 화면 웹앱을 새로 열 때만 앱이 그려질 때까지 시작 그림 유지 -->
+    <script>
+      (function () {
+        try {
+          var standalone = navigator.standalone === true || matchMedia('(display-mode: standalone)').matches;
+          if (!standalone || sessionStorage.getItem('bangtto-boot-splash')) return;
+          sessionStorage.setItem('bangtto-boot-splash', '1');
+          var root = document.documentElement;
+          root.classList.add('boot-splash');
+          // 앱이 끝내 그려지지 않아도 시작 그림이 화면을 덮고 남지 않게 함
+          setTimeout(function () {
+            root.classList.remove('boot-splash');
+          }, 10000);
+        } catch (error) {}
+      })();
+    </script>
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      /* 브라우저가 화면을 어둡게 바꾸지 않게 밝은 화면 고정 */
+      :root {
+        color-scheme: only light;
+      }
+      /* These styles make the body full-height */
+      html,
+      body {
+        height: 100%;
+        background: #ffffff;
+      }
+      /* 화면 전환 시 글자 크기 유지 */
+      html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+      }
+      /* These styles disable body scrolling if you are using <ScrollView> */
+      body {
+        overflow: hidden;
+      }
+      /* 아이폰 상태 표시줄 탭 감지용 페이지 스크롤, 페이지는 튕기지 않음 */
+      html.status-tap {
+        overscroll-behavior-y: none;
+      }
+      /* 스크롤 영역 밖을 밀어도 페이지가 끌려가지 않게 함 */
+      html.status-tap body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        touch-action: pan-x pinch-zoom;
+      }
+      /* 아이폰 상태 표시줄 탭 감지용 페이지 여분 길이 */
+      html.status-tap body::before {
+        content: '';
+        display: block;
+        height: 1px;
+      }
+      /* 화면 밖에 둔 요소가 페이지 길이를 늘리지 않게 함 */
+      html.status-tap #root {
+        overflow: hidden;
+        overflow: clip;
+      }
+      /* 화면 속 스크롤이 끝에 닿아도 페이지로 넘어가지 않게 함 */
+      html.status-tap [data-page-edge] {
+        overscroll-behavior-y: contain;
+      }
+      /* These styles make the root element full-height */
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+        /* 연속 탭으로 인한 화면 확대 방지 */
+        touch-action: manipulation;
+      }
+      .seo-poster {
+        max-width: 100%;
+        height: auto;
+      }
+      /* PC 처럼 넓은 화면은 휴대폰 폭으로 가운데에 담음 */
+      @media (min-width: 600px) {
+        html,
+        body {
+          background: #eef2f6;
+        }
+        #root {
+          max-width: 560px;
+          width: 100%;
+          margin: 0 auto;
+          /* 화면 전환 애니메이션이 바깥 여백에 비치지 않게 가림 */
+          position: relative;
+          overflow: hidden;
+          background: #ffffff;
+          box-shadow: 0 0 24px rgba(22, 131, 218, 0.08);
+        }
+      }
+      /* 앱을 받는 동안 빈 화면이나 검색엔진용 글 대신 보여 줄 로딩 화면, 앱이 그려지면 사라짐 */
+      #boot-loading {
+        display: none;
+      }
+      /* 시작 그림을 받기 전에는 같은 색 바탕, 넓은 화면은 휴대폰 폭으로 가운데 */
+      #root:empty ~ #boot-loading {
+        display: flex;
+        position: fixed;
+        inset: 0;
+        max-width: 560px;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom: 16vh;
+        background: url(/startup/splash.jpg?v=20261104) center / cover no-repeat, linear-gradient(#8ec5f7, #e3f1fd 55%, #ffffff);
+        pointer-events: none;
+      }
+      /* 페이지 본문이 있는 주소는 앱을 받는 동안에도 본문을 바로 보여 주고, 앱이 그려지면 앱 화면으로 바뀜 */
+      #boot-loading .ring {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 4px #e8f4fd;
+      }
+      #boot-loading .ring::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: conic-gradient(rgba(22, 131, 218, 0) 10%, #1683da);
+        -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 4px));
+        mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 4px));
+        animation: boot-spin 0.9s linear infinite;
+      }
+      @keyframes boot-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      /* 홈 화면 웹앱 시작 그림 */
+      #boot-splash {
+        display: none;
+      }
+      .boot-splash #boot-splash {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 2147483647;
+        background: #c1e3fc url(/startup/splash.jpg?v=20261104) center / cover no-repeat;
+        pointer-events: none;
+        transition: opacity 0.35s;
+      }
+      /* 터치 기기 입력칸의 자동 확대 방지 */
+      @media (hover: none) and (pointer: coarse) {
+        #root input,
+        #root textarea,
+        #root select {
+          font-size: max(16px, 1em);
+        }
+      }
+    </style>
+    <!-- 앱 글꼴 Pretendard, 화면에 쓰인 글자 묶음만 받음 -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" /></noscript>
+    <!-- 웹 방문 통계 Google 애널리틱스 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-150RKF7VH9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-150RKF7VH9');
+    </script>
+    <!-- 네이버 서치어드바이저 사이트 소유 확인 -->
+    <meta name="naver-site-verification" content="7f08b13fef14e984d1fff25b4673524cd48cd663" />
+    <!-- 빙 웹마스터 사이트 소유 확인 -->
+    <meta name="msvalidate.01" content="77330B8539B93301BD4CB08EDF8BA70F" />
+    <!-- 웹 광고 AdSense -->
+    <meta name="google-adsense-account" content="ca-pub-1289246991166233" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1289246991166233" crossorigin="anonymous"></script>
+  <link rel="icon" href="/favicon.ico"/>    <link data-rh="true" rel="canonical" href="https://bangtto.com/guide/open-stats" />
+    <meta data-rh="true" property="og:url" content="https://bangtto.com/guide/open-stats" />
+    <script data-seo-url="https://bangtto.com/guide/open-stats" type="application/ld+json">[{"@context":"https://schema.org","@type":"Article","headline":"방탈출 예약 오픈 시각과 날짜 통계","description":"방또가 확인한 전국 매장 396곳의 예약 오픈 규칙을 모아, 몇 시에 며칠 뒤 날짜가 열리는지와 지역별 차이를 정리했어요.","url":"https://bangtto.com/guide/open-stats","inLanguage":"ko-KR","dateModified":"2026-11-25","author":{"@type":"Organization","name":"방또","url":"https://bangtto.com/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"방또","item":"https://bangtto.com/"},{"@type":"ListItem","position":2,"name":"방탈출 가이드","item":"https://bangtto.com/guide"},{"@type":"ListItem","position":3,"name":"방탈출 예약 오픈 시각과 날짜 통계","item":"https://bangtto.com/guide/open-stats"}]}]</script>
+  </head>
+
+  <body>
+    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
+    <noscript>
+      <style>
+        #boot-loading, #boot-splash { display: none !important; }
+        body { overflow: auto; }
+        #root { height: auto; min-height: 100%; }
+        #root > main { visibility: visible !important; animation: none !important; }
+      </style>
+    </noscript>
+    <!-- The root element for your Expo app. -->
+    <div id="root"><main style="padding:24px 20px;font-family:'Pretendard Variable',Pretendard,sans-serif;color:#1E2A44;line-height:1.6;overflow:auto"><p><a href="/">방또</a> · 방탈출 예약 오픈·빈자리 알림·검색·후기</p><h1>방탈출 예약 오픈 시각과 날짜 통계</h1><p>방또가 확인한 전국 매장 396곳의 예약 오픈 규칙을 모아, 몇 시에 며칠 뒤 날짜가 열리는지와 지역별 차이를 정리했어요.</p><p>최종 업데이트 2026-11-25 · 방또</p><section><h2>방또가 모은 예약 오픈 규칙</h2><p>방또는 매장 공식 홈페이지와 예약 페이지에 공개된 안내를 보고, 매장마다 예약이 언제 열리는지 규칙으로 정리해요. 2026년 11월 기준 전국 410개 매장 가운데 396곳의 규칙을 확인했고, 아래 숫자는 모두 이 규칙에서 나온 값이에요.</p></section><section><h2>절반 넘는 매장은 매일 하루씩 열어요</h2><p>예약을 여는 방식은 크게 세 가지로 나뉘어요.</p><ul><li>매일 정해진 시각에 하루치씩 여는 매장: 212곳(54%)</li><li>정해진 오픈 시각 없이 먼 날짜까지 미리 열어 두는 매장: 177곳(45%). 기간 안내 없이 상시 열어 둔 곳이 80곳, 1년 뒤까지 열어 둔 곳이 67곳이에요.</li><li>매주 정해진 요일에 여러 날짜를 한꺼번에 여는 매장: 7곳(2%)</li></ul></section><section><h2>매일 여는 매장의 76%는 자정에 열어요</h2><p>매일 하루씩 여는 매장 212곳의 오픈 시각을 나눠 보면 자정이 압도적으로 많아요.</p><ul><li>0시: 161곳(76%)</li><li>저녁 6시부터 자정 전까지: 33곳(16%). 이 가운데 밤 10시에 여는 매장이 14곳으로 가장 많아요.</li><li>오전 6시부터 낮 12시 전까지: 10곳(5%)</li><li>낮 12시부터 저녁 6시 전까지: 8곳(4%)</li></ul></section><section><h2>열리는 날짜는 6~7일 뒤가 가장 많아요</h2><p>같은 212곳이 며칠 뒤 날짜를 여는지 보면, 절반 넘는 113곳(53%)이 6일 뒤나 7일 뒤 날짜를 열어요. 가운데 값은 7일이에요.</p><p>6일 뒤 규칙이면 일요일 0시에 그 주 토요일 날짜가 열리고, 7일 뒤 규칙이면 토요일 0시에 다음 주 토요일 날짜가 열려요.</p><ul><li>6일 뒤 이하: 63곳(30%)</li><li>7일 뒤: 51곳(24%)</li><li>8~13일 뒤: 23곳(11%)</li><li>14일 뒤: 33곳(16%)</li><li>15~29일 뒤: 20곳(9%)</li><li>30일 뒤 이상: 22곳(10%)</li></ul></section><section><h2>지역마다 미리 여는 기간이 달라요</h2><p>매일 하루씩 여는 매장이 6곳 이상인 지역에서, 며칠 뒤 날짜를 여는지의 가운데 값을 비교했어요.</p><ul><li>강남(40곳): 6일 뒤</li><li>홍대(32곳)·수원(13곳)·부산 서면(9곳)·신촌(6곳): 7일 뒤</li><li>대전(8곳): 7~8일 뒤</li><li>건대(14곳): 10~11일 뒤</li><li>대구(13곳): 14일 뒤</li><li>광주(8곳): 15일 뒤</li></ul></section><section><h2>통계로 본 예약 준비</h2><ul><li>자정에 여는 매장이 대부분이라, 주말 인기 테마는 금요일이나 토요일 밤 0시 전후에 예약 페이지를 열어 두는 것이 기본이에요.</li><li>강남·홍대처럼 일주일 안쪽만 여는 지역은 날짜를 일찍 정해도 미리 예약할 수 없어요. 오픈 시각 알림을 켜 두고 그날 바로 예약하세요.</li><li>대구·광주처럼 2주 넘게 미리 여는 지역은 여행 일정이 정해지면 바로 예약해 두는 편이 안전해요.</li><li>먼 날짜까지 열어 둔 매장은 오픈 시각을 기다릴 필요 없이 원하는 날짜를 바로 예약할 수 있어요.</li></ul></section><section><h2>이 통계를 볼 때 알아 둘 것</h2><p>매장이 예약 규칙을 바꾸면 숫자도 달라져요. 방또는 규칙을 정기적으로 다시 확인하지만, 예약 직전에는 매장 공식 예약 페이지의 안내를 확인하세요.</p><p>규칙을 확인하지 못한 매장 14곳은 통계에서 빠져 있어요.</p></section><h2>다른 가이드</h2><p><a href="/guide/first-time">방탈출 처음 가기 전 알아둘 것</a> · <a href="/guide/difficulty-fear">방탈출 난이도·공포도 숫자 보는 법</a> · <a href="/guide/two-players">2인 방탈출 테마 고르는 법</a> · <a href="/guide/open-time">방탈출 예약 오픈 시간에 맞춰 예약하는 요령</a> · <a href="/guide/vacancy">방탈출 빈자리(취소표) 잡는 법</a> · <a href="/guide/group">4명 이상 단체로 방탈출 가는 법</a> · <a href="/guide/genre">방탈출 장르별 특징과 고르는 법</a> · <a href="/guide/review-tips">스포일러 없이 방탈출 후기 쓰는 법</a> · <a href="/guide/price">방탈출 가격, 지역·인원·플레이 시간별로 비교하기</a> · <a href="/guide">가이드 전체 보기</a></p></main></div>
+    <div id="boot-loading" role="progressbar" aria-label="방또 불러오는 중">
+      <div class="ring"></div>
+    </div>
+    <div id="boot-splash" aria-hidden="true"></div>
+  <script src="/_expo/static/js/web/__expo-metro-runtime-1f8f5d3ca6b7f58204d51e14506d73fb.js" defer></script><script src="/_expo/static/js/web/__common-3f7b67f79052fbaa1f571e3e17e8e052.js" defer></script><script src="/_expo/static/js/web/catalog-3dbcfde2b48fd0d6a415160c57d35514.js" defer></script><script src="/_expo/static/js/web/entry-723c36426dd1f4c6d6dbf1df775d47b1.js" defer></script>
+</body>
+</html>
